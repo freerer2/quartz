@@ -1,0 +1,184 @@
+{
+  "main": {
+    "id": "0bb18c2687a3aa55",
+    "type": "split",
+    "children": [
+      {
+        "id": "c739ffb8c2dcaf77",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d3bc9179f2cec315",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/miniproject/자동 출석 체크 프로그램/실행하기.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "b083d259fb66dcc2",
+    "type": "split",
+    "children": [
+      {
+        "id": "1c9b57960dc0777f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "87226df5c1b3d88f",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "25b0af1c27bf82ed",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "eb0b3233337217f9",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "82c59f5bed82c9f7",
+    "type": "split",
+    "children": [
+      {
+        "id": "e35b3aa7194d5532",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3a42e4a27d935739",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "content/miniproject/자동 출석 체크 프로그램/실행하기.md",
+                "collapseAll": true,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "4a238892f1ced138",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "content/miniproject/자동 출석 체크 프로그램/실행하기.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "7a99c9fce6b818a7",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "5443f03ad74d945a",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "content/miniproject/자동 출석 체크 프로그램/실행하기.md"
+              }
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "oz-clear-unused-images:Clear Unused Images": false,
+      "remotely-save:Remotely Save": false,
+      "templater-obsidian:Templater": false,
+      "switcher:퀵 스위처 열기": false,
+      "canvas:새 캔버스 만들기": false,
+      "daily-notes:오늘의 데일리 노트 열기": false,
+      "templates:템플릿 삽입": false,
+      "command-palette:명령어 팔레트 열기": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false,
+      "graph:그래프 뷰 열기": false
+    }
+  },
+  "active": "d3bc9179f2cec315",
+  "lastOpenFiles": [
+    "content/miniproject/자동 출석 체크 프로그램/구현하기.md",
+    "content/miniproject/자동 출석 체크 프로그램/실행하기.md",
+    "content/miniproject/자동 출석 체크 프로그램/설계하기.md",
+    "content/miniproject/자동 출석 체크 프로그램/분석하기.md",
+    "README.md",
+    "CODE_OF_CONDUCT.md",
+    "docs/upgrading.md",
+    "docs/showcase.md",
+    "docs/setting up your GitHub repository.md",
+    "docs/philosophy.md",
+    "docs/layout.md",
+    "docs/hosting.md",
+    "docs/configuration.md",
+    "docs/build.md",
+    "docs/authoring content.md",
+    "docs/features/private pages.md",
+    "docs/features/Mermaid diagrams.md",
+    "docs/advanced/architecture.md",
+    "docs/advanced/paths.md",
+    "docs/advanced/making plugins.md",
+    "docs/advanced/index.md",
+    "docs/advanced/creating components.md",
+    "docs/features/recent notes.md",
+    "docs/features/syntax highlighting.md",
+    "docs/features/table of contents.md",
+    "docs/features/index.md",
+    "content/miniproject/자동 출석 체크 프로그램",
+    "content/miniproject"
+  ]
+}
