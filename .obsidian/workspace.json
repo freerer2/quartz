@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/miniproject/자동 출석 체크 프로그램/실행하기.md",
+                "file": "content/miniproject/자동 출석 체크 프로그램/설계하기.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,7 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 209.5
   },
   "right": {
     "id": "82c59f5bed82c9f7",
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/miniproject/자동 출석 체크 프로그램/실행하기.md",
+                "file": "content/miniproject/자동 출석 체크 프로그램/설계하기.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/miniproject/자동 출석 체크 프로그램/실행하기.md",
+                "file": "content/miniproject/자동 출석 체크 프로그램/설계하기.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/miniproject/자동 출석 체크 프로그램/실행하기.md"
+                "file": "content/miniproject/자동 출석 체크 프로그램/설계하기.md"
               }
             }
           }
@@ -134,28 +134,31 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
-      "oz-clear-unused-images:Clear Unused Images": false,
-      "remotely-save:Remotely Save": false,
-      "templater-obsidian:Templater": false,
       "switcher:퀵 스위처 열기": false,
       "canvas:새 캔버스 만들기": false,
       "daily-notes:오늘의 데일리 노트 열기": false,
       "templates:템플릿 삽입": false,
       "command-palette:명령어 팔레트 열기": false,
+      "graph:그래프 뷰 열기": false,
+      "oz-clear-unused-images:Clear Unused Images": false,
       "obsidian-excalidraw-plugin:Create new drawing": false,
-      "graph:그래프 뷰 열기": false
+      "remotely-save:Remotely Save": false,
+      "templater-obsidian:Templater": false
     }
   },
   "active": "d3bc9179f2cec315",
   "lastOpenFiles": [
-    "content/miniproject/자동 출석 체크 프로그램/구현하기.md",
-    "content/miniproject/자동 출석 체크 프로그램/실행하기.md",
-    "content/miniproject/자동 출석 체크 프로그램/설계하기.md",
     "content/miniproject/자동 출석 체크 프로그램/분석하기.md",
+    "content/miniproject/자동 출석 체크 프로그램/실행하기.md",
+    "content/miniproject/자동 출석 체크 프로그램/구현하기.md",
+    "content_backup/1.Project/lms/lms.md",
+    "content/miniproject/자동 출석 체크 프로그램/설계하기.md",
+    "content/Obsidian/Mermaid.md",
+    "content/Obsidian/Obsidian 배우기.md",
     "README.md",
     "CODE_OF_CONDUCT.md",
     "docs/upgrading.md",
@@ -175,9 +178,6 @@
     "docs/advanced/index.md",
     "docs/advanced/creating components.md",
     "docs/features/recent notes.md",
-    "docs/features/syntax highlighting.md",
-    "docs/features/table of contents.md",
-    "docs/features/index.md",
     "content/miniproject/자동 출석 체크 프로그램",
     "content/miniproject"
   ]
