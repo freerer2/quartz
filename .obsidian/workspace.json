@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Quartz Help/index.md",
+                "file": "content/Java/언어 알아보기/상속.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/Quartz Help/index.md",
+                "file": "content/Java/언어 알아보기/상속.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/Quartz Help/index.md",
+                "file": "content/Java/언어 알아보기/상속.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/Quartz Help/index.md"
+                "file": "content/Java/언어 알아보기/상속.md"
               }
             }
           }
@@ -150,14 +150,8 @@
       "remotely-save:Remotely Save": false
     }
   },
-  "active": "d3bc9179f2cec315",
+  "active": "87226df5c1b3d88f",
   "lastOpenFiles": [
-    "content/Java/언어 알아보기/index.md",
-    "content/Java/Java 배우기.md",
-    "content/Quartz Help/index.md",
-    "content/Quartz Help/layout.md",
-    "content/Quartz Help/hosting.md",
-    "content/Java/언어 알아보기/상속.md",
     "content/Java/API 마스터하기/컬렉션 프레임워크.md",
     "content/Java/API 마스터하기/최신 Java의 일반적인 IO 작업.md",
     "content/Java/API 마스터하기/정규 표현식.md",
@@ -180,7 +174,13 @@
     "content/Java/언어 알아보기/클래스와 객체",
     "content/Java/언어 알아보기/제네릭/타입 추론.md",
     "content/Java/언어 알아보기/제네릭/타입 삭제.md",
+    "content/Java/언어 알아보기/제네릭/제네릭 소개.md",
+    "content/Java/언어 알아보기/제네릭/제네릭에 대한 제한.md",
+    "content/Java/언어 알아보기/제네릭/와일드카드.md",
     "content/Java/언어 알아보기/제네릭",
+    "content/Java/언어 알아보기/인터페이스/인터페이스를 타입으로 사용하기.md",
+    "content/Java/언어 알아보기/인터페이스/인터페이스 구현하기.md",
+    "content/Java/언어 알아보기/인터페이스/인터페이스란.md",
     "content/Java/언어 알아보기/인터페이스",
     "content/Java/언어 알아보기/예외",
     "content/Java/언어 알아보기/숫자 및 문자열",
