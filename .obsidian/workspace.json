@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "path:\"content/Obsidian/\" ",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -65,12 +65,12 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "82c59f5bed82c9f7",
@@ -151,7 +151,7 @@
       "graph:그래프 뷰 열기": false
     }
   },
-  "active": "d3bc9179f2cec315",
+  "active": "25b0af1c27bf82ed",
   "lastOpenFiles": [
     "content/miniproject/자동 출석 체크 프로그램/구현하기.md",
     "content/miniproject/자동 출석 체크 프로그램/분석하기.md",
