@@ -1,42 +1,42 @@
 이 튜토리얼에서는 변수, 연산자, 표현식, 문, 블록 및 제어 흐름 문을 포함한 언어의 기본 사항을 다룹니다.
 
-1. [[변수 생성 및 변수 이름 지정하기]]
+1. [[content_backup/1.Project/Study/Java/언어 알아보기/Java 언어 기초/변수 생성 및 변수 이름 지정하기]]
 	
 	변수 이름을 지정하는 규칙.
 	
-2. [[프로그램에서 기본 유형 변수 만들기]]
+2. [[content_backup/1.Project/Study/Java/언어 알아보기/Java 언어 기초/프로그램에서 기본 유형 변수 만들기]]
 	
 	기본 유형 변수를 생성하고 초기화하는 구문입니다.
 	
-3. [[프로그램에서 배열 생성하기]]
+3. [[content_backup/1.Project/Study/Java/언어 알아보기/Java 언어 기초/프로그램에서 배열 생성하기]]
 	
 	배열로 객체의 고정 길이 컨테이너 만들기.
 	
-4. [[Var 유형 식별자 사용하기]]
+4. [[content_backup/1.Project/Study/Java/언어 알아보기/Java 언어 기초/Var 유형 식별자 사용하기]]
 	
 	Var을 사용하여 변수 정의하기.
 	
-5. [[프로그램에서 연산자 사용하기]]
+5. [[content_backup/1.Project/Study/Java/언어 알아보기/Java 언어 기초/프로그램에서 연산자 사용하기]]
 	
 	연산자로 연산하기
 	
-6. [[연산자 요약]]
+6. [[content_backup/1.Project/Study/Java/언어 알아보기/Java 언어 기초/연산자 요약]]
 	
 	Java 연산자 마무리하기.
 	
-7. [[표현식, 구문 및 블록]]
+7. [[content_backup/1.Project/Study/Java/언어 알아보기/Java 언어 기초/표현식, 구문 및 블록]]
 	
 	표현식, 문 및 블록에 대한 이해와 문을 블록으로 그룹화하는 방법.
 	
-8. [[제어 흐름 문]]
+8. [[content_backup/1.Project/Study/Java/언어 알아보기/Java 언어 기초/제어 흐름 문]]
 	
 	이 섹션에서는 Java 프로그래밍 언어에서 지원하는 의사 결정 문, 루핑 문 및 분기 문에 대해 설명합니다.
 	
-9. [[스위치 문을 사용한 분기]]
+9. [[content_backup/1.Project/Study/Java/언어 알아보기/Java 언어 기초/스위치 문을 사용한 분기]]
 	
 	스위치 문을 사용하여 프로그램의 흐름을 제어하는 방법에 대해 설명합니다.
 	
-10. [[스위치 표현식으로 분기하기]]
+10. [[content_backup/1.Project/Study/Java/언어 알아보기/Java 언어 기초/스위치 표현식으로 분기하기]]
 	
 	switch를 확장하여 문이나 표현식으로 사용할 수 있도록 합니다.
 	
