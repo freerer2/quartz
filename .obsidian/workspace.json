@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/miniproject/자동 출석 체크 프로그램/실행하기.md",
+                "file": "content/LMS/LMS서버/1. 파이썬 크론탭 자동실행 환경 설정.md",
                 "mode": "source",
                 "source": false
               }
@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/miniproject/자동 출석 체크 프로그램/설계하기.md",
+                "file": "content/LMS/프로그램 목록/자동 출석 체크 프로그램/설계하기.md",
                 "mode": "source",
                 "source": false
               }
@@ -97,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/miniproject/자동 출석 체크 프로그램/실행하기.md",
+                "file": "content/LMS/LMS서버/1. 파이썬 크론탭 자동실행 환경 설정.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/miniproject/자동 출석 체크 프로그램/실행하기.md",
+                "file": "content/LMS/LMS서버/1. 파이썬 크론탭 자동실행 환경 설정.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/miniproject/자동 출석 체크 프로그램/실행하기.md"
+                "file": "content/LMS/LMS서버/1. 파이썬 크론탭 자동실행 환경 설정.md"
               }
             }
           }
@@ -164,12 +164,20 @@
   },
   "active": "d3bc9179f2cec315",
   "lastOpenFiles": [
-    "content/miniproject/자동 출석 체크 프로그램/설계하기.md",
+    "content/LMS/공통 기본환경 설정.md",
+    "content/LMS/프로그램 목록/가계부 프로그램/무제 파일.md",
+    "content/LMS/LMS서버/1. 파이썬 크론탭 자동실행 환경 설정.md",
+    "content/LMS/프로그램 목록/가계부 프로그램",
+    "content/LMS/프로그램 목록/가계부 프로그램",
+    "content/LMS/프로그램 목록",
+    "content/LMS/데이터베이스 서버/1. PostgreSQL 세팅.md",
+    "content/LMS/프로그램 목록/자동 출석 체크 프로그램/분석하기.md",
+    "content/LMS/프로그램 목록/자동 출석 체크 프로그램/설계하기.md",
+    "content/LMS/프로그램 목록/자동 출석 체크 프로그램/구현하기.md",
     "content/miniproject/자동 출석 체크 프로그램/실행하기.md",
-    "content/LMS/1. 우분투 기본 환경 설정.md",
-    "content/miniproject/자동 출석 체크 프로그램/분석하기.md",
+    "content/LMS/데이터베이스 서버",
+    "content/LMS/LMS서버",
     "content/LMS",
-    "content/miniproject/자동 출석 체크 프로그램/구현하기.md",
     "README.md",
     "CODE_OF_CONDUCT.md",
     "docs/upgrading.md",
@@ -188,10 +196,7 @@
     "docs/advanced/making plugins.md",
     "docs/advanced/index.md",
     "docs/advanced/creating components.md",
-    "docs/features/recent notes.md",
-    "docs/features/syntax highlighting.md",
-    "docs/features/table of contents.md",
-    "content/miniproject/자동 출석 체크 프로그램",
+    "content/LMS/프로그램 목록/자동 출석 체크 프로그램",
     "content/miniproject"
   ]
 }
