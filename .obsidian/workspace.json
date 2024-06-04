@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/miniproject/자동 출석 체크 프로그램/분석하기.md",
+                "file": "content/miniproject/자동 출석 체크 프로그램/실행하기.md",
                 "mode": "source",
                 "source": false
               }
@@ -97,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/miniproject/자동 출석 체크 프로그램/분석하기.md",
+                "file": "content/miniproject/자동 출석 체크 프로그램/실행하기.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/miniproject/자동 출석 체크 프로그램/분석하기.md",
+                "file": "content/miniproject/자동 출석 체크 프로그램/실행하기.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/miniproject/자동 출석 체크 프로그램/분석하기.md"
+                "file": "content/miniproject/자동 출석 체크 프로그램/실행하기.md"
               }
             }
           }
@@ -165,9 +165,11 @@
   "active": "d3bc9179f2cec315",
   "lastOpenFiles": [
     "content/miniproject/자동 출석 체크 프로그램/설계하기.md",
-    "content/miniproject/자동 출석 체크 프로그램/분석하기.md",
-    "content/miniproject/자동 출석 체크 프로그램/구현하기.md",
     "content/miniproject/자동 출석 체크 프로그램/실행하기.md",
+    "content/LMS/1. 우분투 기본 환경 설정.md",
+    "content/miniproject/자동 출석 체크 프로그램/분석하기.md",
+    "content/LMS",
+    "content/miniproject/자동 출석 체크 프로그램/구현하기.md",
     "README.md",
     "CODE_OF_CONDUCT.md",
     "docs/upgrading.md",
@@ -189,7 +191,6 @@
     "docs/features/recent notes.md",
     "docs/features/syntax highlighting.md",
     "docs/features/table of contents.md",
-    "docs/features/index.md",
     "content/miniproject/자동 출석 체크 프로그램",
     "content/miniproject"
   ]
