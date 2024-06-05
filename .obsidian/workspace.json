@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/LMS/프로그램 목록/자동 출석 체크 프로그램/설계하기.md",
+                "file": "content/LMS/데이터베이스 서버/1. PostgreSQL 설치.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/LMS/프로그램 목록/자동 출석 체크 프로그램/설계하기.md",
+                "file": "content/LMS/데이터베이스 서버/1. PostgreSQL 설치.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/LMS/프로그램 목록/자동 출석 체크 프로그램/설계하기.md",
+                "file": "content/LMS/데이터베이스 서버/1. PostgreSQL 설치.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/LMS/프로그램 목록/자동 출석 체크 프로그램/설계하기.md"
+                "file": "content/LMS/데이터베이스 서버/1. PostgreSQL 설치.md"
               }
             }
           }
@@ -152,14 +152,15 @@
   },
   "active": "69808d86fd99e510",
   "lastOpenFiles": [
+    "content/LMS/데이터베이스 서버/2. PostgreSQL User 추가.md",
+    "content/LMS/데이터베이스 서버/99. PostgreSQL 작업내역.md",
+    "content/LMS/프로그램 목록/자동 출석 체크 프로그램/설계하기.md",
     "content/LMS/프로그램 목록/자동 출석 체크 프로그램/분석하기.md",
     "content/LMS/프로그램 목록/가계부 프로그램/분석하기.md",
     "content/LMS/LMS 서버/1. 파이썬 크론탭 자동실행 환경 설정.md",
     "content/LMS/데이터베이스 서버/1. PostgreSQL 설치.md",
-    "content/LMS/데이터베이스 서버/2. PostgreSQL User 추가.md",
     "content/LMS/공통 기본환경 설정.md",
     "content/miniproject/자동 출석 체크 프로그램/설계하기.md",
-    "content/LMS/프로그램 목록/자동 출석 체크 프로그램/설계하기.md",
     "content/LMS/프로그램 목록/자동 출석 체크 프로그램/구현하기.md",
     "content/LMS/프로그램 목록/가계부 프로그램/무제 파일.md",
     "content/LMS/프로그램 목록/자동 출석 체크 프로그램",
@@ -185,7 +186,6 @@
     "docs/philosophy.md",
     "docs/layout.md",
     "docs/hosting.md",
-    "docs/configuration.md",
     "content/miniproject/자동 출석 체크 프로그램",
     "content/miniproject"
   ]
