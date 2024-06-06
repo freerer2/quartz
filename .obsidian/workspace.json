@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/LMS/서버/데이터베이스 서버/LMS DB 작업내역/LMS DB.md",
+                "file": "content/LMS/프로그램/자동 출석체크 실행 프로그램/설계하기/기능설계/출석체크.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/LMS/서버/데이터베이스 서버/LMS DB 작업내역/LMS DB.md",
+                "file": "content/LMS/프로그램/자동 출석체크 실행 프로그램/설계하기/기능설계/출석체크.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/LMS/서버/데이터베이스 서버/LMS DB 작업내역/LMS DB.md",
+                "file": "content/LMS/프로그램/자동 출석체크 실행 프로그램/설계하기/기능설계/출석체크.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/LMS/서버/데이터베이스 서버/LMS DB 작업내역/LMS DB.md"
+                "file": "content/LMS/프로그램/자동 출석체크 실행 프로그램/설계하기/기능설계/출석체크.md"
               }
             }
           }
@@ -152,12 +152,30 @@
   },
   "active": "07bc3146cc8868f0",
   "lastOpenFiles": [
-    "content/LMS/프로그램/프로그램 목록.md",
+    "content/LMS/프로그램/자동 출석체크 실행 프로그램/설계하기/기능설계/암복호화.md",
+    "content/LMS/프로그램/자동 출석체크 실행 프로그램/설계하기/기능설계/출석체크.md",
+    "content/LMS/프로그램/자동 출석체크 실행 프로그램/분석하기.md",
+    "content/LMS/프로그램/자동 출석체크 실행 프로그램/구현하기.md",
     "content/LMS/개인관리시스템.md",
+    "content/LMS/프로그램/프로그램 목록.md",
+    "자동 출석체크 실행 프로그램.md",
+    "content/LMS/프로그램/가계부 프로그램/무제파일.md",
+    "content/LMS/프로그램/자동 출석체크 실행 프로그램/설계하기/기능설계/로깅.md",
+    "content/LMS/서버/애플리케이션 서버/서버 세팅정보/2. 파이썬 크론탭 자동실행 환경 설정.md",
+    "content/LMS/프로그램/자동 출석체크 실행 프로그램/설계하기/부가기능/기능설계ㅇㅇㅇ.md",
+    "content/LMS/프로그램/자동 출석체크 실행 프로그램/설계하기/기능설계/DB Connection.md",
+    "content/LMS/프로그램/핫딜 알림 봇 프로그램/무제 파일.md",
+    "content/LMS/프로그램/파싱/무제 폴더",
+    "content/LMS/프로그램/핫딜 알림 봇 프로그램",
+    "content/LMS/프로그램/자동 출석체크 실행 프로그램/설계하기/부가기능/무제 파일.md",
+    "content/LMS/프로그램/자동 출석체크 실행 프로그램/설계하기/부가기능",
+    "content/LMS/프로그램/자동 출석체크 실행 프로그램/설계하기/기능설계",
+    "content/LMS/프로그램/자동 출석체크 실행 프로그램/설계하기/DB설계.md",
+    "content/LMS/서버/데이터베이스 서버/LMS DB 작업내역/LMS DB.md",
     "content/LMS/프로그램/자동 출석체크 실행 프로그램/자동 출석체크 실행 프로그램.md",
+    "content/LMS/프로그램/자동 출석체크 실행 프로그램/설계하기.md",
     "content/LMS/서버/서버 목록.md",
     "content/LMS/서버/데이터베이스 서버/데이터베이스 서버.md",
-    "content/LMS/서버/데이터베이스 서버/LMS DB 작업내역/LMS DB.md",
     "content/LMS/서버/무제 폴더",
     "content/LMS/프로그램/자동 출석체크 실행 프로그램/자동 출석체크 프로그램.md",
     "content/LMS/프로그램/키보드 설계 관리 프로그램/무제 파일.md",
@@ -165,29 +183,11 @@
     "content/LMS/서버/데이터베이스 서버/LMS DB 작업내역/ATTENDANCE SCHEMA/TABLE/DOMAIN_LIST.md",
     "content/LMS/서버/데이터베이스 서버/LMS DB 작업내역/ATTENDANCE SCHEMA/TABLE/ACT_LIST.md",
     "content/LMS/서버/데이터베이스 서버/LMS DB 작업내역/ATTENDANCE SCHEMA/TABLE/DOMAIN_ACCNT_LIST.md",
-    "content/LMS/서버/데이터베이스 서버/LMS DB 작업내역/ATTENDANCE SCHEMA/TABLE/ATNDNC_LOG.md",
     "content/LMS/서버/데이터베이스 서버/LMS DB 작업내역/PUBLIC SCHEMA/FUNCTION",
     "content/LMS/서버/데이터베이스 서버/LMS DB 작업내역/ATTENDANCE SCHEMA/TABLE",
-    "content/LMS/서버/애플리케이션 서버/서버 세팅정보/2. 파이썬 크론탭 자동실행 환경 설정.md",
-    "content/LMS/서버/애플리케이션 서버/서버 세팅정보/1. 서버 기본환경 설정.md",
-    "content/LMS/서버/데이터베이스 서버/서버 세팅정보/2. PostgreSQL User 추가.md",
-    "content/LMS/서버/데이터베이스 서버/서버 세팅정보/1. PostgreSQL 설치.md",
     "content/LMS/서버/데이터베이스 서버/LMS DB 작업내역/PUBLIC SCHEMA",
     "content/LMS/서버/데이터베이스 서버/LMS DB 작업내역/ATTENDANCE SCHEMA",
     "content/LMS/서버/애플리케이션 서버/서버 세팅정보",
-    "content/LMS/서버/데이터베이스 서버/서버 세팅정보",
-    "content/LMS/서버/데이터베이스 서버/LMS DB 작업내역",
-    "content/LMS/서버/애플리케이션 서버",
-    "content/LMS/서버/데이터베이스 서버",
-    "content/LMS/프로그램/자동 출석체크 실행 프로그램/설계하기/기능설계.md",
-    "content/LMS/프로그램/자동 출석체크 실행 프로그램/설계하기/DB설계.md",
-    "content/LMS/프로그램/자동 출석체크 실행 프로그램/설계하기.md",
-    "content/LMS/프로그램/자동 출석체크 실행 프로그램/분석하기.md",
-    "content/LMS/프로그램/자동 출석체크 실행 프로그램/구현하기.md",
-    "content/LMS/프로그램/시스템 모니터링 프로그램/무제 파일.md",
-    "content/LMS/프로그램/가계부 프로그램/분석하기.md",
-    "content/LMS/프로그램 목록/프로그램 목록.md",
-    "content/LMS/프로그램 목록/index.md",
     "content/images/출첵물리.png",
     "content/images/출첵논리.png",
     "content/images/Pasted image 20240519225829.png",
