@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "c2391e833b32ebca",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/index.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/LMS/개인관리시스템.md",
+                "file": "content/index.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/LMS/개인관리시스템.md",
+                "file": "content/index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/LMS/개인관리시스템.md"
+                "file": "content/index.md"
               }
             }
           }
@@ -150,12 +163,12 @@
       "graph:그래프 뷰 열기": false
     }
   },
-  "active": "07bc3146cc8868f0",
+  "active": "c2391e833b32ebca",
   "lastOpenFiles": [
-    "content/LMS/프로그램/자동 출석체크 실행 프로그램/분석하기.md",
-    "content/LMS/프로그램/자동 출석체크 실행 프로그램/개요.md",
     "content/LMS/개인관리시스템.md",
     "content/index.md",
+    "content/LMS/프로그램/자동 출석체크 실행 프로그램/분석하기.md",
+    "content/LMS/프로그램/자동 출석체크 실행 프로그램/개요.md",
     "프로그램 목록.md",
     "content/LMS/프로그램/자동 출석체크 실행 프로그램/구현하기.md",
     "content/LMS/프로그램/자동 출석체크 실행 프로그램/설계하기/기능설계.md",
