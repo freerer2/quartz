@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/LMS/개인관리시스템.md",
+                "file": "content/index.md",
                 "mode": "source",
                 "source": false
               }
@@ -97,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/LMS/개인관리시스템.md",
+                "file": "content/index.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/LMS/개인관리시스템.md",
+                "file": "content/index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/LMS/개인관리시스템.md"
+                "file": "content/index.md"
               }
             }
           }
@@ -164,8 +164,13 @@
   },
   "active": "07bc3146cc8868f0",
   "lastOpenFiles": [
-    "content/index.md",
+    "content/Java/Java 배우기.md",
+    "content/Java/언어 알아보기 List/숫자 및 문자열 List/숫자.md",
+    "content/Java/언어 알아보기 List/숫자 및 문자열.md",
+    "content/Java/언어 알아보기.md",
+    "content/Java/언어 알아보기 List/Java 언어 기초.md",
     "content/LMS/개인관리시스템.md",
+    "content/index.md",
     "content/LMS/프로그램/자동 출석체크 실행 프로그램/분석하기.md",
     "content/LMS/프로그램/자동 출석체크 실행 프로그램/개요.md",
     "프로그램 목록.md",
@@ -189,11 +194,6 @@
     "content/LMS/프로그램/자동 출석체크 실행 프로그램/설계하기/부가기능",
     "content/LMS/프로그램/자동 출석체크 실행 프로그램/설계하기/기능설계",
     "content/LMS/프로그램/자동 출석체크 실행 프로그램/설계하기/DB설계.md",
-    "content/LMS/서버/데이터베이스 서버/LMS DB 작업내역/LMS DB.md",
-    "content/LMS/프로그램/자동 출석체크 실행 프로그램/자동 출석체크 실행 프로그램.md",
-    "content/LMS/프로그램/자동 출석체크 실행 프로그램/설계하기.md",
-    "content/LMS/서버/서버 목록.md",
-    "content/LMS/서버/데이터베이스 서버/데이터베이스 서버.md",
     "content/LMS/서버/무제 폴더",
     "content/LMS/서버/데이터베이스 서버/LMS DB 작업내역/PUBLIC SCHEMA/FUNCTION",
     "content/LMS/서버/데이터베이스 서버/LMS DB 작업내역/ATTENDANCE SCHEMA/TABLE",
