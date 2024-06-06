@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/LMS/개인관리시스템.md",
+                "file": "content/LMS/프로그램 목록/LMS-PG-001/LMS-PG-001.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/LMS/개인관리시스템.md",
+                "file": "content/LMS/프로그램 목록/LMS-PG-001/LMS-PG-001.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/LMS/개인관리시스템.md",
+                "file": "content/LMS/프로그램 목록/LMS-PG-001/LMS-PG-001.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/LMS/개인관리시스템.md"
+                "file": "content/LMS/프로그램 목록/LMS-PG-001/LMS-PG-001.md"
               }
             }
           }
@@ -152,9 +152,10 @@
   },
   "active": "d78d80d016f018bd",
   "lastOpenFiles": [
-    "content/LMS/프로그램 목록/LMS-PG-001/index.md",
-    "content/LMS/개인관리시스템.md",
     "content/LMS/프로그램 목록/LMS-PG-001/분석하기.md",
+    "content/LMS/프로그램 목록/LMS-PG-001/LMS-PG-001.md",
+    "content/LMS/개인관리시스템.md",
+    "content/LMS/프로그램 목록/LMS-PG-001/index.md",
     "content/LMS/프로그램 목록.md",
     "content/LMS/프로그램 목록/LMS-PG-001/구현하기.md",
     "content/LMS/프로그램 목록/LMS-PG-001/설계하기/DB설계.md",
