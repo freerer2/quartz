@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "c739ffb8c2dcaf77",
+        "id": "509f328d11e40405",
         "type": "tabs",
         "children": [
           {
-            "id": "69808d86fd99e510",
+            "id": "d78d80d016f018bd",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/LMS/프로그램 목록/키보드 설계 관리 프로그램/무제 파일.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -48,7 +44,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "path:\"content/Obsidian/\" ",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/LMS/프로그램 목록/키보드 설계 관리 프로그램/무제 파일.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/LMS/프로그램 목록/키보드 설계 관리 프로그램/무제 파일.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "content/LMS/프로그램 목록/키보드 설계 관리 프로그램/무제 파일.md"
-              }
+              "state": {}
             }
           }
         ],
@@ -134,11 +126,12 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
       "oz-clear-unused-images:Clear Unused Images": false,
+      "remotely-save:Remotely Save": false,
       "templater-obsidian:Templater": false,
       "switcher:퀵 스위처 열기": false,
       "canvas:새 캔버스 만들기": false,
@@ -146,47 +139,56 @@
       "templates:템플릿 삽입": false,
       "command-palette:명령어 팔레트 열기": false,
       "obsidian-excalidraw-plugin:Create new drawing": false,
-      "graph:그래프 뷰 열기": false,
-      "remotely-save:Remotely Save": false
+      "graph:그래프 뷰 열기": false
     }
   },
-  "active": "69808d86fd99e510",
+  "active": "d78d80d016f018bd",
   "lastOpenFiles": [
-    "content/LMS/프로그램 목록/자동 출석체크 관리 프로그램/설계하기.md",
+    "content/LMS/서버목록/데이터베이스 서버/LMS DB 작업내역/ATTENDANCE/TABLE/DOMAIN_LIST.md",
+    "content/LMS/서버목록/데이터베이스 서버/LMS DB 작업내역/ATTENDANCE/TABLE/DOMAIN_ACCNT_LIST.md",
+    "content/LMS/서버목록/데이터베이스 서버/LMS DB 작업내역/ATTENDANCE/TABLE/ACT_LIST.md",
+    "content/LMS/서버목록/데이터베이스 서버/LMS DB 작업내역/ATTENDANCE/TABLE/ATNDNC_LOG.md",
+    "content/LMS/서버목록/데이터베이스 서버/LMS DB 작업내역/PUBLIC/FUNCTION/CUSTOM_RANDOM.md",
+    "content/LMS/서버목록/데이터베이스 서버/LMS DB 작업내역/ATTENDANCE/TABLE",
+    "content/LMS/서버목록/데이터베이스 서버/LMS DB 작업내역/PUBLIC/FUNCTION",
+    "content/LMS/프로그램 목록/자동 출석체크 실행 프로그램/설계하기/DB설계.md",
+    "content/LMS/프로그램 목록/자동 출석체크 실행 프로그램/설계하기/기능설계.md",
+    "content/LMS/서버목록/애플리케이션 서버/서버 세팅정보/2. 파이썬 크론탭 자동실행 환경 설정.md",
+    "content/LMS/서버목록/애플리케이션 서버/서버 세팅정보/1. 서버 기본환경 설정.md",
+    "content/LMS/서버목록/데이터베이스 서버/서버 세팅정보/2. PostgreSQL User 추가.md",
+    "content/LMS/서버목록/데이터베이스 서버/서버 세팅정보/1. PostgreSQL 설치.md",
+    "content/LMS/서버목록/데이터베이스 서버/LMS DB 작업내역/ATTENDANCE",
+    "content/LMS/서버목록/데이터베이스 서버/LMS DB 작업내역/PUBLIC",
     "content/LMS/프로그램 목록/키보드 설계 관리 프로그램/무제 파일.md",
-    "content/LMS/프로그램 목록/키보드 설계 관리 프로그램",
-    "content/LMS/프로그램 목록/자동 출석체크 관리 프로그램/구현하기.md",
-    "content/LMS/프로그램 목록/자동 출석체크 관리 프로그램/분석하기.md",
+    "content/LMS/프로그램 목록/자동 출석체크 실행 프로그램/설계하기",
+    "content/LMS/프로그램 목록/자동 출석체크 실행 프로그램/분석하기.md",
+    "content/LMS/프로그램 목록/자동 출석체크 실행 프로그램/구현하기.md",
+    "content/LMS/프로그램 목록/시스템 모니터링 프로그램/무제 파일.md",
     "content/LMS/프로그램 목록/가계부 프로그램/분석하기.md",
-    "content/LMS/데이터베이스 서버/99. PostgreSQL 작업내역.md",
-    "content/LMS/데이터베이스 서버/2. PostgreSQL User 추가.md",
-    "content/LMS/데이터베이스 서버/1. PostgreSQL 설치.md",
-    "content/LMS/LMS 서버/1. 파이썬 크론탭 자동실행 환경 설정.md",
-    "content/LMS/공통 기본환경 설정.md",
-    "content/miniproject/자동 출석 체크 프로그램/설계하기.md",
-    "content/LMS/프로그램 목록/가계부 프로그램/무제 파일.md",
-    "content/LMS/프로그램 목록/자동 출석체크 관리 프로그램",
-    "content/LMS/프로그램 목록/가계부 프로그램",
-    "content/LMS/프로그램 목록",
-    "content/LMS/LMS 서버",
-    "content/LMS/LMS 서버/파이썬 crontab 실행환경 세팅.md",
-    "content/LMS/1. 우분투 기본 환경 설정.md",
-    "content/LMS/데이터베이스 서버",
-    "content/LMS/LMS 서버",
-    "content/LMS/데이터베이스 서버/PostgreSQL 세팅.md",
-    "content/LMS/1. 데이터베이스 구축/2. 데이터베이스 구축.md",
-    "content/miniproject/자동 출석 체크 프로그램/실행하기.md",
-    "content/LMS/1. 데이터베이스 구축",
-    "content/miniproject/자동 출석 체크 프로그램/구현하기.md",
-    "content/miniproject/자동 출석 체크 프로그램/분석하기.md",
-    "content/LMS",
-    "README.md",
-    "CODE_OF_CONDUCT.md",
-    "docs/upgrading.md",
-    "docs/showcase.md",
-    "docs/setting up your GitHub repository.md",
-    "docs/philosophy.md",
-    "docs/layout.md",
-    "content/miniproject/자동 출석 체크 프로그램"
+    "content/LMS/서버목록/애플리케이션 서버/서버 세팅정보",
+    "content/LMS/서버목록/데이터베이스 서버/서버 세팅정보",
+    "content/LMS/서버목록/데이터베이스 서버/LMS DB 작업내역",
+    "content/Java/언어 알아보기 List/클래스와 객체 List/클래스에 생성자 제공.md",
+    "content/Java/언어 알아보기 List/클래스와 객체 List/클래스에 대해 자세히 알아보기.md",
+    "content/Java/언어 알아보기 List/클래스와 객체 List/클래스 생성하기.md",
+    "content/Java/언어 알아보기 List/클래스와 객체 List/중첩 클래스.md",
+    "content/Java/언어 알아보기 List/클래스와 객체 List/중첩 클래스, 로컬 클래스, 익명 클래스 및 람다 표현식을 사용하는 경우.md",
+    "content/Java/언어 알아보기 List/클래스와 객체 List/열거형.md",
+    "content/Java/언어 알아보기 List/클래스와 객체 List/메서드 정의하기.md",
+    "content/Java/언어 알아보기 List/클래스와 객체 List/메서드 및 생성자 호출하기.md",
+    "content/Java/언어 알아보기 List/클래스와 객체 List/객체 생성 및 사용.md",
+    "content/Java/언어 알아보기 List/제네릭 List/타입 추론.md",
+    "content/LMS/프로그램 목록/키보드 설계 관리 프로그램",
+    "content/LMS/프로그램 목록/자동 출석체크 실행 프로그램",
+    "content/images/출첵물리.png",
+    "content/images/출첵논리.png",
+    "content/images/Pasted image 20240519225829.png",
+    "content/images/Pasted image 20240522085339.png",
+    "content/images/Pasted image 20240521230508.png",
+    "content/images/Pasted image 20240521230611.png",
+    "content/images/Pasted image 20240519223330.png",
+    "content/images/Pasted image 20240519223240.png",
+    "content/images/Pasted image 20240428042333.jpg",
+    "quartz/static/og-image.png"
   ]
 }
