@@ -8,21 +8,21 @@
   "collapse-color-groups": false,
   "colorGroups": [
     {
-      "query": "path:Java  ",
+      "query": "path:content/Java  ",
       "color": {
         "a": 1,
         "rgb": 14048348
       }
     },
     {
-      "query": "path:Obsidian  ",
+      "query": "path:content/Obsidian  ",
       "color": {
         "a": 1,
         "rgb": 14069084
       }
     },
     {
-      "query": "path:\"Quartz Help\"  ",
+      "query": "path:content/LMS  ",
       "color": {
         "a": 1,
         "rgb": 11392604
@@ -46,6 +46,6 @@
   "repelStrength": 10.0519750519751,
   "linkStrength": 1,
   "linkDistance": 250,
-  "scale": 0.16348370567220533,
+  "scale": 0.11660891579457341,
   "close": false
 }

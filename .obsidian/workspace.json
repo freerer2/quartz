@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/LMS/프로그램 목록/자동 출석체크 실행 프로그램.md",
+                "file": "content/LMS/프로그램 목록/index.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/LMS/프로그램 목록/자동 출석체크 실행 프로그램.md",
+                "file": "content/LMS/프로그램 목록/index.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/LMS/프로그램 목록/자동 출석체크 실행 프로그램.md",
+                "file": "content/LMS/프로그램 목록/index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/LMS/프로그램 목록/자동 출석체크 실행 프로그램.md"
+                "file": "content/LMS/프로그램 목록/index.md"
               }
             }
           }
@@ -152,10 +152,12 @@
   },
   "active": "d78d80d016f018bd",
   "lastOpenFiles": [
-    "content/LMS/프로그램 목록/자동 출석체크 실행 프로그램/설계하기.md",
     "content/LMS/프로그램 목록/자동 출석체크 실행 프로그램.md",
-    "content/LMS/프로그램 목록/자동 출석체크 실행 프로그램/분석하기.md",
+    "content/LMS/프로그램 목록/index.md",
     "content/LMS/개인관리시스템.md",
+    "content/LMS/프로그램 목록/자동 출석체크 실행 프로그램/설계하기.md",
+    "content/LMS/프로그램 목록/자동 출석체크 실행 프로그램/분석하기.md",
+    "content/LMS/프로그램 목록/키보드 설계 관리 프로그램/무제 파일.md",
     "content/index.md",
     "content/LMS/서버 목록/데이터베이스 서버/LMS DB 작업내역/LMS DB.md",
     "content/LMS/서버 목록/데이터베이스 서버/LMS DB 작업내역/PUBLIC SCHEMA/FUNCTION/CUSTOM_RANDOM.md",
@@ -177,7 +179,6 @@
     "content/LMS/서버 목록/데이터베이스 서버/서버 세팅정보/1. PostgreSQL 설치.md",
     "content/LMS/서버 목록/데이터베이스 서버/LMS DB 작업내역/ATTENDANCE SCHEMA",
     "content/LMS/서버 목록/데이터베이스 서버/LMS DB 작업내역/PUBLIC SCHEMA",
-    "content/LMS/프로그램 목록/키보드 설계 관리 프로그램/무제 파일.md",
     "content/LMS/프로그램 목록/자동 출석체크 실행 프로그램/설계하기",
     "content/LMS/프로그램 목록/시스템 모니터링 프로그램/무제 파일.md",
     "content/LMS/프로그램 목록/가계부 프로그램/분석하기.md",
