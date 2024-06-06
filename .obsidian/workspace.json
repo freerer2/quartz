@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/LMS/프로그램/자동 출석체크 실행 프로그램/개요.md",
+                "file": "content/index.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/LMS/프로그램/자동 출석체크 실행 프로그램/개요.md",
+                "file": "content/index.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/LMS/프로그램/자동 출석체크 실행 프로그램/개요.md",
+                "file": "content/index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/LMS/프로그램/자동 출석체크 실행 프로그램/개요.md"
+                "file": "content/index.md"
               }
             }
           }
@@ -152,8 +152,8 @@
   },
   "active": "07bc3146cc8868f0",
   "lastOpenFiles": [
-    "content/LMS/개인관리시스템.md",
     "content/LMS/프로그램/자동 출석체크 실행 프로그램/개요.md",
+    "content/LMS/개인관리시스템.md",
     "프로그램 목록.md",
     "content/index.md",
     "content/LMS/프로그램/자동 출석체크 실행 프로그램/분석하기.md",
