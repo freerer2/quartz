@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "LMS/서버/데이터베이스 서버/LMS DB 작업내역/ATTENDANCE SCHEMA/TABLE/DOMAIN_LIST.md",
+                "file": "LMS/프로그램/자동 출석체크 실행 프로그램/DB작업.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "LMS/서버/데이터베이스 서버/LMS DB 작업내역/ATTENDANCE SCHEMA/TABLE/DOMAIN_LIST.md",
+                "file": "LMS/프로그램/자동 출석체크 실행 프로그램/DB작업.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "LMS/서버/데이터베이스 서버/LMS DB 작업내역/ATTENDANCE SCHEMA/TABLE/DOMAIN_LIST.md",
+                "file": "LMS/프로그램/자동 출석체크 실행 프로그램/DB작업.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "LMS/서버/데이터베이스 서버/LMS DB 작업내역/ATTENDANCE SCHEMA/TABLE/DOMAIN_LIST.md"
+                "file": "LMS/프로그램/자동 출석체크 실행 프로그램/DB작업.md"
               }
             }
           }
@@ -152,12 +152,17 @@
   },
   "active": "07bc3146cc8868f0",
   "lastOpenFiles": [
-    "LMS/서버/데이터베이스 서버/LMS DB 작업내역/ATTENDANCE SCHEMA/TABLE/DOMAIN_ACCNT_LIST.md",
-    "LMS/서버/데이터베이스 서버/LMS DB 작업내역/ATTENDANCE SCHEMA/TABLE/ACT_LIST.md",
+    "LMS/개인관리시스템.md",
+    "LMS/프로그램/자동 출석체크 실행 프로그램/DB작업.md",
     "LMS/서버/데이터베이스 서버/LMS DB 작업내역/ATTENDANCE SCHEMA/TABLE/ATNDNC_LOG.md",
+    "LMS/서버/데이터베이스 서버/LMS DB 작업내역/ATTENDANCE SCHEMA/TABLE/ACT_LIST.md",
+    "LMS/서버/데이터베이스 서버/LMS DB 작업내역/ATTENDANCE SCHEMA/TABLE/DOMAIN_ACCNT_LIST.md",
     "LMS/서버/데이터베이스 서버/LMS DB 작업내역/ATTENDANCE SCHEMA/TABLE/DOMAIN_LIST.md",
     "LMS/서버/데이터베이스 서버/LMS DB 작업내역/PUBLIC SCHEMA/FUNCTION/CUSTOM_RANDOM.md",
     "LMS/서버/데이터베이스 서버/LMS DB 작업내역/LMS DB.md",
+    "LMS/서버/애플리케이션 서버/서버 세팅정보/2. 파이썬 크론탭 자동실행 환경 설정.md",
+    "LMS/프로그램/자동 출석체크 실행 프로그램/분석하기.md",
+    "LMS/프로그램/자동 출석체크 실행 프로그램/설계하기.md",
     "언어 배우기/Java/언어 알아보기 List/숫자 및 문자열 List/문자열.md",
     "언어 배우기/Java/언어 알아보기 List/숫자 및 문자열 List/문자.md",
     "언어 배우기/Java/언어 알아보기 List/숫자 및 문자열.md",
@@ -166,12 +171,10 @@
     "언어 배우기/Java/언어 알아보기 List/숫자 및 문자열 List/숫자.md",
     "언어 배우기/Java/언어 알아보기.md",
     "언어 배우기/Java/Java 배우기.md",
-    "LMS/개인관리시스템.md",
     "언어 배우기/언어 목록.md",
     "LMS/프로그램/텔레그램 알림 봇 프로그램/설계하기.md",
     "LMS/프로그램/텔레그램 알림 봇 프로그램/분석하기.md",
     "index.md",
-    "LMS/프로그램/자동 출석체크 실행 프로그램/설계하기.md",
     "LMS/프로그램/자동 출석체크 실행 프로그램/설계하기/기능설계.md",
     "LMS/프로그램/자동 출석체크 실행 프로그램/설계하기/DB설계.md",
     "templates/초안.md",
@@ -180,10 +183,7 @@
     "images/출첵논리.png",
     "private/images/출첵논리.png",
     "images/사과.jpg",
-    "Java/언어 알아보기.md",
-    "Template/초안.md",
     "images/사과 1.jpg",
-    "Java/Java 배우기.md",
     "images/dns records.png",
     "images/da0201_0401.gif",
     "images/quartz layout.png",
