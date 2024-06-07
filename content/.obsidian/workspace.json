@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "LMS/개인관리시스템.md",
+                "file": "언어 배우기/Java/언어 알아보기 List/숫자 및 문자열 List/문자열.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "LMS/개인관리시스템.md",
+                "file": "언어 배우기/Java/언어 알아보기 List/숫자 및 문자열 List/문자열.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "LMS/개인관리시스템.md",
+                "file": "언어 배우기/Java/언어 알아보기 List/숫자 및 문자열 List/문자열.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "LMS/개인관리시스템.md"
+                "file": "언어 배우기/Java/언어 알아보기 List/숫자 및 문자열 List/문자열.md"
               }
             }
           }
@@ -134,7 +134,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 260.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -152,8 +152,17 @@
   },
   "active": "07bc3146cc8868f0",
   "lastOpenFiles": [
-    "LMS/프로그램/텔레그램 알림 봇 프로그램/설계하기.md",
+    "언어 배우기/Java/언어 알아보기 List/숫자 및 문자열.md",
+    "언어 배우기/Java/언어 알아보기 List/숫자 및 문자열 List/자동 박싱 및 언박싱.md",
+    "언어 배우기/Java/언어 알아보기 List/숫자 및 문자열 List/문자열 빌더.md",
+    "언어 배우기/Java/언어 알아보기 List/숫자 및 문자열 List/문자열.md",
+    "언어 배우기/Java/언어 알아보기 List/숫자 및 문자열 List/문자.md",
+    "언어 배우기/Java/언어 알아보기 List/숫자 및 문자열 List/숫자.md",
+    "언어 배우기/Java/언어 알아보기.md",
+    "언어 배우기/Java/Java 배우기.md",
     "LMS/개인관리시스템.md",
+    "언어 배우기/언어 목록.md",
+    "LMS/프로그램/텔레그램 알림 봇 프로그램/설계하기.md",
     "LMS/프로그램/텔레그램 알림 봇 프로그램/분석하기.md",
     "index.md",
     "LMS/프로그램/자동 출석체크 실행 프로그램/설계하기.md",
@@ -177,16 +186,7 @@
     "Quartz Help/hosting.md",
     "images/dns records.png",
     "images/da0201_0401.gif",
-    "Java/언어 알아보기 List/상속.md",
-    "Java/언어 알아보기 List/예외.md",
-    "Quartz Help/showcase.md",
-    "Java/언어 알아보기 List/제네릭.md",
-    "Java/언어 알아보기 List/패키지.md",
-    "Quartz Help/philosophy.md",
-    "Quartz Help/upgrading.md",
     "images/quartz layout.png",
-    "Java/언어 알아보기 List/인터페이스.md",
-    "Quartz Help/tags/plugin.md",
     "images/github-quick-setup.png",
     "Quartz Help/images/dns records.png",
     "Java/언어 알아보기 List/예외 List",
