@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "언어 배우기/Java/언어 알아보기/상속/수퍼클래스로서의 객체.md",
+                "file": "언어 배우기/Java/언어 알아보기.md",
                 "mode": "source",
                 "source": false
               }
@@ -97,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "언어 배우기/Java/언어 알아보기/상속/수퍼클래스로서의 객체.md",
+                "file": "언어 배우기/Java/언어 알아보기.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "언어 배우기/Java/언어 알아보기/상속/수퍼클래스로서의 객체.md",
+                "file": "언어 배우기/Java/언어 알아보기.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,11 +137,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "언어 배우기/Java/언어 알아보기/상속/수퍼클래스로서의 객체.md"
+                "file": "언어 배우기/Java/언어 알아보기.md"
               }
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -163,10 +164,13 @@
   },
   "active": "0815f3107d454622",
   "lastOpenFiles": [
-    "언어 배우기/Java/언어 알아보기/상속.md",
-    "언어 배우기/Java/언어 알아보기/상속/다형성.md",
-    "언어 배우기/Java/언어 알아보기/상속/수퍼클래스로서의 객체.md",
+    "언어 배우기/Java/언어 알아보기/인터페이스.md",
     "언어 배우기/Java/언어 알아보기.md",
+    "언어 배우기/Java/언어 알아보기/상속.md",
+    "언어 배우기/Java/언어 알아보기/상속/추상 메서드와 클래스.md",
+    "언어 배우기/Java/언어 알아보기/클래스와 객체.md",
+    "언어 배우기/Java/언어 알아보기/상속/수퍼클래스로서의 객체.md",
+    "언어 배우기/Java/언어 알아보기/상속/다형성.md",
     "언어 배우기/Java/언어 알아보기/숫자 및 문자열/숫자.md",
     "언어 배우기/Java/언어 알아보기/Java 언어 기초/표현식, 구문 및 블록.md",
     "언어 배우기/Java/언어 알아보기/Java 언어 기초.md",
@@ -186,9 +190,6 @@
     "언어 배우기/Java/언어 알아보기/클래스와 객체/객체 생성 및 사용.md",
     "언어 배우기/Java/언어 알아보기/클래스와 객체/메서드 정의하기.md",
     "언어 배우기/Java/언어 알아보기/클래스와 객체/메서드 및 생성자 호출하기.md",
-    "언어 배우기/Java/언어 알아보기/인터페이스/인터페이스를 타입으로 사용하기.md",
-    "언어 배우기/Java/언어 알아보기/인터페이스/인터페이스란.md",
-    "언어 배우기/Java/언어 알아보기/인터페이스/인터페이스 구현하기.md",
     "언어 배우기/Java/언어 알아보기/제네릭",
     "언어 배우기/Java/언어 알아보기/클래스와 객체",
     "언어 배우기/Java/언어 알아보기/인터페이스",
