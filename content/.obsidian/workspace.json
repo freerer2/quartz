@@ -13,7 +13,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "언어 배우기/Java/언어 알아보기.md",
+                "file": "언어 배우기/Java/언어 알아보기/숫자 및 문자열/숫자.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "879863fdff8a89a2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "언어 배우기/Java/언어 알아보기/Java 언어 기초/표현식, 구문 및 블록.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "언어 배우기/Java/언어 알아보기.md",
+                "file": "언어 배우기/Java/언어 알아보기/숫자 및 문자열/숫자.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "언어 배우기/Java/언어 알아보기.md",
+                "file": "언어 배우기/Java/언어 알아보기/숫자 및 문자열/숫자.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,12 +137,11 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "언어 배우기/Java/언어 알아보기.md"
+                "file": "언어 배우기/Java/언어 알아보기/숫자 및 문자열/숫자.md"
               }
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
@@ -152,6 +163,11 @@
   },
   "active": "0815f3107d454622",
   "lastOpenFiles": [
+    "언어 배우기/Java/언어 알아보기/Java 언어 기초/표현식, 구문 및 블록.md",
+    "언어 배우기/Java/언어 알아보기/숫자 및 문자열/숫자.md",
+    "언어 배우기/Java/언어 알아보기/Java 언어 기초.md",
+    "언어 배우기/Java/언어 알아보기.md",
+    "언어 배우기/Java/언어 알아보기/숫자 및 문자열.md",
     "언어 배우기/Java/언어 알아보기 List/상속.md",
     "언어 배우기/Java/언어 알아보기/제네릭/타입 추론.md",
     "언어 배우기/Java/언어 알아보기/제네릭/제네릭에 대한 제한.md",
@@ -173,11 +189,6 @@
     "언어 배우기/Java/언어 알아보기/예외/확인되지 않은 예외.md",
     "언어 배우기/Java/언어 알아보기/숫자 및 문자열/오토박싱 및 언박싱.md",
     "언어 배우기/Java/언어 알아보기/예외/예외란.md",
-    "언어 배우기/Java/언어 알아보기/예외/예외 던지기.md",
-    "언어 배우기/Java/언어 알아보기/예외/예외 감지 및 처리.md",
-    "언어 배우기/Java/언어 알아보기/숫자 및 문자열/숫자.md",
-    "언어 배우기/Java/언어 알아보기/숫자 및 문자열/문자열.md",
-    "언어 배우기/Java/언어 알아보기/숫자 및 문자열/문자.md",
     "언어 배우기/Java/언어 알아보기/제네릭",
     "언어 배우기/Java/언어 알아보기/클래스와 객체",
     "언어 배우기/Java/언어 알아보기/인터페이스",
