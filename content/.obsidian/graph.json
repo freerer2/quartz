@@ -1,6 +1,6 @@
 {
   "collapse-filter": false,
-  "search": "path:content path:-content_backup  ",
+  "search": "path: -\"서버\"",
   "showTags": false,
   "showAttachments": false,
   "hideUnresolved": true,
@@ -8,31 +8,24 @@
   "collapse-color-groups": false,
   "colorGroups": [
     {
-      "query": "path:content/Java  ",
+      "query": "path:\"언어 배우기/Java\"  ",
       "color": {
         "a": 1,
         "rgb": 14048348
       }
     },
     {
-      "query": "path:content/Obsidian  ",
+      "query": "path:\"LMS\"  ",
       "color": {
         "a": 1,
         "rgb": 14069084
       }
     },
     {
-      "query": "path:content/LMS  ",
+      "query": "path:\"언어 배우기/Obsidian\"  ",
       "color": {
         "a": 1,
         "rgb": 11392604
-      }
-    },
-    {
-      "query": "file:index",
-      "color": {
-        "a": 1,
-        "rgb": 16777215
       }
     }
   ],
@@ -46,6 +39,6 @@
   "repelStrength": 10.0519750519751,
   "linkStrength": 1,
   "linkDistance": 250,
-  "scale": 0.32133638605035936,
+  "scale": 0.22920135941749428,
   "close": false
 }
