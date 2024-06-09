@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "LMS/프로그램/자동 출석체크 실행 프로그램/DB작업.md",
+                "file": "index.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "LMS/프로그램/자동 출석체크 실행 프로그램/DB작업.md",
+                "file": "index.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "LMS/프로그램/자동 출석체크 실행 프로그램/DB작업.md",
+                "file": "index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "LMS/프로그램/자동 출석체크 실행 프로그램/DB작업.md"
+                "file": "index.md"
               }
             }
           }
@@ -152,7 +152,23 @@
   },
   "active": "07bc3146cc8868f0",
   "lastOpenFiles": [
+    "templates/초안.md",
+    "언어 배우기/언어 목록.md",
+    "언어 배우기/Java/Java 배우기.md",
+    "index.md",
+    "언어 배우기/Java/언어 알아보기.md",
+    "tags/component.md",
+    "tags/plugin.md",
+    "언어 배우기/Obsidian/고급 문법.md",
+    "언어 배우기/Obsidian/기본 문법.md",
+    "언어 배우기/Obsidian/노트 속성.md",
+    "언어 배우기/Obsidian/Mermaid.md",
+    "언어 배우기/Obsidian/콜아웃.md",
+    "언어 배우기/Obsidian/코드블럭 지원 언어.md",
+    "언어 배우기/Obsidian/웹 페이지 임베딩.md",
     "LMS/개인관리시스템.md",
+    "LMS/프로그램/LMS/키보드 설계 관리 기능/무제 파일.md",
+    "LMS/프로그램/LMS/핫딜 알림 관리 기능/무제 파일.md",
     "LMS/프로그램/자동 출석체크 실행 프로그램/DB작업.md",
     "LMS/서버/데이터베이스 서버/LMS DB 작업내역/ATTENDANCE SCHEMA/TABLE/ATNDNC_LOG.md",
     "LMS/서버/데이터베이스 서버/LMS DB 작업내역/ATTENDANCE SCHEMA/TABLE/ACT_LIST.md",
@@ -162,22 +178,6 @@
     "LMS/서버/데이터베이스 서버/LMS DB 작업내역/LMS DB.md",
     "LMS/서버/애플리케이션 서버/서버 세팅정보/2. 파이썬 크론탭 자동실행 환경 설정.md",
     "LMS/프로그램/자동 출석체크 실행 프로그램/분석하기.md",
-    "LMS/프로그램/자동 출석체크 실행 프로그램/설계하기.md",
-    "언어 배우기/Java/언어 알아보기 List/숫자 및 문자열 List/문자열.md",
-    "언어 배우기/Java/언어 알아보기 List/숫자 및 문자열 List/문자.md",
-    "언어 배우기/Java/언어 알아보기 List/숫자 및 문자열.md",
-    "언어 배우기/Java/언어 알아보기 List/숫자 및 문자열 List/자동 박싱 및 언박싱.md",
-    "언어 배우기/Java/언어 알아보기 List/숫자 및 문자열 List/문자열 빌더.md",
-    "언어 배우기/Java/언어 알아보기 List/숫자 및 문자열 List/숫자.md",
-    "언어 배우기/Java/언어 알아보기.md",
-    "언어 배우기/Java/Java 배우기.md",
-    "언어 배우기/언어 목록.md",
-    "LMS/프로그램/텔레그램 알림 봇 프로그램/설계하기.md",
-    "LMS/프로그램/텔레그램 알림 봇 프로그램/분석하기.md",
-    "index.md",
-    "LMS/프로그램/자동 출석체크 실행 프로그램/설계하기/기능설계.md",
-    "LMS/프로그램/자동 출석체크 실행 프로그램/설계하기/DB설계.md",
-    "templates/초안.md",
     "templates",
     "images/출첵물리.png",
     "images/출첵논리.png",
