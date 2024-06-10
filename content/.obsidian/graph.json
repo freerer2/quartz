@@ -8,7 +8,7 @@
   "collapse-color-groups": false,
   "colorGroups": [
     {
-      "query": "path:\"언어 배우기/Java\"  ",
+      "query": "path:\"개발언어/Java\"  ",
       "color": {
         "a": 1,
         "rgb": 14048348
@@ -22,7 +22,7 @@
       }
     },
     {
-      "query": "path:\"언어 배우기/Obsidian\"  ",
+      "query": "path:\"개발언어/Obsidian\"  ",
       "color": {
         "a": 1,
         "rgb": 11392604
@@ -39,6 +39,6 @@
   "repelStrength": 10.0519750519751,
   "linkStrength": 1,
   "linkDistance": 250,
-  "scale": 0.4505081176757839,
+  "scale": 0.16348370567220596,
   "close": false
 }
