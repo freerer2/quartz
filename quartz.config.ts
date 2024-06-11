@@ -14,7 +14,7 @@ const config: QuartzConfig = {
     analytics: null,
     // locale: "en-US",
     locale: "ko-KR",
-    baseUrl: "quartz.jzhao.xyz",
+    baseUrl: "lhk-lms.pages.dev",
     ignorePatterns: ["private", ".makemd", ".obsidian", ".obsidian-mobile", ".space", ".trash"],
     defaultDateType: "created",
     theme: {
