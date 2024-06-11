@@ -11,9 +11,7 @@ const config: QuartzConfig = {
     pageTitle: "🪴 Quartz 4.0",
     enableSPA: true,
     enablePopovers: true,
-    analytics: {
-      provider: "plausible",
-    },
+    analytics: null,
     // locale: "en-US",
     locale: "ko-KR",
     baseUrl: "quartz.jzhao.xyz",
