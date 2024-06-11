@@ -13,11 +13,6 @@ export const sharedPageComponents: SharedLayout = {
   }),
 }
 
-const Explorer = Component.Explorer({
-  title: "목록",
-  folderClickBehavior:"link"
-})
-
 // components for pages that display a single page (e.g. a single note)
 export const defaultContentPageLayout: PageLayout = {
   beforeBody: [
@@ -32,7 +27,15 @@ export const defaultContentPageLayout: PageLayout = {
     Component.Search(),
     Component.Darkmode(),
     // Component.DesktopOnly(Component.Explorer()),
-    Explorer,
+    Component.DesktopOnly(Component.Explorer({
+      title: "목록",
+      folderClickBehavior:"link",
+    })),
+    Component.MobileOnly(Component.Explorer({
+      title: "목록",
+      folderClickBehavior:"link",
+      folderDefaultState: "collapsed",
+    })),
   ],
   right: [
     Component.Graph(),
@@ -50,7 +53,11 @@ export const defaultListPageLayout: PageLayout = {
     Component.MobileOnly(Component.Spacer()),
     Component.Search(),
     Component.Darkmode(),
-    Explorer,
+    // Component.Explorer(),
+    Component.DesktopOnly(Component.Explorer({
+      title: "목록",
+      folderClickBehavior:"link",
+    })),
   ],
   right: [],
 }
