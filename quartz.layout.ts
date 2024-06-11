@@ -13,7 +13,7 @@ export const sharedPageComponents: SharedLayout = {
   }),
 }
 
-const explorer = Component.Explorer({
+const Explorer = Component.Explorer({
   title: "목록",
   folderClickBehavior:"link"
 })
@@ -32,11 +32,12 @@ export const defaultContentPageLayout: PageLayout = {
     Component.Search(),
     Component.Darkmode(),
     // Component.DesktopOnly(Component.Explorer()),
-    explorer,
+    Explorer,
   ],
   right: [
     Component.Graph(),
-    Component.DesktopOnly(Component.TableOfContents()),
+    // Component.DesktopOnly(Component.TableOfContents()),
+    Component.TableOfContents(),
     Component.Backlinks(),
   ],
 }
@@ -49,7 +50,7 @@ export const defaultListPageLayout: PageLayout = {
     Component.MobileOnly(Component.Spacer()),
     Component.Search(),
     Component.Darkmode(),
-    explorer,
+    Explorer,
   ],
   right: [],
 }
