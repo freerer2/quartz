@@ -13,6 +13,13 @@ export const sharedPageComponents: SharedLayout = {
   }),
 }
 
+import { Options } from "./quartz/components/ExplorerNode"
+
+const defaultOptions = {
+  title: "목록",
+  folderClickBehavior:"link",
+} satisfies Partial<Options>
+
 // components for pages that display a single page (e.g. a single note)
 export const defaultContentPageLayout: PageLayout = {
   beforeBody: [
@@ -27,15 +34,8 @@ export const defaultContentPageLayout: PageLayout = {
     Component.Search(),
     Component.Darkmode(),
     // Component.DesktopOnly(Component.Explorer()),
-    Component.DesktopOnly(Component.Explorer({
-      title: "목록",
-      folderClickBehavior:"link",
-    })),
-    Component.MobileOnly(Component.Explorer({
-      title: "목록",
-      folderClickBehavior:"link",
-      folderDefaultState: "collapsed",
-    })),
+    Component.DesktopOnly(Component.Explorer({...defaultOptions})),
+    Component.MobileOnly(Component.Explorer({...defaultOptions, folderDefaultState: "collapsed"})),
   ],
   right: [
     Component.Graph(),
@@ -54,10 +54,7 @@ export const defaultListPageLayout: PageLayout = {
     Component.Search(),
     Component.Darkmode(),
     // Component.Explorer(),
-    Component.DesktopOnly(Component.Explorer({
-      title: "목록",
-      folderClickBehavior:"link",
-    })),
+    Component.Explorer({...defaultOptions}),
   ],
   right: [],
 }
