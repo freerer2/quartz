@@ -25,6 +25,10 @@ const defaultOptions = {
         numeric: true,
         sensitivity: "base",
       })
+
+      // 프로퍼티 접근
+      // a.displayName
+      // a.file?.frontmatter?.title
     }
 
     if (a.file && !b.file) {
