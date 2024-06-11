@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/개발언어/Java/언어 알아보기/index.md",
+                "file": "content/개발언어/Java/Java 배우기.md",
                 "mode": "source",
                 "source": false
               }
@@ -97,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/개발언어/Java/언어 알아보기/index.md",
+                "file": "content/개발언어/Java/Java 배우기.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/개발언어/Java/언어 알아보기/index.md",
+                "file": "content/개발언어/Java/Java 배우기.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/개발언어/Java/언어 알아보기/index.md"
+                "file": "content/개발언어/Java/Java 배우기.md"
               }
             }
           }
@@ -161,6 +161,13 @@
   },
   "active": "a419a5463b655f0d",
   "lastOpenFiles": [
+    "content/개발언어/Java/API 마스터하기/index.md",
+    "content/개발언어/Java/Java 배우기.md",
+    "public/개발언어/Java/API-마스터하기/API-마스터하기.html",
+    "public/개발언어/Java/언어 알아보기/언어 알아보기.html",
+    "public/개발언어/Java/언어 알아보기",
+    "content/개발언어/Java/언어 알아보기/Java 언어 기초.md",
+    "content/개발언어/Java/언어 알아보기/index.md",
     "content/개발언어/Java/언어 알아보기/클래스와 객체/열거형.md",
     "public/개발언어/Java/언어-알아보기/언어-알아보기.html",
     "content/문서관리/configuration.md",
@@ -175,8 +182,6 @@
     "content/개발언어/Java/언어 알아보기/상속/추상 메서드와 클래스.md",
     "content/개발언어/Java/언어 알아보기/인터페이스/인터페이스를 타입으로 사용하기.md",
     "content/개발언어/Java/언어 알아보기/상속.md",
-    "content/개발언어/Java/언어 알아보기/index.md",
-    "content/개발언어/Java/언어 알아보기/Java 언어 기초.md",
     "content/개발언어/Java/언어 알아보기/패턴 매칭 사용.md",
     "content/개발언어/Java/언어 알아보기/패키지.md",
     "content/tags/component.md",
