@@ -1,3 +1,9 @@
+---
+title: Obsidian
+aliases:
+  - Obsidian
+---
+
 - [[기본 문법]]
 - [[고급 문법]]
 - [[콜아웃]]

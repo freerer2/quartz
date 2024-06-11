@@ -34,7 +34,6 @@ export const defaultContentPageLayout: PageLayout = {
     Component.Search(),
     Component.Darkmode(),
     Component.DesktopOnly(Component.Explorer({...defaultOptions})),
-    Component.MobileOnly(Component.Explorer({...defaultOptions, folderDefaultState: "collapsed"})),
   ],
   right: [
     Component.Graph(),
