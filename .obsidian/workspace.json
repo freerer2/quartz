@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/index.md",
+                "file": "content/문서관리/index.md",
                 "mode": "source",
                 "source": false
               }
@@ -97,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/index.md",
+                "file": "content/문서관리/index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "content/index.md",
+                "file": "content/문서관리/index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/index.md"
+                "file": "content/문서관리/index.md"
               }
             }
           }
@@ -160,6 +160,7 @@
   },
   "active": "a419a5463b655f0d",
   "lastOpenFiles": [
+    "content/index.md",
     "content/개발언어/Design Patterns/무제 파일.md",
     "content/개발언어/Java/언어 알아보기/인터페이스/인터페이스란.md",
     "content/개발언어/Design Patterns",
