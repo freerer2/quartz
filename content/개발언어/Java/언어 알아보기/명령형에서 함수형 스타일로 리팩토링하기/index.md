@@ -1,3 +1,9 @@
+---
+title: 명령형에서 함수형 스타일로 리팩토링하기
+aliases:
+  - 명령형에서 함수형 스타일로 리팩토링하기
+---
+
 This page was contributed by [Venkat Subramaniam](https://dev.java/author/VenkatSubramaniam) under the [UPL](https://oss.oracle.com/licenses/upl/)  
 
 This part of the tutorial helps you to learn the functional style equivalent of the imperative style code we often find. As you move forward in your projects, wherever it makes sense, you can change imperative style code to functional style code using the mappings you learn in this tutorial.
