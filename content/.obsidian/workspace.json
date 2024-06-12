@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "개인관리시스템/서버/애플리케이션 서버/index.md",
+                "file": "개발언어/Java/언어 알아보기/제네릭/와일드카드.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "개인관리시스템/서버/애플리케이션 서버/index.md",
+                "file": "개발언어/Java/언어 알아보기/제네릭/와일드카드.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "개인관리시스템/서버/애플리케이션 서버/index.md",
+                "file": "개발언어/Java/언어 알아보기/제네릭/와일드카드.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "개인관리시스템/서버/애플리케이션 서버/index.md"
+                "file": "개발언어/Java/언어 알아보기/제네릭/와일드카드.md"
               }
             }
           }
@@ -152,14 +152,21 @@
   },
   "active": "88b625a15210d72b",
   "lastOpenFiles": [
-    "개인관리시스템/서버/데이터베이스 서버/index.md",
+    "개발언어/Java/언어 알아보기/제네릭/제네릭 소개.md",
+    "개발언어/Java/언어 알아보기/제네릭/제네릭에 대한 제한.md",
+    "개발언어/Java/언어 알아보기/제네릭/타입 추론.md",
+    "개발언어/Java/언어 알아보기/제네릭/와일드카드.md",
+    "개발언어/Java/언어 알아보기/제네릭/index.md",
+    "개발언어/Java/언어 알아보기/index.md",
+    "개발언어/Java/언어 알아보기/예외/index.md",
+    "개발언어/Java/언어 알아보기/패키지.md",
+    "개발언어/Java/언어 알아보기/어노테이션.md",
+    "개발언어/Java/언어 알아보기/람다 표현식/index.md",
+    "개발언어/Java/언어 알아보기/제네릭/타입 삭제.md",
     "개인관리시스템/서버/애플리케이션 서버/index.md",
+    "개인관리시스템/서버/데이터베이스 서버/index.md",
     "개인관리시스템/서버/index.md",
     "개발언어/Java/index.md",
-    "개발언어/Java/언어 알아보기/index.md",
-    "개발언어/Java/언어 알아보기/제네릭/제네릭 소개.md",
-    "개발언어/Java/언어 알아보기/제네릭/index.md",
-    "개발언어/Java/언어 알아보기/제네릭/타입 추론.md",
     "LMS/개인관리시스템.md",
     "문서관리/plugins/TagPage.md",
     "문서관리/plugins/TableOfContents.md",
@@ -171,13 +178,6 @@
     "문서관리/plugins/NotFoundPage.md",
     "문서관리/plugins/Latex.md",
     "문서관리/plugins/index.md",
-    "문서관리/plugins/HardLineBreaks.md",
-    "문서관리/plugins/GitHubFlavoredMarkdown.md",
-    "문서관리/plugins/Frontmatter.md",
-    "문서관리/plugins/FolderPage.md",
-    "문서관리/plugins/ExplicitPublish.md",
-    "문서관리/plugins/Description.md",
-    "문서관리/plugins/CreatedModifiedDate.md",
     "문서관리/plugins",
     "문서관리/features",
     "문서관리/advanced",
