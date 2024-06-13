@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "개발언어/Java/언어 알아보기/제네릭/와일드카드.md",
+                "file": "개인관리시스템/서버/index.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "개발언어/Java/언어 알아보기/제네릭/와일드카드.md",
+                "file": "개인관리시스템/서버/index.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "개발언어/Java/언어 알아보기/제네릭/와일드카드.md",
+                "file": "개인관리시스템/서버/index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "개발언어/Java/언어 알아보기/제네릭/와일드카드.md"
+                "file": "개인관리시스템/서버/index.md"
               }
             }
           }
@@ -152,10 +152,14 @@
   },
   "active": "88b625a15210d72b",
   "lastOpenFiles": [
+    "개발언어/Obsidian/기본 문법.md",
+    "개인관리시스템/서버/index.md",
+    "개인관리시스템/프로그램/index.md",
+    "개인관리시스템/프로그램/자동 출석체크 실행 프로그램/분석하기.md",
+    "개발언어/Java/언어 알아보기/제네릭/와일드카드.md",
     "개발언어/Java/언어 알아보기/제네릭/제네릭 소개.md",
     "개발언어/Java/언어 알아보기/제네릭/제네릭에 대한 제한.md",
     "개발언어/Java/언어 알아보기/제네릭/타입 추론.md",
-    "개발언어/Java/언어 알아보기/제네릭/와일드카드.md",
     "개발언어/Java/언어 알아보기/제네릭/index.md",
     "개발언어/Java/언어 알아보기/index.md",
     "개발언어/Java/언어 알아보기/예외/index.md",
@@ -165,7 +169,6 @@
     "개발언어/Java/언어 알아보기/제네릭/타입 삭제.md",
     "개인관리시스템/서버/애플리케이션 서버/index.md",
     "개인관리시스템/서버/데이터베이스 서버/index.md",
-    "개인관리시스템/서버/index.md",
     "개발언어/Java/index.md",
     "LMS/개인관리시스템.md",
     "문서관리/plugins/TagPage.md",
@@ -175,9 +178,6 @@
     "문서관리/plugins/RemoveDrafts.md",
     "문서관리/plugins/OxHugoFlavoredMarkdown.md",
     "문서관리/plugins/ObsidianFlavoredMarkdown.md",
-    "문서관리/plugins/NotFoundPage.md",
-    "문서관리/plugins/Latex.md",
-    "문서관리/plugins/index.md",
     "문서관리/plugins",
     "문서관리/features",
     "문서관리/advanced",

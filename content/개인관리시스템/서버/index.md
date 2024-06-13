@@ -26,4 +26,5 @@ aliases:
 	- AMD EPYC 7742. Base frequency 2.25 GHz, max boost frequency 3.4 GHz.
 	- AMD EPYC 7J13. Base frequency 2.55 GHz, max boost frequency 3.5 GHz.
 
-[^2]: x86 CPU Architecture의 1 OCPU(AMD 및 Intel) = 2 vCPUs
+[^2]: x86 CPU 아키텍처의 1 OCPU = 2 vCPUs
+	Arm CPU 아키텍처의 1 OCPU = 1 vCPU
