@@ -21,10 +21,10 @@ aliases:
 	- **용도** : 개발된 프로그램들의 실행
 
 ---
-[^1]: 오라클 클라우드 인프라는 다음 프로세서 중 하나를 할당합니다:
+[^1]: 오라클 클라우드 인프라는 다음 프로세서 중 하나를 할당합니다:  
 	- AMD EPYC 7551. Base frequency 2.0 GHz, max boost frequency 3.0 GHz.
 	- AMD EPYC 7742. Base frequency 2.25 GHz, max boost frequency 3.4 GHz.
 	- AMD EPYC 7J13. Base frequency 2.55 GHz, max boost frequency 3.5 GHz.
 
-[^2]: x86 CPU 아키텍처의 1 OCPU = 2 vCPUs
+[^2]: x86 CPU 아키텍처의 1 OCPU = 2 vCPUs  
 	Arm CPU 아키텍처의 1 OCPU = 1 vCPU
