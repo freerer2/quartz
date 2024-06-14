@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "개인관리시스템/서버/index.md",
+                "file": "개발언어/Obsidian/고급 문법.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "개인관리시스템/서버/index.md",
+                "file": "개발언어/Obsidian/고급 문법.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "개인관리시스템/서버/index.md",
+                "file": "개발언어/Obsidian/고급 문법.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "개인관리시스템/서버/index.md"
+                "file": "개발언어/Obsidian/고급 문법.md"
               }
             }
           }
@@ -152,8 +152,8 @@
   },
   "active": "88b625a15210d72b",
   "lastOpenFiles": [
-    "개발언어/Obsidian/기본 문법.md",
     "개인관리시스템/서버/index.md",
+    "개발언어/Obsidian/기본 문법.md",
     "개인관리시스템/프로그램/index.md",
     "개인관리시스템/프로그램/자동 출석체크 실행 프로그램/분석하기.md",
     "개발언어/Java/언어 알아보기/제네릭/와일드카드.md",
