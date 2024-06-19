@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "개발언어/Java/언어 알아보기/제네릭/타입 추론.md",
+                "file": "index.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "2e42d57729f856d2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "기타정보/무료 데이터베이스 정보.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "개발언어/Java/언어 알아보기/제네릭/타입 추론.md",
+                "file": "기타정보/무료 데이터베이스 정보.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "개발언어/Java/언어 알아보기/제네릭/타입 추론.md",
+                "file": "기타정보/무료 데이터베이스 정보.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "개발언어/Java/언어 알아보기/제네릭/타입 추론.md"
+                "file": "기타정보/무료 데이터베이스 정보.md"
               }
             }
           }
@@ -150,34 +163,36 @@
       "graph:그래프 뷰 열기": false
     }
   },
-  "active": "88b625a15210d72b",
+  "active": "2e42d57729f856d2",
   "lastOpenFiles": [
-    "개발언어/Java/언어 알아보기/제네릭/제네릭에 대한 제한.md",
+    "기타정보/무료 서버 호스팅 플랫폼 정보.md",
+    "기타정보/무료 클라우드 정보.md",
+    "기타정보/무료 데이터베이스 정보.md",
+    "기타정보/무료 BaaS 정보.md",
+    "기타정보/무료 Serverless 플랫폼 정보.md",
+    "기타정보/index.md",
     "index.md",
-    "개발언어/index.md",
-    "개발언어/Obsidian/고급 문법.md",
     "개인관리시스템/index.md",
-    "개발언어/Java/첫 번째 Java 애플리케이션 실행하기.md",
-    "개발언어/Java/언어 알아보기/제네릭/타입 추론.md",
-    "개발언어/Java/언어 알아보기/제네릭/제네릭 소개.md",
-    "개발언어/Java/언어 알아보기/제네릭/와일드카드.md",
-    "개발언어/Java/언어 알아보기/제네릭/index.md",
-    "개발언어/Java/언어 알아보기/index.md",
-    "개발언어/Java/index.md",
+    "기타정보",
+    "기타정보",
     "개인관리시스템/서버/index.md",
-    "개발언어/Obsidian/기본 문법.md",
     "개인관리시스템/프로그램/index.md",
-    "개인관리시스템/프로그램/자동 출석체크 실행 프로그램/분석하기.md",
+    "templates/초안.md",
+    "개발언어/Java/첫 번째 Java 애플리케이션 실행하기.md",
+    "개발언어/Java/index.md",
+    "개발언어/Java/언어 알아보기/제네릭/index.md",
+    "개발언어/Java/언어 알아보기/제네릭/제네릭 소개.md",
+    "개발언어/Java/언어 알아보기/제네릭/타입 추론.md",
+    "개발언어/Java/언어 알아보기/제네릭/와일드카드.md",
+    "개발언어/index.md",
+    "개발언어/Java/언어 알아보기/제네릭/제네릭에 대한 제한.md",
+    "개발언어/Java/언어 알아보기/index.md",
     "개발언어/Java/언어 알아보기/예외/index.md",
     "개발언어/Java/언어 알아보기/패키지.md",
     "개발언어/Java/언어 알아보기/어노테이션.md",
     "개발언어/Java/언어 알아보기/람다 표현식/index.md",
     "개발언어/Java/언어 알아보기/제네릭/타입 삭제.md",
     "개인관리시스템/서버/애플리케이션 서버/index.md",
-    "개인관리시스템/서버/데이터베이스 서버/index.md",
-    "LMS/개인관리시스템.md",
-    "문서관리/plugins/TagPage.md",
-    "문서관리/plugins/TableOfContents.md",
     "문서관리/plugins",
     "문서관리/features",
     "문서관리/advanced",
@@ -186,8 +201,6 @@
     "개인관리시스템/서버/데이터베이스 서버/LMS DB 작업내역/ATTENDANCE SCHEMA/TABLE",
     "개인관리시스템/서버/데이터베이스 서버/LMS DB 작업내역/PUBLIC SCHEMA",
     "개인관리시스템/서버/데이터베이스 서버/LMS DB 작업내역/ATTENDANCE SCHEMA",
-    "개인관리시스템/프로그램/LMS/핫딜 알림 관리 기능",
-    "개인관리시스템/프로그램/LMS/자동 출석체크 관리 기능",
     "images/quartz/quartz transform pipeline.png",
     "images/quartz/quartz layout.png",
     "images/quartz/github-quick-setup.png",
