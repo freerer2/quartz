@@ -1,4 +1,4 @@
-### Direction
+### 방향
 
 ```mermaid
 flowchart RL
@@ -10,7 +10,7 @@ flowchart RL
 - RL - Right to left
 - LR - Left to right
 
-## Node shapes
+## 노드 모양
 
 ```mermaid
 flowchart LR
@@ -35,7 +35,7 @@ flowchart LR
 	l ~~~m
 ```
 
-## Link and Arrow Head
+## 링크 및 화살표 머리
 
 ```mermaid
 flowchart LR
@@ -47,7 +47,7 @@ flowchart LR
 	E0~~~|~#126;~|E1
 ```
 
-## Subgraphs
+## 하위 그래프
 
 ```mermaid
 flowchart LR

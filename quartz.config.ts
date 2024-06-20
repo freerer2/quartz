@@ -15,7 +15,7 @@ const config: QuartzConfig = {
     // locale: "en-US",
     locale: "ko-KR",
     baseUrl: "lhk-lms.pages.dev",
-    ignorePatterns: ["private", ".makemd", ".obsidian", ".obsidian-mobile", ".space", ".trash"],
+    ignorePatterns: ["templates", "private", ".makemd", ".obsidian", ".obsidian-mobile", ".space", ".trash"],
     defaultDateType: "created",
     theme: {
       fontOrigin: "googleFonts",
