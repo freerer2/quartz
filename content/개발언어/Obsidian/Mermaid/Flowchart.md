@@ -1,4 +1,4 @@
-### 방향
+## 방향
 
 ```mermaid
 flowchart RL
