@@ -1,0 +1,5 @@
+---
+title: Mermaid
+aliases:
+  - Mermaid
+---

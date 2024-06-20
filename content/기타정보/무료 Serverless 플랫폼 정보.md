@@ -1,3 +1,5 @@
 - [Vercel](https://vercel.com/)
 - [Cloudflare](https://www.cloudflare.com/ko-kr/)
 - [Netlify](https://www.netlify.com/)
+- [Deno Deploy | Deno](https://deno.com/deploy)
+- [Deploy app servers close to your users · Fly](https://fly.io/)
