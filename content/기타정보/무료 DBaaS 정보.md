@@ -26,6 +26,22 @@
 - GPU access
 - 3 users included
 - DB뿐 아닌 모바일 및 웹 애플리케이션 개발 플랫폼으로 사용 가능
+- 1 Project
+	- 5분간 미사용시 절전모드 전환(쿼리를 날려 절전해제 가능)
+
+[Data platform for PostgreSQL - Xata](https://xata.io/)
+- PostgreSQL(15)
+- Shared environments
+- 10 database branches
+- High availability
+- 15 GB data storage
+- 15 GB search engine storage
+- 2 GB file attachments
+- 250 AI queries per month
+
+[EdgeDB | The next-gen database](https://www.edgedb.com/)
+- 1/4 compute unit (1/16 vCPU, 1/2 GiB RAM)
+- Up to 1GB of disk space
 
 [Turso — SQLite for Production](https://turso.tech/)
 - SQLite
