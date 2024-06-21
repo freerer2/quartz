@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "기타정보/무료 데이터베이스 정보.md",
+                "file": "기타정보/무료 DBaaS 정보.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "기타정보/무료 데이터베이스 정보.md",
+                "file": "기타정보/무료 DBaaS 정보.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "기타정보/무료 데이터베이스 정보.md",
+                "file": "기타정보/무료 DBaaS 정보.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "기타정보/무료 데이터베이스 정보.md"
+                "file": "기타정보/무료 DBaaS 정보.md"
               }
             }
           }
@@ -150,8 +150,12 @@
       "graph:그래프 뷰 열기": false
     }
   },
-  "active": "ae5db1c1201ade6a",
+  "active": "87226df5c1b3d88f",
   "lastOpenFiles": [
+    "기타정보/무료 BaaS 정보.md",
+    "기타정보/무료 DBaaS 정보.md",
+    "기타정보/무료 Serverless 플랫폼 정보.md",
+    "기타정보/무료 서버 호스팅 플랫폼 정보.md",
     "개인관리시스템/서버/데이터베이스 서버/LMS DB 작업내역/LMS DB.md",
     "개인관리시스템/서버/애플리케이션 서버/시스템 구성도.md",
     "개인관리시스템/서버/애플리케이션 서버/OS 초기 설정정보/서버 기본환경 설정.md",
@@ -168,11 +172,7 @@
     "개발언어/index.md",
     "templates/index.md",
     "index.md",
-    "기타정보/무료 데이터베이스 정보.md",
-    "기타정보/무료 서버 호스팅 플랫폼 정보.md",
     "기타정보/무료 클라우드 정보.md",
-    "기타정보/무료 BaaS 정보.md",
-    "기타정보/무료 Serverless 플랫폼 정보.md",
     "sd.md",
     "개인관리시스템/서버/애플리케이션 서버/OS 초기 설정정보",
     "개인관리시스템/서버/데이터베이스 서버/데이터베이스 세팅정보/2. PostgreSQL User 추가.md",
