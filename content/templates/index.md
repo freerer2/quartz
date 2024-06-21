@@ -1,5 +1,5 @@
 ---
-title: <% tp.file.folder() %>
+title: templates
 aliases:
-  - <% tp.file.folder() %>
+  - templates
 ---
