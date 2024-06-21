@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "기타정보/무료 DBaaS 정보.md",
+                "file": "개인관리시스템/프로그램/index.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "기타정보/무료 DBaaS 정보.md",
+                "file": "개인관리시스템/프로그램/index.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "기타정보/무료 DBaaS 정보.md",
+                "file": "개인관리시스템/프로그램/index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,12 +125,11 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "기타정보/무료 DBaaS 정보.md"
+                "file": "개인관리시스템/프로그램/index.md"
               }
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
@@ -152,14 +151,21 @@
   },
   "active": "ae5db1c1201ade6a",
   "lastOpenFiles": [
+    "개인관리시스템/index.md",
     "개인관리시스템/프로그램/index.md",
+    "개인관리시스템/프로그램/텔레그램 알림 봇 프로그램/설계하기.md",
+    "index.md",
+    "개발언어/Obsidian/콜아웃.md",
+    "images/Pasted image 20240428042333.jpg",
+    "images/DB설계/출첵논리.png",
+    "images/DB설계/출첵물리.png",
+    "images/java/Pasted image 20240519223240.png",
+    "templates/index.md",
     "기타정보/무료 DBaaS 정보.md",
     "개인관리시스템/서버/애플리케이션 서버/OS 초기 설정정보/서버 기본환경 설정.md",
     "개인관리시스템/서버/데이터베이스 서버/데이터베이스 세팅정보/1. PostgreSQL 설치.md",
     "개인관리시스템/서버/데이터베이스 서버/데이터베이스 세팅정보/2. PostgreSQL User 추가.md",
-    "개인관리시스템/index.md",
     "개인관리시스템/서버/애플리케이션 서버/시스템 구성도.md",
-    "templates/index.md",
     "개발언어/Obsidian/무제 파일.md",
     "기타정보/무료 BaaS 정보.md",
     "기타정보/무료 Serverless 플랫폼 정보.md",
@@ -175,13 +181,10 @@
     "개인관리시스템/프로그램/자동 출석체크 실행 프로그램/분석하기.md",
     "개발언어/Obsidian/Mermaid/그리는법.md",
     "개발언어/index.md",
-    "index.md",
     "기타정보/무료 클라우드 정보.md",
-    "sd.md",
     "개인관리시스템/서버/애플리케이션 서버/OS 초기 설정정보",
     "개인관리시스템/서버/데이터베이스 서버/데이터베이스 세팅정보",
     "개발언어/Obsidian/Mermaid",
-    "기타정보/index.md",
     "기타정보",
     "개인관리시스템/서버/애플리케이션 서버/서버 세팅정보",
     "개인관리시스템/서버/데이터베이스 서버/서버 세팅정보",
@@ -193,10 +196,6 @@
     "images/quartz/quartz layout.png",
     "images/quartz/github-quick-setup.png",
     "images/quartz/github-init-repo-options.png",
-    "images/quartz/dns records.png",
-    "images/java/Pasted image 20240522085339.png",
-    "images/java/Pasted image 20240521230611.png",
-    "images/java/Pasted image 20240521230508.png",
-    "images/java/Pasted image 20240519225829.png"
+    "images/quartz/dns records.png"
   ]
 }
