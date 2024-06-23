@@ -2,12 +2,12 @@
 title: 관심사 목록
 ---
 ## 현재 관심사
-- **[[개발언어/index|개발언어]]**
-	1. [[개발언어/Java/index|Java]]  
+- **[[프로그래밍/개발언어/index|개발언어]]**
+	1. [[프로그래밍/개발언어/Java/index|Java]]  
 		다음 단계 도약을 위한 Java 기초 다시 한번 상기시키기
-	2. [[개발언어/Obsidian/index|Obsidian]]  
+	2. [[프로그래밍/개발언어/Obsidian/index|Obsidian]]  
 		페이지 정리를 위한 Obsidian(md) 문법 정리
-	3. [[개발언어/Kotlin/index|Kotlin]]
+	3. [[프로그래밍/개발언어/Kotlin/index|Kotlin]]
 - **[[개인관리시스템/index|개인프로젝트]]**  
 	내 삶에 도움이 되는 프로젝트를 개발하며 이것 저것 응용하기
 ## 추후 관심사
