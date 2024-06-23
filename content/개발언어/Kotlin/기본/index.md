@@ -1,7 +1,7 @@
 ---
-title: " Kotlin 기본"
+title: 기본
 aliases:
-  - Kotlin 기본
+  - 기본
 ---
 ## [[Kotlin 소개]]
 

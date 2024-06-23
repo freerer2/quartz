@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "4df37df7dce00fbf",
+        "id": "365582e3fb36780b",
         "type": "tabs",
         "children": [
           {
-            "id": "8e55d1607edc0e35",
+            "id": "88b625a15210d72b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "개발언어/Java/언어 알아보기/제네릭/index.md",
+                "file": "개발언어/Java/언어 알아보기/제네릭/제네릭에 대한 제한.md",
                 "mode": "source",
                 "source": false
               }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "dev.java",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "개발언어/Java/언어 알아보기/제네릭/index.md",
+                "file": "개발언어/Java/언어 알아보기/제네릭/제네릭에 대한 제한.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "개발언어/Java/언어 알아보기/제네릭/index.md",
+                "file": "개발언어/Java/언어 알아보기/제네릭/제네릭에 대한 제한.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "개발언어/Java/언어 알아보기/제네릭/index.md"
+                "file": "개발언어/Java/언어 알아보기/제네릭/제네릭에 대한 제한.md"
               }
             }
           }
@@ -138,65 +138,65 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
-      "templates:Insert template": false,
-      "command-palette:Open command palette": false,
       "oz-clear-unused-images:Clear Unused Images": false,
+      "remotely-save:Remotely Save": false,
       "templater-obsidian:Templater": false,
+      "switcher:퀵 스위처 열기": false,
+      "canvas:새 캔버스 만들기": false,
+      "daily-notes:오늘의 데일리 노트 열기": false,
+      "templates:템플릿 삽입": false,
+      "command-palette:명령어 팔레트 열기": false,
       "obsidian-excalidraw-plugin:Create new drawing": false,
-      "remotely-save:Remotely Save": false
+      "graph:그래프 뷰 열기": false
     }
   },
-  "active": "8e55d1607edc0e35",
+  "active": "88b625a15210d72b",
   "lastOpenFiles": [
+    "개발언어/Java/언어 알아보기/제네릭/index.md",
     "개발언어/Java/언어 알아보기/index.md",
-    "개발언어/Java/언어 알아보기/Java 언어 기초/index.md",
-    "개발언어/Java/언어 알아보기/Java 언어 기초/프로그램에서 연산자 사용하기.md",
-    "개발언어/Kotlin/Kotlin 기본/코드 스타일/변수 이름 지정.md",
-    "개인관리시스템/index.md",
-    "개인관리시스템/프로그램/index.md",
-    "개발언어/index.md",
-    "개발언어/Kotlin/index.md",
-    "templates/index.md",
-    "개발언어/Kotlin/Kotlin 기본/코드 스타일/index.md",
-    "개발언어/Kotlin/타입 및 데이터 구조/변수/값 및 변수.md",
-    "개발언어/Kotlin/Kotlin 기본/코드 스타일",
-    "개발언어/Kotlin/Kotlin 기본/Kotlin을 처음 살펴보기/Kotlin 발전 원칙.md",
-    "개발언어/Kotlin/타입 및 데이터 구조/Untitled.md",
-    "개발언어/Kotlin/Kotlin 기본/Kotlin을 처음 살펴보기/index.md",
-    "개발언어/Kotlin/Kotlin 기본/Kotlin을 처음 살펴보기/기본 리터럴(숫자, 문자열 및 문자).md",
-    "개발언어/Kotlin/Kotlin 기본/Kotlin을 처음 살펴보기",
-    "개발언어/Kotlin/타입 및 데이터 구조/변수/index.md",
-    "개발언어/Kotlin/타입 및 데이터 구조/변수",
-    "개발언어/Kotlin/타입 및 데이터 구조/index.md",
-    "개발언어/Kotlin/Kotlin 기본/index.md",
-    "개발언어/Kotlin/Kotlin 기본/Kotlin을 처음 살펴보기/첫 번째 프로그램 작성.md",
-    "개발언어/Kotlin/타입 및 데이터 구조",
-    "개발언어/Java/index.md",
-    "개발언어/Kotlin/Kotlin 기본/Kotlin을 처음 살펴보기/Kotlin 소개.md",
-    "index.md",
-    "개발언어/Kotlin/Kotlin 기본",
-    "Kotlin 배우기.md",
-    "개발언어/Kotlin",
-    "개발언어/Java/언어 알아보기/제네릭/타입 삭제.md",
-    "문서관리/변경이력.md",
+    "개발언어/Java/언어 알아보기/객체, 클래스, 인터페이스, 패키지 및 상속.md",
+    "개발언어/Java/언어 알아보기/레코드를 사용하여 불변 데이터 모델링하기.md",
+    "개인관리시스템/프로그램/자동 출석체크 실행 프로그램/개발환경.md",
+    "개인관리시스템/프로그램/LMS/개발환경.md",
+    "개인관리시스템/서버/index.md",
+    "개인관리시스템/서버/데이터베이스 서버/index.md",
     "개인관리시스템/프로그램/자동 출석체크 실행 프로그램/분석하기.md",
-    "images/Pasted image 20240428042333.jpg",
-    "images/DB설계/출첵논리.png",
-    "images/DB설계/출첵물리.png",
-    "images/java/Pasted image 20240519223240.png",
-    "Pasted image 20240620125939.png",
+    "개인관리시스템/프로그램/자동 출석체크 실행 프로그램/설계하기.md",
+    "개인관리시스템/서버/애플리케이션 서버/시스템 구성도.md",
+    "개인관리시스템/프로그램/LMS/자동 출석체크 관리 기능/무제 파일.md",
+    "개인관리시스템/프로그램/index.md",
+    "개인관리시스템/index.md",
+    "개발언어/Kotlin/기본/index.md",
+    "개발언어/Kotlin/개념/index.md",
+    "개발언어/Kotlin/index.md",
+    "개발언어/Java/index.md",
+    "index.md",
+    "개발언어/Java/언어 알아보기/상속/수퍼클래스로서의 객체.md",
+    "개발언어/Java/언어 알아보기/명령형에서 함수형 스타일로 리팩토링하기/변환을 사용하여 반복문 변환하기.md",
+    "개발언어/Java/언어 알아보기/숫자 및 문자열/문자열.md",
+    "개발언어/Java/언어 알아보기/명령형에서 함수형 스타일로 리팩토링하기/데이터 소스를 스트림으로 변환.md",
+    "개발언어/Java/언어 알아보기/명령형에서 함수형 스타일로 리팩토링하기/단순 루프 변환하기.md",
+    "개발언어/Java/언어 알아보기/명령형에서 함수형 스타일로 리팩토링하기/단계가 있는 루프 변환하기.md",
+    "templates/index.md",
+    "개발언어/Kotlin/개념/변수",
+    "개발언어/Kotlin/개념",
+    "개발언어/Kotlin/기본/코드 스타일",
+    "개발언어/Kotlin/기본/Kotlin을 처음 살펴보기",
+    "개발언어/Kotlin/기본",
+    "개발언어/Kotlin",
     "개인관리시스템/서버/애플리케이션 서버/OS 초기 설정정보",
     "개인관리시스템/서버/데이터베이스 서버/데이터베이스 세팅정보",
     "개발언어/Obsidian/Mermaid",
-    "기타정보",
+    "Pasted image 20240620125939.png",
+    "정보",
     "images/quartz/quartz transform pipeline.png",
     "images/quartz/quartz layout.png",
     "images/quartz/github-quick-setup.png",
     "images/quartz/github-init-repo-options.png",
-    "images/quartz/dns records.png"
+    "images/quartz/dns records.png",
+    "images/java/Pasted image 20240522085339.png",
+    "images/java/Pasted image 20240521230611.png",
+    "images/java/Pasted image 20240521230508.png",
+    "images/java/Pasted image 20240519225829.png"
   ]
 }
