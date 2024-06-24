@@ -5,15 +5,16 @@ title: 관심사 목록
 - **[[프로그래밍/개발언어/index|개발언어]]**
 	1. [[프로그래밍/개발언어/Java/index|Java]]  
 		다음 단계 도약을 위한 Java 기초 다시 한번 상기시키기
-	2. [[프로그래밍/개발언어/Obsidian/index|Obsidian]]  
+	2. [[프로그래밍/개발언어/Kotlin/index|Kotlin]]
+	3. [[프로그래밍/개발언어/Obsidian/index|Obsidian]]  
 		페이지 정리를 위한 Obsidian(md) 문법 정리
-	3. [[프로그래밍/개발언어/Kotlin/index|Kotlin]]
-- **[[개인관리시스템/index|개인프로젝트]]**  
+- **[[개인프로젝트/index|개인프로젝트]]**  
 	내 삶에 도움이 되는 프로젝트를 개발하며 이것 저것 응용하기
 ## 추후 관심사
 - 디자인패턴 정리
 - 자료구조/알고리즘 정리
-- **[[Kotlin 배우기]]**
+- GraphQL
+- **Kotlin 배우기**
 	- Java와 같은 JVM언어로 활용도가 높고 문법이 단순하며, JVM을 사용하므로 Java와 100% 호환된다.
 	- 코틀린이 지원하는 Coroutine으로 반응형 프로그램을 Java보다 쉽게(Java의 Future 또는 RxJava 보다 러닝커브가 낮음) 개발 할 수 있다고 한다.
 	- 국내에서 범용적으로 사용하는 Java 프레임워크인 Spring도 코틀린을 공식 지원하고 있어 추후 여러모로 쓸모가 있을 것 같다.
