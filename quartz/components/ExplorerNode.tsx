@@ -197,7 +197,7 @@ export function ExplorerNode({ node, opts, fullPath, fileData }: ExplorerNodePro
             stroke-linejoin="round"
             class="text-icon"
           >
-            <polyline points="8 12 16 12"></polyline>
+            <polyline points="7 12 15 12"></polyline>
           </svg>
           <a href={resolveRelative(fileData.slug!, node.file.slug!)} data-for={node.file.slug}>
             {node.displayName}
