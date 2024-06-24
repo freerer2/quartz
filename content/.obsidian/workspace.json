@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "dev.java",
+                "query": "[\"excalidraw-autoexport\"]",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -128,9 +128,31 @@
                 "file": "개인프로젝트/index.md"
               }
             }
+          },
+          {
+            "id": "37fd93309ea829f1",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              }
+            }
+          },
+          {
+            "id": "49cb9c5332247981",
+            "type": "leaf",
+            "state": {
+              "type": "file-properties",
+              "state": {
+                "file": "개인프로젝트/index.md"
+              }
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -153,6 +175,9 @@
   "active": "677f82e960350718",
   "lastOpenFiles": [
     "프로그래밍/index.md",
+    "templates/index.md",
+    "index.md",
+    "개인프로젝트/index.md",
     "개발언어/Java/언어 알아보기/패턴 매칭 사용.md",
     "개인프로젝트/서버/데이터베이스 서버/LMS DB 작업내역/PUBLIC SCHEMA/FUNCTION/CUSTOM_RANDOM.md",
     "개인프로젝트/서버/데이터베이스 서버/LMS DB 작업내역/ATTENDANCE SCHEMA/TABLE/DOMAIN_LIST.md",
@@ -183,11 +208,8 @@
     "개인프로젝트/서버/애플리케이션 서버",
     "개인프로젝트/서버/데이터베이스 서버",
     "개인프로젝트/서버/index.md",
-    "개인프로젝트/index.md",
     "프로그래밍/개발언어/Java/언어 알아보기/클래스와 객체/클래스에 생성자 제공.md",
     "프로그래밍/개발언어/Java/언어 알아보기/클래스와 객체/클래스에 대해 자세히 알아보기.md",
-    "프로그래밍/개발언어/Java/언어 알아보기/클래스와 객체/클래스 생성하기.md",
-    "프로그래밍/개발언어/Java/언어 알아보기/클래스와 객체/중첩 클래스.md",
     "Pasted image 20240620125939.png",
     "images/quartz/quartz transform pipeline.png",
     "images/quartz/quartz layout.png",

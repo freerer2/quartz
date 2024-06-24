@@ -1,5 +1,7 @@
 {
   "types": {
+    "title": "text",
+    "order": "number",
     "aliases": "aliases",
     "cssclasses": "multitext",
     "tags": "tags",
