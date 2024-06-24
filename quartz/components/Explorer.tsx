@@ -17,10 +17,6 @@ const defaultOptions = {
     return node
   },
   sortFn: (a, b) => {
-    
-    if(a.displayName.includes("무제")){
-      console.log(a, b)
-    }
     // Sort order: folders first, then files. Sort folders and files alphabetically
     if ((!a.file && !b.file) || (a.file && b.file)) {
       // numeric: true: Whether numeric collation should be used, such that "1" < "2" < "10"
@@ -29,22 +25,13 @@ const defaultOptions = {
         numeric: true,
         sensitivity: "base",
       })
-
-      // 프로퍼티 접근
-      // a.displayName
-      // a.file?.frontmatter?.title
     }
 
-    if(a.sortOrder > b.sortOrder) {
+    if (a.file && !b.file) {
       return 1
     } else {
-      if (a.file && !b.file) {
-        return 1
-      } else {
-        return -1
-      }
+      return -1
     }
-    
   },
   filterFn: (node) => node.name !== "tags",
   order: ["filter", "map", "sort"],
