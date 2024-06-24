@@ -2,6 +2,7 @@
 title: Java
 aliases:
   - Java
+order: 1
 ---
 
 %%

@@ -53,22 +53,22 @@ function setupExplorer() {
   const explorer = document.getElementById("explorer")
   if (!explorer) return
 
+  if (explorer.dataset.behavior === "collapse") {
+    for (const item of document.getElementsByClassName(
+      "folder-button",
+    ) as HTMLCollectionOf<HTMLElement>) {
+      item.addEventListener("click", toggleFolder)
+      window.addCleanup(() => item.removeEventListener("click", toggleFolder))
+    }
+    
   // folderBehavior가 Link 일 경우도 폴더 토글 가능하게 변경
-  for (const item of document.getElementsByClassName(
-    "folder-title",
-  ) as HTMLCollectionOf<HTMLElement>) {
-    item.addEventListener("click", toggleFolder)
-    window.addCleanup(() => item.removeEventListener("click", toggleFolder))
-  }
-
-  //if (explorer.dataset.behavior === "collapse") {
-    // for (const item of document.getElementsByClassName(
-    //   "folder-button",
-    // ) as HTMLCollectionOf<HTMLElement>) {
-    //   item.addEventListener("click", toggleFolder)
-    //   window.addCleanup(() => item.removeEventListener("click", toggleFolder))
-    // }
+  // for (const item of document.getElementsByClassName(
+  //   "folder-title",
+  // ) as HTMLCollectionOf<HTMLElement>) {
+  //   item.addEventListener("click", toggleFolder)
+  //   window.addCleanup(() => item.removeEventListener("click", toggleFolder))
   // }
+  }
 
   explorer.addEventListener("click", toggleExplorer)
   window.addCleanup(() => explorer.removeEventListener("click", toggleExplorer))

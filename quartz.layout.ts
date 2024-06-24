@@ -19,6 +19,7 @@ const defaultOptions = {
   title: "목록",
   folderClickBehavior:"link",
   sortFn: (a, b) => {
+    console.log(a.displayName,a.sortOrder, b.displayName, b.sortOrder)
     if(a.sortOrder > b.sortOrder) {
       return 1
     } else if(a.sortOrder < b.sortOrder) {

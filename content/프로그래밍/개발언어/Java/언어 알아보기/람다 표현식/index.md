@@ -2,6 +2,7 @@
 title: 람다 표현식
 aliases:
   - 람다 표현식
+order: 9
 ---
 
 # Lambda Expressions
