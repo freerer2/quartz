@@ -3,6 +3,14 @@
 // put your custom CSS here!
 li.section-li {
   & > .section {
-    grid-template-columns: 7em 3fr 1fr;
+    grid-template-columns: 8em 3fr 1fr;
   }
+}
+
+.text-icon {
+  margin-right: 5px;
+}
+
+li:has(> .folder-outer:not(.open)) > .folder-container > svg {
+  transform: rotate(-90deg);
 }
