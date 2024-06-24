@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "프로그래밍/개발언어/Java/언어 알아보기/람다 표현식/index.md",
+                "file": "프로그래밍/개발언어/Java/언어 알아보기/람다 표현식/애플리케이션에서 람다 표현식 사용하기.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "프로그래밍/개발언어/Java/언어 알아보기/람다 표현식/index.md",
+                "file": "프로그래밍/개발언어/Java/언어 알아보기/람다 표현식/애플리케이션에서 람다 표현식 사용하기.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "프로그래밍/개발언어/Java/언어 알아보기/람다 표현식/index.md",
+                "file": "프로그래밍/개발언어/Java/언어 알아보기/람다 표현식/애플리케이션에서 람다 표현식 사용하기.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "프로그래밍/개발언어/Java/언어 알아보기/람다 표현식/index.md"
+                "file": "프로그래밍/개발언어/Java/언어 알아보기/람다 표현식/애플리케이션에서 람다 표현식 사용하기.md"
               }
             }
           },
@@ -147,7 +147,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "프로그래밍/개발언어/Java/언어 알아보기/람다 표현식/index.md"
+                "file": "프로그래밍/개발언어/Java/언어 알아보기/람다 표현식/애플리케이션에서 람다 표현식 사용하기.md"
               }
             }
           }
@@ -173,8 +173,8 @@
   },
   "active": "677f82e960350718",
   "lastOpenFiles": [
-    "프로그래밍/개발언어/Java/언어 알아보기/람다 표현식/애플리케이션에서 람다 표현식 사용하기.md",
     "프로그래밍/개발언어/Java/언어 알아보기/람다 표현식/index.md",
+    "프로그래밍/개발언어/Java/언어 알아보기/람다 표현식/애플리케이션에서 람다 표현식 사용하기.md",
     "프로그래밍/개발언어/Java/언어 알아보기/람다 표현식/첫 번째 람다 표현식 작성하기.md",
     "프로그래밍/개발언어/Java/언어 알아보기/index.md",
     "프로그래밍/개발언어/Java/index.md",
