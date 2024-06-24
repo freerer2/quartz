@@ -35,19 +35,16 @@ const defaultOptions = {
       // a.file?.frontmatter?.title
     }
 
-    if(a.sortOrder == b.sortOrder){
+    if(a.sortOrder > b.sortOrder) {
+      return 1
+    } else {
       if (a.file && !b.file) {
         return 1
       } else {
         return -1
       }
-    } else {
-      if(a.sortOrder > b.sortOrder) {
-        return 1
-      } else {
-        return -1
-      }
     }
+    
   },
   filterFn: (node) => node.name !== "tags",
   order: ["filter", "map", "sort"],
