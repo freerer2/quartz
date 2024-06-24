@@ -47,13 +47,15 @@ export class FileNode {
   displayName: string
   file: QuartzPluginData | null
   depth: number
+  sortOrder: number
 
-  constructor(slugSegment: string, displayName?: string, file?: QuartzPluginData, depth?: number) {
+  constructor(slugSegment: string, displayName?: string, file?: QuartzPluginData, depth?: number, sortOrder?: number) {
     this.children = []
     this.name = slugSegment
     this.displayName = displayName ?? file?.frontmatter?.title ?? slugSegment
     this.file = file ? clone(file) : null
     this.depth = depth ?? 0
+    this.sortOrder = file?.frontmatter?.order ?? 99999
   }
 
   private insert(fileData: DataWrapper) {
@@ -67,13 +69,19 @@ export class FileNode {
     if (fileData.path.length === 1) {
       if (nextSegment === "") {
         // index case (we are the root and we just found index.md), set our data appropriately
+        const sortOrder = fileData.file.frontmatter?.order
         const title = fileData.file.frontmatter?.title
         if (title && title !== "index") {
           this.displayName = title
         }
+
+        if (sortOrder) {
+          this.sortOrder = sortOrder
+        }
+        
       } else {
         // direct child
-        this.children.push(new FileNode(nextSegment, undefined, fileData.file, this.depth + 1))
+        this.children.push(new FileNode(nextSegment, undefined, fileData.file, this.depth + 1, fileData.file.frontmatter?.order))
       }
 
       return
@@ -92,6 +100,7 @@ export class FileNode {
       getPathSegment(fileData.file.relativePath, this.depth),
       undefined,
       this.depth + 1,
+      this.sortOrder,
     )
     newChild.insert(fileData)
     this.children.push(newChild)

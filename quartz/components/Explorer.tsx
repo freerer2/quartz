@@ -17,6 +17,10 @@ const defaultOptions = {
     return node
   },
   sortFn: (a, b) => {
+    
+    if(a.displayName.includes("무제")){
+      console.log(a, b)
+    }
     // Sort order: folders first, then files. Sort folders and files alphabetically
     if ((!a.file && !b.file) || (a.file && b.file)) {
       // numeric: true: Whether numeric collation should be used, such that "1" < "2" < "10"
@@ -31,10 +35,18 @@ const defaultOptions = {
       // a.file?.frontmatter?.title
     }
 
-    if (a.file && !b.file) {
-      return 1
+    if(a.sortOrder == b.sortOrder){
+      if (a.file && !b.file) {
+        return 1
+      } else {
+        return -1
+      }
     } else {
-      return -1
+      if(a.sortOrder > b.sortOrder) {
+        return 1
+      } else {
+        return -1
+      }
     }
   },
   filterFn: (node) => node.name !== "tags",
