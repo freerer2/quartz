@@ -14,3 +14,11 @@ li.section-li {
 li:has(> .folder-outer:not(.open)) > .folder-container > svg {
   transform: rotate(-90deg);
 }
+
+#explorer-content {
+  & ul {
+    & li > a {
+      font-size: .95rem;
+    }
+  }
+}
