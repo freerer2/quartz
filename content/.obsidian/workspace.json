@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "프로그래밍/개발언어/Java/API 마스터하기/index.md",
+                "file": "문서관리/Obsidian/index.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "프로그래밍/개발언어/Java/API 마스터하기/index.md",
+                "file": "문서관리/Obsidian/index.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "프로그래밍/개발언어/Java/API 마스터하기/index.md",
+                "file": "문서관리/Obsidian/index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "프로그래밍/개발언어/Java/API 마스터하기/index.md"
+                "file": "문서관리/Obsidian/index.md"
               }
             }
           },
@@ -160,7 +160,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "프로그래밍/개발언어/Java/API 마스터하기/index.md"
+                "file": "문서관리/Obsidian/index.md"
               }
             }
           }
@@ -186,38 +186,38 @@
   },
   "active": "91a63f1b66d7f948",
   "lastOpenFiles": [
-    "프로그래밍/개발언어/Java/언어 알아보기/index.md",
-    "프로그래밍/개발언어/Java/언어 알아보기/패턴 매칭 사용.md",
-    "프로그래밍/개발언어/Java/언어 알아보기/람다 표현식/index.md",
-    "프로그래밍/개발언어/Java/디자인패턴/index.md",
-    "프로그래밍/개발언어/Java/Effective Java 3E/index.md",
     "프로그래밍/SQL/index.md",
-    "프로그래밍/자료구조와 알고리즘/index.md",
     "프로그래밍/기타정보/index.md",
+    "프로그래밍/자료구조와 알고리즘/index.md",
+    "프로그래밍/Java/index.md",
+    "프로그래밍/Kotlin/index.md",
+    "프로그래밍/Java/API 마스터하기/index.md",
+    "프로그래밍/Java/언어 알아보기/index.md",
+    "프로그래밍/Java/언어 알아보기/패턴 매칭 사용.md",
+    "프로그래밍/Java/언어 알아보기/람다 표현식/index.md",
+    "프로그래밍/Java/디자인패턴/index.md",
+    "프로그래밍/Java/Effective Java 3E/index.md",
     "프로그래밍/개발언어/index.md",
     "프로그래밍/index.md",
     "프로그래밍/SQL",
-    "프로그래밍/개발언어/Java/index.md",
     "templates/index.md",
     "index.md",
-    "프로그래밍/개발언어/Java/Effective Java 3E",
-    "프로그래밍/개발언어/Java/디자인패턴",
+    "프로그래밍/Java/Effective Java 3E",
+    "프로그래밍/Java/디자인패턴",
     "프로그래밍/자료구조와 알고리즘",
     "Pasted image 20240620125939.png",
-    "프로그래밍/개발언어/Java/언어 알아보기/람다 표현식/람다 표현식을 메서드 참조로 작성하기.md",
-    "프로그래밍/개발언어/Java/언어 알아보기/람다 표현식/비교자 작성 및 결합하기.md",
-    "프로그래밍/개발언어/Java/언어 알아보기/람다 표현식/람다 표현식 결합하기.md",
-    "프로그래밍/개발언어/Java/언어 알아보기/람다 표현식/애플리케이션에서 람다 표현식 사용하기.md",
-    "프로그래밍/개발언어/Java/언어 알아보기/람다 표현식/첫 번째 람다 표현식 작성하기.md",
+    "프로그래밍/Java/언어 알아보기/람다 표현식/람다 표현식을 메서드 참조로 작성하기.md",
+    "프로그래밍/Java/언어 알아보기/람다 표현식/비교자 작성 및 결합하기.md",
+    "프로그래밍/Java/언어 알아보기/람다 표현식/람다 표현식 결합하기.md",
+    "프로그래밍/Java/언어 알아보기/람다 표현식/애플리케이션에서 람다 표현식 사용하기.md",
+    "프로그래밍/Java/언어 알아보기/람다 표현식/첫 번째 람다 표현식 작성하기.md",
     "프로그래밍/개발언어/Java/첫 번째 Java 애플리케이션 실행하기.md",
     "개인관리시스템/index.md",
     "개인관리시스템",
-    "프로그래밍/개발언어/Obsidian/코드블럭 지원 언어.md",
-    "프로그래밍/개발언어/Obsidian/index.md",
-    "프로그래밍/개발언어/Java/언어 알아보기/명령형에서 함수형 스타일로 리팩토링하기/index.md",
-    "프로그래밍/개발언어/Java/언어 알아보기/예외/index.md",
-    "프로그래밍/개발언어/Java/언어 알아보기/패키지.md",
-    "프로그래밍/개발언어/Java/언어 알아보기/어노테이션.md",
+    "문서관리/Obsidian/코드블럭 지원 언어.md",
+    "문서관리/Obsidian/index.md",
+    "프로그래밍/Java/언어 알아보기/명령형에서 함수형 스타일로 리팩토링하기/index.md",
+    "프로그래밍/Java/언어 알아보기/예외/index.md",
     "ㅎㅎ 테스트/무제 폴더",
     "ㅎㅎ 테스트",
     "개인프로젝트/서버/데이터베이스 서버/LMS DB 작업내역/PUBLIC SCHEMA/FUNCTION",

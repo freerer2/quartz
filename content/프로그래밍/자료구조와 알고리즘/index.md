@@ -2,5 +2,5 @@
 title: 자료구조와 알고리즘
 aliases:
   - 자료구조와 알고리즘
-order: 20
+order: 30
 ---

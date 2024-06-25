@@ -2,5 +2,5 @@
 title: SQL
 aliases:
   - SQL
-order: 30
+order: 40
 ---
