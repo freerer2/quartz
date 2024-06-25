@@ -1,3 +1,6 @@
+---
+order: 3
+---
 ## Iterating with foreach
 
 In the previous articles in this [tutorial series](https://dev.java/learn/refactoring-to-functional-style/) we looked at converting loops written in the imperative style to the functional style. In this article we'll see how to convert an imperative style iteration using `foreach` to the functional style. In addition, we'll also see how to pick select elements using `if` transforms to the functional style.

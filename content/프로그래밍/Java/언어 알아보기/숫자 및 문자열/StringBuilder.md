@@ -1,3 +1,6 @@
+---
+order: 4
+---
 ## StringBuilder 클래스
 
 [`String`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/lang/String.html) 객체는 수정이 가능하다는 점을 제외하면 [`StringBuilder`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/lang/StringBuilder.html) 객체와 비슷합니다. 내부적으로 이러한 객체는 일련의 문자를 포함하는 가변 길이 배열처럼 취급됩니다. 언제든 메서드 호출을 통해 시퀀스의 길이와 내용을 변경할 수 있습니다.
