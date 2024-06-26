@@ -16,7 +16,7 @@ const config: QuartzConfig = {
     locale: "ko-KR",
     baseUrl: "lhk-lms.pages.dev",
     ignorePatterns: ["templates", "private", ".makemd", ".obsidian", ".obsidian-mobile", ".space", ".trash"],
-    defaultDateType: "created",
+    defaultDateType: "modified",//"created",
     theme: {
       fontOrigin: "googleFonts",
       cdnCaching: true,
