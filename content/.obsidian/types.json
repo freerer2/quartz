@@ -5,6 +5,7 @@
     "aliases": "aliases",
     "cssclasses": "multitext",
     "tags": "tags",
-    "date": "date"
+    "date": "date",
+    "updated": "date"
   }
 }
