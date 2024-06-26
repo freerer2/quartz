@@ -2,7 +2,7 @@
 title: 제네릭
 aliases:
   - 제네릭
-order: 8
+order: 80
 ---
 
 1. [[제네릭 소개]]

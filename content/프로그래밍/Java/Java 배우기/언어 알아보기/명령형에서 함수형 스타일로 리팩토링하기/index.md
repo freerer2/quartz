@@ -2,7 +2,7 @@
 title: 명령형에서 함수형 스타일로 리팩토링하기
 aliases:
   - 명령형에서 함수형 스타일로 리팩토링하기
-order: 14
+order: 140
 ---
 
 This page was contributed by [Venkat Subramaniam](https://dev.java/author/VenkatSubramaniam) under the [UPL](https://oss.oracle.com/licenses/upl/)  

@@ -2,7 +2,7 @@
 title: 컬렉션 프레임워크
 aliases:
   - 컬렉션 프레임워크
-order: 1
+order: 10
 ---
 This is a series of tutorials aimed at introducing the collections framework. There are quite a few tutorials because the collections framework is extensive, and powerful. If you are new to them, start at the beginning and work your way through, but you can of course jump all around.
 

@@ -2,7 +2,7 @@
 title: JDK 라이브러리를 사용한 보안의 기초
 aliases:
   - JDK 라이브러리를 사용한 보안의 기초
-order: 9
+order: 90
 ---
 This section teaches the cryptography and TLS fundamentals in the JDK and presents several working examples to illustrate how to use security APIs.
 

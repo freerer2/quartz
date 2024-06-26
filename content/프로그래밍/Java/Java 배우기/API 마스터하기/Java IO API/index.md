@@ -2,7 +2,7 @@
 title: Java IO API
 aliases:
   - Java IO API
-order: 3
+order: 30
 ---
 Java I/O is a set of classes that give access to external resources including file systems and the network.
 

@@ -2,7 +2,7 @@
 title: 스트림 API
 aliases:
   - 스트림 API
-order: 2
+order: 20
 ---
 The Stream API is your best tool to process your in-memory data following a map/filter/reduce approach.
 

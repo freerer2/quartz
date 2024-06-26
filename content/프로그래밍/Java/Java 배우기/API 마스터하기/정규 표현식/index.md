@@ -2,7 +2,7 @@
 title: 정규 표현식
 aliases:
   - 정규 표현식
-order: 6
+order: 60
 ---
 This section teaches the regular expression syntax supported by the `java.util.regex` API and presents several working examples to illustrate how the various objects interact.
 
