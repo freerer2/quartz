@@ -1,4 +1,5 @@
 ---
-date: <% tp.file.creation_date("YYYY-MM-DD") %>
+date: <% tp.date.now("YYYY-MM-DD") %>
+updated: <% tp.date.now("YYYY-MM-DD") %>
 order: 99999
 ---
