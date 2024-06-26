@@ -4,6 +4,7 @@
     "order": "number",
     "aliases": "aliases",
     "cssclasses": "multitext",
-    "tags": "tags"
+    "tags": "tags",
+    "date": "date"
   }
 }
