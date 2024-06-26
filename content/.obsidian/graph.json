@@ -8,21 +8,21 @@
   "collapse-color-groups": false,
   "colorGroups": [
     {
-      "query": "path:\"개발언어/Java\"  ",
+      "query": "path:\"프로그래밍/Java\"  ",
       "color": {
         "a": 1,
         "rgb": 14048348
       }
     },
     {
-      "query": "path:\"LMS\"  ",
+      "query": "path:\"개인프로젝트\"",
       "color": {
         "a": 1,
         "rgb": 14069084
       }
     },
     {
-      "query": "path:\"개발언어/Obsidian\"  ",
+      "query": "path:\"문서관리/Obsidian\"  ",
       "color": {
         "a": 1,
         "rgb": 11392604
@@ -39,6 +39,6 @@
   "repelStrength": 10.0519750519751,
   "linkStrength": 1,
   "linkDistance": 250,
-  "scale": 0.16348370567220596,
+  "scale": 0.32133638605036186,
   "close": false
 }
