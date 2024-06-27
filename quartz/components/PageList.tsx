@@ -25,12 +25,44 @@ export function byDateAndAlphabetical(
   }
 }
 
+export function bySortOrder(
+  cfg: GlobalConfiguration,
+): (f1: QuartzPluginData, f2: QuartzPluginData) => number {
+  return (f1, f2) => {
+    const f1Order = f1.frontmatter?.order ?? 99999;
+    const f2Order = f2.frontmatter?.order ?? 99999;
+
+    if(f1Order > f2Order) {
+      return 1
+    } else if(f1Order < f2Order) {
+      return -1
+    } else {
+
+      if (f1.dates && f2.dates) {
+        // sort descending
+        return getDate(cfg, f2)!.getTime() - getDate(cfg, f1)!.getTime()
+      } else if (f1.dates && !f2.dates) {
+        // prioritize files with dates
+        return -1
+      } else if (!f1.dates && f2.dates) {
+        return 1
+      }
+
+      // otherwise, sort lexographically by title
+      const f1Title = f1.frontmatter?.title.toLowerCase() ?? ""
+      const f2Title = f2.frontmatter?.title.toLowerCase() ?? ""
+      return f1Title.localeCompare(f2Title)
+    }
+  }
+}
+
 type Props = {
   limit?: number
 } & QuartzComponentProps
 
 export const PageList: QuartzComponent = ({ cfg, fileData, allFiles, limit }: Props) => {
-  let list = allFiles.sort(byDateAndAlphabetical(cfg))
+  //let list = allFiles.sort(byDateAndAlphabetical(cfg))
+  let list = allFiles.sort(bySortOrder(cfg))
   if (limit) {
     list = list.slice(0, limit)
   }
