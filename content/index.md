@@ -8,14 +8,14 @@ title: 목록
 
 ## 관심사
 ### 현재 관심사
-#### [[프로그래밍/Java/index|Java]]
-#### [[프로그래밍/자료구조와 알고리즘/index|자료구조와 알고리즘]]
+- [[프로그래밍/Java/index|Java]]
+- [[프로그래밍/자료구조와 알고리즘/index|자료구조와 알고리즘]]
 ### 추후 관심사
  %%- [기초 알고리즘 개념(반복문) 및 flow chart (velog.io)](https://velog.io/@dnrwhddk1/%EA%B8%B0%EC%B4%88-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EA%B0%9C%EB%85%90%EB%B0%98%EB%B3%B5%EB%AC%B8-%EB%B0%8F-flow-chart#1%EB%B6%80%ED%84%B0-n%EA%B9%8C%EC%A7%80%EC%9D%98-%EC%A0%95%EC%88%98-%ED%95%A9-%EA%B5%AC%ED%95%98%EA%B8%B0) %%
-#### [[프로그래밍/Java/디자인패턴/index|디자인패턴]]
-#### [[프로그래밍/Java/Effective Java 3E/index|Effective Java 3E]]
-#### [[프로그래밍/Kotlin/index|Kotlin]]
-#### GraphQL
+- [[프로그래밍/Java/디자인패턴/index|디자인패턴]]
+- [[프로그래밍/Java/Effective Java 3E/index|Effective Java 3E]]
+- [[프로그래밍/Kotlin/index|Kotlin]]
+- GraphQL
 %%
 	- Java와 같은 JVM언어로 활용도가 높고 문법이 단순하며, JVM을 사용하므로 Java와 100% 호환된다.
 	- 코틀린이 지원하는 Coroutine으로 반응형 프로그램을 Java보다 쉽게(Java의 Future 또는 RxJava 보다 러닝커브가 낮음) 개발 할 수 있다고 한다.
