@@ -3,19 +3,27 @@ title: 목록
 ---
 ## 목록
 1. **[[프로그래밍/index|프로그래밍]]** : 프로그래밍(개발) 관련 정보 모음
-2. **[[프로젝트 관리/index|개인프로젝트]]** : 내 삶에 도움이 되는 프로젝트를 개발하며 이것 저
-3. **[[문서관리/index|문서관리]]** :🗄️서랍장🗄️ 관리를 위한 도움말
+2. **[[프로젝트 관리/index|개인프로젝트]]** : 내 삶에 도움이 되는 프로젝트를 개발하며 이것 저것 응용하기
+3. **[[문서관리/index|문서관리]]** : 페이지 관리를 위한 도움말
 
 ## 관심사
 ### 현재 관심사
-- [[프로그래밍/Java/index|Java]]
-- [[프로그래밍/자료구조와 알고리즘/index|자료구조와 알고리즘]]
+- [[프로그래밍/Java/index|Java]] : 다음 단계 도약을 위한 자바 기본 다시 살펴보기
+- [[프로그래밍/자료구조와 알고리즘/index|자료구조와 알고리즘]] : 정식으로 배워본 적이 없으니 학습해보기
 ### 추후 관심사
- %%- [기초 알고리즘 개념(반복문) 및 flow chart (velog.io)](https://velog.io/@dnrwhddk1/%EA%B8%B0%EC%B4%88-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EA%B0%9C%EB%85%90%EB%B0%98%EB%B3%B5%EB%AC%B8-%EB%B0%8F-flow-chart#1%EB%B6%80%ED%84%B0-n%EA%B9%8C%EC%A7%80%EC%9D%98-%EC%A0%95%EC%88%98-%ED%95%A9-%EA%B5%AC%ED%95%98%EA%B8%B0) %%
-- [[프로그래밍/Java/디자인패턴/index|디자인패턴]]
-- [[프로그래밍/Java/Effective Java 3E/index|Effective Java 3E]]
-- [[프로그래밍/Kotlin/index|Kotlin]]
+- [[프로그래밍/Java/디자인패턴/index|디자인패턴]] : 자바에서 많이 쓰이는 디자인 패턴 정리하기
+- [[프로그래밍/Java/Effective Java 3E/index|Effective Java 3E]] : 좋은 코드를 작성하기 위한 심화 학습
+- [[프로그래밍/Kotlin/index|Kotlin]] : 코틀린 스프링 한번 써보고 싶음
+- [[프로그래밍/React/index|React]] : 많이 쓰이는 프론트엔드 라이브러리 써보기
 - GraphQL
+### 우선순위
+1. Java
+2. 자료구조와 알고리즘
+3. 디자인패턴
+4. Effective Java 3E
+5. Kotilin
+6. React
+
 %%
 	- Java와 같은 JVM언어로 활용도가 높고 문법이 단순하며, JVM을 사용하므로 Java와 100% 호환된다.
 	- 코틀린이 지원하는 Coroutine으로 반응형 프로그램을 Java보다 쉽게(Java의 Future 또는 RxJava 보다 러닝커브가 낮음) 개발 할 수 있다고 한다.
