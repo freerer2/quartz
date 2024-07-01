@@ -15,7 +15,8 @@ title: 목록
 - [[프로그래밍/Java/Effective Java 3E/index|Effective Java 3E]] : 좋은 코드를 작성하기 위한 심화 학습
 - [[프로그래밍/Kotlin/index|Kotlin]] : 코틀린 스프링 한번 써보고 싶음
 - [[프로그래밍/React/index|React]] : 많이 쓰이는 프론트엔드 라이브러리 써보기
-- GraphQL
+- SQL : SQL전문가 가이드 스터디
+- GraphQL : 뭔지 모르는데 일단 적어봄
 ### 우선순위
 1. Java
 2. 자료구조와 알고리즘
@@ -23,6 +24,8 @@ title: 목록
 4. Effective Java 3E
 5. Kotilin
 6. React
+7. SQL
+8. GraphQL
 
 %%
 	- Java와 같은 JVM언어로 활용도가 높고 문법이 단순하며, JVM을 사용하므로 Java와 100% 호환된다.
