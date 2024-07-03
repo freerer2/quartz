@@ -186,7 +186,7 @@ var N = {
     onunload() {}
     isFolderNote(t) {
       return this.settings.folderNoteType === u.InsideFolder
-        ? t.basename == t.parent.name
+        ? t.basename == t.parent.name || app.metadataCache.getFileCache(t).frontmatter?.title == t.parent.name
         : t.parent
           ? this.app.vault.getAbstractFileByPath(this.getCleanParentPath(t) + t.basename) instanceof
             a.TFolder
