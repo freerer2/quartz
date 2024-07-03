@@ -4,7 +4,7 @@ tags:
   - moc
 ---
 %% Begin Waypoint %%
-- **[[언어 알아보기]]**
-- **[[API 마스터하기]]**
+- **[[언어 알아보기/index.md|언어 알아보기]]**
+- **[[API 마스터하기/index.md|API 마스터하기]]**
 
 %% End Waypoint %%

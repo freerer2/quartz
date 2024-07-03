@@ -333,7 +333,7 @@ ${n}`
         }
         let p = ""
         if (!s || this.settings.showEnclosingNote) {
-          e.children.find((c)=>c.name == 'index.md') ? p = `${o} **[[${e.path}/index.md|${e.name}]]**` : p = `${o} **${e.name}**`;          
+          e.children.find((c)=>c.name == 'index.md') ? p = `${o} **[[${e.name}/index.md|${e.name}]]**` : p = `${o} **${e.name}**`;          
           let r
           if (
             (this.settings.folderNoteType === u.InsideFolder
@@ -342,7 +342,7 @@ ${n}`
                 (r = this.app.vault.getAbstractFileByPath(e.parent.path + "/" + e.name + ".md")),
             r instanceof a.TFile &&
               (this.settings.useWikiLinks
-                ? (p = `${o} **[[${r.basename}]]**`)
+                ? !app.metadataCache.getFileCache(r).frontmatter.tags.includes('moc') ? (p = `${o} **[[${r.basename}]]**`) : p
                 : (p = `${o} **[${r.basename}](${this.getEncodedUri(t, r)})**`),
               !s))
           ) {

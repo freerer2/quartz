@@ -4,9 +4,9 @@ tags:
   - moc
 ---
 %% Begin Waypoint %%
-- **[[Java 배우기]]**
-- **[[디자인패턴]]**
-- **[[Effective Java 3E]]**
+- **[[Java 배우기/index.md|Java 배우기]]**
+- **[[디자인패턴/index.md|디자인패턴]]**
+- **[[Effective Java 3E/index.md|Effective Java 3E]]**
 - [[자바 버전별 주요 변경 사항]]
 
 %% End Waypoint %%
