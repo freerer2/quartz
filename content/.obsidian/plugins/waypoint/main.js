@@ -333,7 +333,7 @@ ${n}`
         }
         let p = ""
         if (!s || this.settings.showEnclosingNote) {
-          e.children.find((c)=>c.name == 'index.md') ? p = `${o} **[[${e.name}/index.md|${e.name}]]**` : p = `${o} **${e.name}**`;          
+          e.children.find((c)=>c.name == 'index.md') ? p = `${o} **[[${e.path}/index.md|${e.name}]]**` : p = `${o} **${e.name}**`;          
           let r
           if (
             (this.settings.folderNoteType === u.InsideFolder
