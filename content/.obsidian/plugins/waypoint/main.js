@@ -333,7 +333,7 @@ ${n}`
         }
         let p = ""
         if (!s || this.settings.showEnclosingNote) {
-          p = `${o} **[[${e.name}/index.md|${e.name}]]**`
+          e.children.find((c)=>c.name == 'index.md') ? p = `${o} **[[${e.name}/index.md|${e.name}]]**` : p = `${o} **${e.name}**`;          
           let r
           if (
             (this.settings.folderNoteType === u.InsideFolder
@@ -355,15 +355,24 @@ ${n}`
         let g = e.children
         if (
           ((g = g.sort((r, d) =>{
+            //order값으로 sort처리
             const rmeta = app.metadataCache.getFileCache(r);
             const dmeta = app.metadataCache.getFileCache(d);
 
             let rorder, dorder;
 
             if(rmeta) rorder = rmeta.frontmatter?.order || 99999;
-            else rorder = app.metadataCache.getFileCache(r.children.find((c)=>c.name == 'index.md')).frontmatter?.order || 99999;
+            else {
+              let temp = r.children.find((c)=>c.name == 'index.md');
+              if(temp) rorder = app.metadataCache.getFileCache(temp).frontmatter?.order || 99999
+              else rorder = 99999;
+            };
             if(dmeta) dorder = dmeta.frontmatter?.order || 99999;
-            else dorder = app.metadataCache.getFileCache(d.children.find((c)=>c.name == 'index.md')).frontmatter?.order || 99999;
+            else {
+              let temp = d.children.find((c)=>c.name == 'index.md');
+              if(temp) dorder = app.metadataCache.getFileCache(temp).frontmatter?.order || 99999
+              else dorder = 99999;
+            };
 
             if(rorder > dorder) {
               return 1
