@@ -354,8 +354,24 @@ ${n}`
         if (!e.children || e.children.length == 0) return `${o} **${e.name}**`
         let g = e.children
         if (
-          ((g = g.sort((r, d) =>
-            r.name.localeCompare(d.name, void 0, { numeric: !0, sensitivity: "base" }),
+          ((g = g.sort((r, d) =>{
+            const rmeta = app.metadataCache.getFileCache(r);
+            const dmeta = app.metadataCache.getFileCache(d);
+
+            let rorder, dorder;
+
+            if(rmeta) rorder = rmeta.frontmatter?.order || 99999;
+            else rorder = app.metadataCache.getFileCache(r.children.find((c)=>c.name == 'index.md')).frontmatter?.order || 99999;
+            if(dmeta) dorder = dmeta.frontmatter?.order || 99999;
+            else dorder = app.metadataCache.getFileCache(d.children.find((c)=>c.name == 'index.md')).frontmatter?.order || 99999;
+
+            if(rorder > dorder) {
+              return 1
+            } else if(rorder < dorder) {
+              return -1
+            }
+            return r.name.localeCompare(d.name, void 0, { numeric: !0, sensitivity: "base" })
+          }
           )),
           !this.settings.showFolderNotes)
         )
