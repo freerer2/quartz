@@ -5,4 +5,5 @@ aliases:
 order: 300
 ---
 
-![[Effective Java 3E/Effective Java 3E]]
+![[프로그래밍/Java/Effective Java 3E/Effective Java 3E]]
+

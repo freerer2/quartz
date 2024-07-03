@@ -5,4 +5,5 @@ aliases:
 order: 100
 ---
 
-![[Java/Java]]
+![[프로그래밍/Java/Java]]
+
