@@ -1,17 +1,17 @@
 ---
 order: 30
 ---
-## Iterating with foreach
+## foreach로 반복하기
 
-In the previous articles in this [tutorial series](https://dev.java/learn/refactoring-to-functional-style/) we looked at converting loops written in the imperative style to the functional style. In this article we'll see how to convert an imperative style iteration using `foreach` to the functional style. In addition, we'll also see how to pick select elements using `if` transforms to the functional style.
+[[프로그래밍/Java/Java 배우기/언어 알아보기/명령형에서 함수형 스타일로 리팩토링하기/index|튜토리얼 시리즈]]의 이전 글에서는 명령형으로 작성된 루프를 함수형으로 변환하는 방법을 살펴봤습니다. 이번 글에서는 `foreach`를 사용해 명령형 반복문을 함수형으로 변환하는 방법을 살펴보겠습니다. 또한 `if` 변환을 사용하여 선택 요소를 함수형 스타일로 변환하는 방법도 살펴보겠습니다.
 
-Java 5 introduced the very popular `foreach` syntax. For example, to iterate over a collection of `String`s representing names, we'd write something like `for(String name: names)`. Under the hood, the `foreach` is converted, at the bytecode level, to use an `Iterator`—while the iterator tells us there is another element, fetch the next element for processing. In other words, the `foreach` is a nice concise syntax sugar for iteration with a `while` loop over the elements provided by an `Iterator`. We can convert a `foreach` into the functional style quite easily. Let's see how.
+Java 5에는 매우 인기 있는 `foreach` 구문이 도입되었습니다. 예를 들어, 이름을 나타내는 `String`의 컬렉션을 반복하려면 `for(String name: names)`과 같이 작성합니다. 내부적으로 `foreach`는 바이트코드 수준에서 `Iterator`를 사용하도록 변환되며, 이터레이터는 다른 요소가 있다는 것을 알려주면 처리를 위해 다음 요소를 가져옵니다. 다시 말해, `foreach`는 `Iterator`가 제공하는 요소에 대한 `while` 루프를 사용한 반복을 위한 간결한 Syntax Sugar입니다. 우리는 `foreach`를 함수형 스타일로 아주 쉽게 변환할 수 있습니다. 방법을 살펴보겠습니다.
 
  
 
-## From Imperative to Functional Style
+## 명령형에서 함수형 스타일로 전환하기
 
-Here's an example of iteration, using the `foreach`, over a collection of names:
+다음은 이름 모음에 대해 `foreach`를 사용하는 반복의 예입니다:
 
 ```java
 List<String> names = List.of("Jack", "Paula", "Kate", "Peter");
@@ -21,9 +21,9 @@ for(String name: names) {
 }
 ```
 
-Each step through the iteration, the `name` variable is bound to a new value, as the iteration advances from one element to the next in the given collection. Converting the imperative style `foreach` to the functional style is a straight up use of the `forEach` internal iterator method. It is called an internal iterator because the advancing to the next element is handled internally and automatically instead of externally or explicitly.
+반복이 주어진 컬렉션의 한 요소에서 다음 요소로 진행됨에 따라 반복의 각 단계에서 `name` 변수는 새로운 값에 바인딩됩니다. 명령형 스타일인 `foreach`를 함수형 스타일로 변환하는 것은 `forEach` 내부 이터레이터 메서드를 바로 사용하는 것입니다. 다음 요소로의 전진이 외부적으로 또는 명시적으로 처리되는 것이 아니라 내부적으로 자동으로 처리되기 때문에 internal iterator라고 부릅니다.
 
-Let's refactor the loop to use functional style.
+함수형 스타일을 사용하도록 루프를 리팩터링해 보겠습니다.
 
 ```java
 List<String> names = List.of("Jack", "Paula", "Kate", "Peter");
@@ -31,9 +31,9 @@ List<String> names = List.of("Jack", "Paula", "Kate", "Peter");
 names.forEach(name -> System.out.println(name));
 ```
 
-That was pretty straightforward, the `for` loop turned into a call to the `forEach()` method on the collection. Each step through the iteration, the lambda provided to the `forEach()` as an argument is invoked with the next element in the collection.
+이는 매우 간단합니다. `for` 루프는 컬렉션의 `forEach()` 메서드 호출로 바뀌었습니다. 반복의 각 단계에서 `forEach()`에 인수로 제공된 람다가 컬렉션의 다음 요소와 함께 호출됩니다.
 
-A slightly variation of this iteration, using `stream()`, is shown next.
+이 반복을 `stream()`을 사용하여 약간 변형한 것이 다음에 나와 있습니다.
 
 ```java
 List<String> names = List.of("Jack", "Paula", "Kate", "Peter");
@@ -42,13 +42,13 @@ names.stream()
   .forEach(name -> System.out.println(name));
 ```
 
-The `forEach()` method is available both on a `Collection<T>` and on a `Stream<T>`. Functions like `filter()`, which we'll use soon, are available only on a `Stream<T>` and not on the `Collection`. This is by design in order to provide efficiency when multiple intermediate operations may precede the terminal operation like `forEach()`, `findFirst()`, etc.
+`forEach()` 메서드는 `Collection<T>`와 `Stream<T>`에서 모두 사용할 수 있습니다. 곧 사용하게 될 `filter()`와 같은 함수형은 `Stream<T>`에서만 사용할 수 있고 `Collection`에서는 사용할 수 없습니다. 이는 `forEach()`, `findFirst()` 등과 같이 여러 중간 연산이 터미널 연산에 선행될 수 있는 경우 효율성을 제공하기 위한 설계입니다.
 
  
 
-## Picking select elements with if
+## if를 사용하여 선택 요소 선택
 
-Suppose, in the middle of the iteration, we want to pick some values from the collection based on some condition. For example, what if we want to print only names of length 4? In the imperative style we could do the following:
+반복 도중에 특정 조건에 따라 컬렉션에서 일부 값을 선택하고자 한다고 가정해 보겠습니다. 예를 들어 길이가 4인 이름만 인쇄하고 싶다면 어떻게 해야 할까요? 명령형 스타일에서는 다음과 같이 할 수 있습니다:
 
 ```java
 List<String> names = List.of("Jack", "Paula", "Kate", "Peter");
@@ -60,9 +60,9 @@ for(String name: names) {
 }
 ```
 
-For the functional style, the `filter` method of `Stream` becomes a direct replacement of the imperative style `if`. The `filter` method will allow an element in the collection to pass through to the next stage in the functional pipeline if the predicate, passed in as a lambda, to the `filter()` method evaluates to `true`; otherwise, the value is discarded from further processing.
+함수형 스타일의 경우, `Stream`의 `filter` 메서드는 명령형 스타일인 `if`를 직접 대체하게 됩니다. `filter` 메서드는 `filter()` 메서드에 람다로 전달된 predicate가 `true`로 평가되면 컬렉션의 요소를 함수형 파이프라인의 다음 단계로 통과시키고, 그렇지 않으면 더 이상 처리하지 않고 값을 버립니다.
 
-Let's conver the previous code to functional style:
+이전 코드를 함수형으로 변환해 보겠습니다:
 
 ```java
 List<String> names = List.of("Jack", "Paula", "Kate", "Peter");
@@ -72,15 +72,15 @@ names.stream()
   .forEach(name -> System.out.println(name));
 ```
 
-The `filter()` method acts like a gate, it opens to let some elements pass through and closes to reject or discard some elements, as the iteration moves forward.
+`filter()` 메서드는 게이트처럼 작동하며, 반복이 진행됨에 따라 일부 요소를 통과시키기 위해 열리고 일부 요소를 거부하거나 버리기 위해 닫힙니다.
 
-We saw in the previous articles the functional style equivalent for the traditional `for` loops. In this article we saw how the imperative style `foreach` of Java 5 transforms into an elegant syntax in the functional style. Furthermore, the `if` condition within a loop of the imperative style translates to a call to the `filter()` method of the `Stream` API.
+이전 기사에서 전통적인 `for` 루프에 해당하는 함수형 스타일을 살펴봤습니다. 이번 기사에서는 Java 5의 명령형 스타일인 `foreach`가 함수형 스타일에서 어떻게 우아한 구문으로 변환되는지 살펴보았습니다. 또한 명령형 스타일의 루프 내의 `if` 조건은 `Stream` API의 `filter()` 메서드에 대한 호출로 변환됩니다.
 
  
 
-## Mappings
+## 매핑하기
 
-Anywhere you see a `foreach` loop, use the `forEach()` method directly on the collection. If the body of the `foreach` has a `if` statement to selectively pick some value, then use the `stream()` API with the call to the `filter()` method.
+`foreach` 루프가 보이는 곳에서는 컬렉션에서 직접 `forEach()` 메서드를 사용하세요. `foreach`의 본문에 일부 값을 선택적으로 선택하는 `if` 문이 있는 경우 `stream()` API를 `filter()` 메서드 호출과 함께 사용하세요.
 
 ---
 Last update: November 14, 2023
