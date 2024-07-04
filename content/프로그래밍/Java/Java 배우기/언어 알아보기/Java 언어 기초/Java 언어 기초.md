@@ -1,5 +1,5 @@
 ---
-title: Java 언어 기초 목차
+title: "[목차] Java 언어 기초"
 tags:
   - moc
 ---

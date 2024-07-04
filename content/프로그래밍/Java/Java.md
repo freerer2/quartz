@@ -1,5 +1,5 @@
 ---
-title: Java 목차
+title: "[목차] Java"
 tags:
   - moc
 ---

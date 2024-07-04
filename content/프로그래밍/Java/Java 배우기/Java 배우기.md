@@ -1,5 +1,5 @@
 ---
-title: Java 배우기 목차
+title: "[목차] Java 배우기"
 tags:
   - moc
 order: 99999

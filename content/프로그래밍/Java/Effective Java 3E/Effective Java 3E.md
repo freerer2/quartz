@@ -1,5 +1,5 @@
 ---
-title: Effective Java 3E 목차
+title: "[목차] Effective Java 3E"
 tags:
   - moc
 ---
