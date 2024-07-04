@@ -4,61 +4,61 @@ aliases:
   - 컬렉션 프레임워크
 order: 10
 ---
-This is a series of tutorials aimed at introducing the collections framework. There are quite a few tutorials because the collections framework is extensive, and powerful. If you are new to them, start at the beginning and work your way through, but you can of course jump all around.
+이 튜토리얼은 컬렉션 프레임워크를 소개하기 위한 일련의 튜토리얼입니다. 컬렉션 프레임워크는 광범위하고 강력하기 때문에 튜토리얼이 꽤 많이 있습니다. 처음 사용하는 경우 처음부터 시작하여 차근차근 진행하되, 물론 여기저기 뛰어다녀도 됩니다.
 
   
 
-1. [[Storing Data Using the Collections Framework]]  
+1. [[컬렉션 프레임워크를 사용하여 데이터 저장]]  
     
-    Why Choosing a Collection over an Array?
+    배열 대신 컬렉션을 선택하는 이유는 무엇인가요?
     
-2. [[Getting to Know the Collection Hierarchy]]  
+2. [[컬렉션 계층 구조 알아보기]]  
     
-    Getting to Know the Collection Hierarchy.
+    컬렉션 계층 구조에 대해 알아보기.
     
-3. [[Storing Elements in a Collection]]  
+3. [[컬렉션에 요소 저장하기]]  
     
-    Using a Collection to Store and Retrieve Elements
+    컬렉션을 사용하여 요소 저장 및 검색하기
     
-4. [[Iterating over the Elements of a Collection]]  
+4. [[컬렉션의 요소 반복하기]]  
     
-    Iterating over the Content of a Collection.
+    컬렉션의 콘텐츠를 반복합니다.
     
-5. [[Extending Collection with List]]  
+5. [[List로 컬렉션 확장하기]]  
     
-    Exploring the List Interface.
+    List 인터페이스 살펴보기.
     
-6. [[Extending Collection with Set, SortedSet and NavigableSet]]  
+6. [[Set, SortedSet 및 NavigableSet으로 컬렉션 확장하기]]  
     
-    Exploring the Set Interface.
+    Set 인터페이스 살펴보기.
     
-7. [[Creating and Processing Data with the Collections Factory Methods]]  
+7. [[컬렉션 팩토리 메서드를 사용한 데이터 생성 및 처리]]  
     
-    Creating Immutable Collections.
+    불변 컬렉션 만들기.
     
-8. [[Storing Elements in Stacks and Queues]]  
+8. [[스택 및 큐에 요소 저장하기]]  
     
-    Finding Your Way in the Queue Hierarchy.
+	큐 계층 구조에서 내 길 찾기.
     
-9. [[Using Maps to Store Key Value Pairs]]  
+9. [[맵을 사용하여 키 값 쌍 저장]]  
     
-    Introducing the Map Hierarchy.
+    맵 계층 구조를 소개합니다.
     
-10. [[Managing the Content of a Map]]  
+10. [[맵의 콘텐츠 관리]]  
     
-    Using a Map to Handle Key-Value Pairs.
+    맵을 사용하여 키-값 쌍을 처리합니다.
     
-11. [[Handling Map Values with Lambda Expressions]]  
+11. [[람다 표현식으로 맵 값 처리하기]]  
     
-    Handling the Values Stored in a Map.
+    맵에 저장된 값 처리하기.
     
-12. [[Keeping Keys Sorted with SortedMap and NavigableMap]]  
+12. [[SortedMap과 NavigableMap으로 키 정렬 유지]]  
     
-    Using a Sortedmap to Sort Key-Value Pairs.
+    Sortedmap 을 사용하여 키-값 쌍을 정렬합니다.
     
-13. [[Choosing Immutable Types for Your Key]]  
+13. [[키의 변경 불가능한 타입 선택하기]]  
     
-    Avoiding the Use of Mutable Keys.
+    변경 가능한 키 사용 안 하기.
 
 ## More Learning
 ![](https://youtu.be/gTBb7LxTBbE](https://youtu.be/gTBb7LxTBbE)
