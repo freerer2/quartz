@@ -343,7 +343,7 @@ ${n}`
             r instanceof a.TFile &&
               (this.settings.useWikiLinks
                 //moc 태그가 있으면 index 파일을 바라보게 변경
-                ? !app.metadataCache.getFileCache(r).frontmatter.tags.includes('moc') ? (p = `${o} **[[${r.basename}]]**`) : p
+                ? !app.metadataCache.getFileCache(r).frontmatter.tags?.includes('moc') ? (p = `${o} **[[${r.basename}]]**`) : p
                 : (p = `${o} **[${r.basename}](${this.getEncodedUri(t, r)})**`),
               !s))
           ) {

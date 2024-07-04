@@ -1,6 +1,6 @@
 {
   "collapse-filter": false,
-  "search": "",
+  "search": "file:-index",
   "showTags": false,
   "showAttachments": false,
   "hideUnresolved": true,
@@ -8,24 +8,10 @@
   "collapse-color-groups": false,
   "colorGroups": [
     {
-      "query": "path:\"프로그래밍/Java\"  ",
+      "query": "file:목록",
       "color": {
         "a": 1,
         "rgb": 14048348
-      }
-    },
-    {
-      "query": "path:\"개인프로젝트\"",
-      "color": {
-        "a": 1,
-        "rgb": 14069084
-      }
-    },
-    {
-      "query": "path:\"문서관리/Obsidian\"  ",
-      "color": {
-        "a": 1,
-        "rgb": 11392604
       }
     }
   ],
@@ -39,6 +25,6 @@
   "repelStrength": 10.0519750519751,
   "linkStrength": 1,
   "linkDistance": 250,
-  "scale": 0.22920135941749661,
+  "scale": 0.02152871844243049,
   "close": false
 }
