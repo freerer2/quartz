@@ -51,8 +51,6 @@ byte[] fileArray;
 fileArray = Files.readAllBytes(file);
 ```
 
-Copy
-
 ### Writing All Bytes or Lines to a File
 
 You can use one of the write methods to write bytes, or lines, to a file.
@@ -67,8 +65,6 @@ Path file = ...;
 byte[] buf = ...;
 Files.write(file, buf);
 ```
-
-Copy
 
  
 
@@ -96,8 +92,6 @@ try {
 }
 ```
 
-Copy
-
 POSIX File Permissions has an example that uses [`createFile(Path, FileAttribute<?>)`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Files.html#createFile(java.nio.file.Path,java.nio.file.attribute.FileAttribute...)) to create a file with pre-set permissions.
 
 You can also create a new file by using the [`newOutputStream()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Files.html#newOutputStream(java.nio.file.Path,java.nio.file.OpenOption...)) methods, as described in the section [Creating and Writing a File using Stream I/O](https://dev.java/learn/java-io/reading-writing/binary-files/#writing-bytes). If you open a new output stream and close it immediately, an empty file is created.
@@ -122,15 +116,11 @@ try {
 }
 ```
 
-Copy
-
 The result of running this file would be something like the following:
 
 ```shell
 The temporary file has been created: /tmp/509668702974537184.myapp
 ```
-
-Copy
 
 The specific format of the temporary file name is platform specific.
 

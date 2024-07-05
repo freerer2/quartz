@@ -58,8 +58,6 @@ boolean parallel = false;
 Stream<String> stream = StreamSupport.stream(spliterator, parallel);
 ```
 
-Copy
-
 This pattern contains several magical elements that will be covered later in this tutorial. Let quickly browse through them.
 
 The `estimateSize` is the number of elements you think this stream will be consuming. There are cases where this information is simple to get: for example if you are creating a stream on an array or a collection. But there are also cases where this information is unknown.
@@ -81,15 +79,11 @@ List<String> strings = empty.collect(Collectors.toList());
 System.out.println("strings = " + strings);
 ```
 
-Copy
-
 Running this code displays the following on your console.
 
 ```text
 strings = []
 ```
-
-Copy
 
 There are cases where creating an empty stream may be very handy. In fact, you saw one in the previous part of this tutorial. The pattern you saw uses empty streams and flatmap to remove invalid elements from a stream. Starting with Java SE 16, this pattern has been replaced with the [`mapMulti()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Stream.html#mapMulti(java.util.function.BiConsumer)) pattern.
 
@@ -108,15 +102,11 @@ List<Integer> ints = intStream.collect(Collectors.toList());
 System.out.println("ints = " + ints);
 ```
 
-Copy
-
 Running this first example gives you the following:
 
 ```text
 ints = [1, 2, 3]
 ```
-
-Copy
 
 Here is the second one.
 
@@ -128,15 +118,11 @@ List<String> strings = stringStream.collect(Collectors.toList());
 System.out.println("strings = " + strings);
 ```
 
-Copy
-
 Running this second example gives you the following:
 
 ```text
 strings = [one, two, three]
 ```
-
-Copy
 
  
 
@@ -152,8 +138,6 @@ You can create such a stream with the following code, but don't do it!
 Stream<String> generated = Stream.generate(() -> "+");
 List<String> strings = generated.collect(Collectors.toList());
 ```
-
-Copy
 
 If you run this code (once again, don't), you will see that it will never stop. If you did and were patient enough, you may see an [`OutOfMemoryError`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/lang/OutOfMemoryError.html). If not, you are good to terminate your application through your IDE. This stream produces elements and never stops. It really produces an infinite stream.
 
@@ -171,15 +155,11 @@ List<String> strings =
 System.out.println("strings = " + strings);
 ```
 
-Copy
-
 Running this code prints the following.
 
 ```text
 strings = [+, +, +, +, +, +, +, +, +, +]
 ```
-
-Copy
 
 The [`limit()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Stream.html#limit(long)) method is called a _short-circuiting_ method: it can stop the consumption of the elements of a stream. You may remember that the data is processed on element at a time in a stream: each element traverses all the operations defined in your stream, from the first one to the last one. This is the reason why this limit operation can stop the generation of more elements.
 
@@ -196,8 +176,6 @@ Stream<String> iterated = Stream.iterate("+", s -> s + "+");
 iterated.limit(5L).forEach(System.out::println);
 ```
 
-Copy
-
 You should see the following result.
 
 ```text
@@ -208,8 +186,6 @@ You should see the following result.
 +++++
 ```
 
-Copy
-
 Do not forget to limit the number of elements processed by your stream when using this pattern.
 
 Starting with Java SE 9, this pattern has an overload, which takes a predicate as an argument. The [`iterate()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Stream.html#iterate(T,java.util.function.UnaryOperator)) method stops generating elements when this predicate becomes false. The previous code can use this pattern in the following way.
@@ -218,8 +194,6 @@ Starting with Java SE 9, this pattern has an overload, which takes a predicate a
 Stream<String> iterated = Stream.iterate("+", s -> s.length() <= 5, s -> s + "+");
 iterated.forEach(System.out::println);
 ```
-
-Copy
 
 Running this code gives you the same result as the previous one.
 
@@ -242,15 +216,11 @@ List<String> listLetters =
 System.out.println("listLetters = " + listLetters);
 ```
 
-Copy
-
 The result is the following.
 
 ```text
 listLetters = [A, B, C, D, A, B, C, D, A, B]
 ```
-
-Copy
 
 There are plenty of things you can do, based on this pattern. Note that because [`IntStream.range()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/IntStream.html#range(int,int)) creates an [`IntStream`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/IntStream.html), you need to use the [`mapToObj()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/IntStream.html#mapToObj(java.util.function.IntFunction)) method to map it to a stream of objects.
 
@@ -280,15 +250,11 @@ List<Integer> randomInts =
 System.out.println("randomInts = " + randomInts);
 ```
 
-Copy
-
 If you used the same seed as the one used in this example, you will have the following in your console.
 
 ```text
 randomInts = [4, 4, 3, 1, 1, 1, 2, 2, 4, 2]
 ```
-
-Copy
 
 Note that we used the [`boxed()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/IntStream.html#boxed()) method available on the specialized stream of numbers, which simply maps this stream to the equivalent stream of wrapper types. So an [`IntStream`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/IntStream.html) is mapped to a [`Stream<Integer>`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Stream.html) by this method.
 
@@ -309,15 +275,11 @@ long numberOfTrue =
 System.out.println("numberOfTrue = " + numberOfTrue);
 ```
 
-Copy
-
 If you used the same seed as the one we used in this example, you will see the following result.
 
 ```text
 numberOfTrue = 773
 ```
-
-Copy
 
 You can adapt this pattern to generate any kind of object with the probability you need. Here is another example that generates a stream with the letters A, B, C, and D. The probability for each letter is the following:
 
@@ -344,8 +306,6 @@ Map<String, Long> map =
 map.forEach((letter, number) -> System.out.println(letter + " :: " + number));
 ```
 
-Copy
-
 With the same seed, you will get the following result.
 
 ```text
@@ -354,8 +314,6 @@ B :: 303
 C :: 117
 D :: 110
 ```
-
-Copy
 
 The building of the map with this [`groupingBy()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Collectors.html#groupingBy(java.util.function.Function)) may look unclear to you at this point. Do not worry; this pattern will be covered later in this tutorial.
 
@@ -381,8 +339,6 @@ List<String> letters =
 System.out.println("letters = " + letters);
 ```
 
-Copy
-
 A [`toString()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/lang/Character.html#toString(int)) factory method has been added on the [`Character`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/lang/Character.html) class in Java SE 11, that you can use to make this code simpler.
 
 ```java
@@ -394,15 +350,11 @@ List<String> letters =
 System.out.println("letters = " + letters);
 ```
 
-Copy
-
 Both codes print out the following.
 
 ```text
 letters = [H, e, l, l, o,  , D, u, k, e]
 ```
-
-Copy
 
  
 
@@ -438,8 +390,6 @@ try (Stream<String> lines = Files.lines(log)) {
 }
 ```
 
-Copy
-
 The try-with-resources pattern will call the [`close()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/lang/AutoCloseable.html#close()) method of your stream, which will in turn properly close the text file you have parsed.
 
  
@@ -464,8 +414,6 @@ String[] elements = sentence.split(" ");
 Stream<String> stream = Arrays.stream(elements);
 ```
 
-Copy
-
 The [`Pattern`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/regex/Pattern.html) class has also a method for you. What you can do is call [`Pattern.compile().splitAsStream()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/regex/Pattern.html#splitAsStream(java.lang.CharSequence)). Here is the code you can write using this method.
 
 ```java
@@ -478,15 +426,11 @@ List<String> words = stream.collect(Collectors.toList());
 System.out.println("words = " + words);
 ```
 
-Copy
-
 Running this code produces the following result.
 
 ```text
 words = [For, there, is, good, news, yet, to, hear, and, fine, things, to, be, seen]
 ```
-
-Copy
 
 You may be wondering which of the two patterns is the best. To answer this question, you need to take a close look at the first pattern. First, you create an array to store the result of the splitting, then you create a stream on this array.
 
@@ -520,15 +464,11 @@ List<String> list = stream.collect(Collectors.toList());
 System.out.println("list = " + list);
 ```
 
-Copy
-
 Running this code prints the following.
 
 ```text
 list = [one, two, three, four]
 ```
-
-Copy
 
  
 
@@ -563,15 +503,11 @@ try (Stream<String> stream = response.body()) {
 System.out.println("# lines = " + lines.size());
 ```
 
-Copy
-
 Running this code will print out the following.
 
 ```text
 # lines = 15904
 ```
-
-Copy
 
 The stream is created by the body handler you give as an argument to the [`send()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.net.http/java/net/http/HttpClient.html#send(java.net.http.HttpRequest,java.net.http.HttpResponse.BodyHandler)) method. The HTTP Client API gives you several body handlers. The one you need to consume the body as a stream is the one created by the factory method [`HttpResponse.BodyHandlers.ofLines()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.net.http/java/net/http/HttpResponse.BodyHandlers.html#ofLines()). This way of consuming the body of the response is very memory efficient. If you write your stream carefully, the body of the response will never be stored in memory.
 

@@ -20,8 +20,6 @@ var map = strings.stream()
 map.forEach((key, value) -> System.out.println(key + " :: " + value));
 ```
 
-Copy
-
 This code prints out the following.
 
 - It groups the strings by their length with [`groupingBy(String::length)`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Collectors.html#groupingBy(java.util.function.Function))
@@ -35,8 +33,6 @@ Running this code produces the following result.
 4 :: 1
 5 :: 1
 ```
-
-Copy
 
 Even if you are not familiar with the Stream API, reading code that uses it gives you an idea of what it is doing at the first glance.
 
@@ -59,8 +55,6 @@ public class Sale {
 }
 ```
 
-Copy
-
 Suppose you need to compute the total amount for the sales in March. You will probably write the following code.
 
 ```java
@@ -73,8 +67,6 @@ for (Sale sale: sales) {
 }
 System.out.println("Amount sold in March: " + amountSoldInMarch);
 ```
-
-Copy
 
 You can see three steps in this simple data processing algorithm.
 
@@ -91,8 +83,6 @@ select sum(amount)
 from Sales
 where extract(month from date) = 3;
 ```
-
-Copy
 
  
 
@@ -156,8 +146,6 @@ for (City city: cities) {
 System.out.println("Sum = " + sum);
 ```
 
-Copy
-
 You can recognize another map-filter-reduce processing on a list of cities.
 
 Now, let us make a little thought experiment: suppose the Stream API does not exist, and that a `map()` and a `filter()` method exists on the [`Collection`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/Collection.html) interface, as well as a [`sum()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/IntStream.html#sum()) method.
@@ -170,8 +158,6 @@ int sum = cities.map(city -> city.getPopulation())
                 .sum();
 ```
 
-Copy
-
 From a readability and expressiveness point of view, this code is very easy to understand. So you may be wondering: why these map and filter methods have not been added to the [`Collection`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/Collection.html) interface?
 
 Let us dig a little deeper: what would be the return type of these `map()` and `filter()` methods? Well, since we are in the Collections Framework, returning a collection seems natural. So you could write this code in this way.
@@ -181,8 +167,6 @@ Collection<Integer> populations         = cities.map(city -> city.getPopulation(
 Collection<Integer> filteredPopulations = populations.filter(population -> population > 100_000);
 int sum                                 = filteredPopulations.sum();
 ```
-
-Copy
 
 Even if chaining the calls improves readability, this code should still be correct.
 
@@ -207,8 +191,6 @@ Stream<Integer> populations         = streamOfCities.map(city -> city.getPopulat
 Stream<Integer> filteredPopulations = populations.filter(population -> population > 100_000);
 int sum = filteredPopulations.sum(); // in fact this code does not compile; we'll fix it later
 ```
-
-Copy
 
 The [`Stream`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Stream.html) interface avoids creating intermediate structures to store mapped or filtered objects. Here the [`map()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Stream.html#map(java.util.function.Function)) and [`filter()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Stream.html#filter(java.util.function.Predicate)) methods are still returning new streams. So for this code to work and be efficient, no data should be stored in these streams. The streams created in this code, `streamOfCities`, `populations` and `filteredPopulations` must all be empty objects.
 
@@ -247,8 +229,6 @@ var stream = Stream.of(1, 2, 3, 4);
 var stream1 = stream.map(i -> i + 1);
 var list = stream.toList();
 ```
-
-Copy
 
  
 

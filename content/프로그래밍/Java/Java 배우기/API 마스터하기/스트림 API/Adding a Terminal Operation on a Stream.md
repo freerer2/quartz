@@ -32,15 +32,11 @@ long count =
 System.out.println("count = " + count);
 ```
 
-Copy
-
 Running this code produces the following result.
 
 ```text
 count = 4
 ```
-
-Copy
 
  
 
@@ -55,16 +51,12 @@ strings.filter(s -> s.length() == 3)
        .forEach(System.out::println);
 ```
 
-Copy
-
 Running this code prints out the following.
 
 ```text
 ONE
 TWO
 ```
-
-Copy
 
 This method is so simple that you may be tempted to use it in wrong use cases.
 
@@ -83,15 +75,11 @@ strings.filter(s -> s.length() == 3)
 System.out.println("result = " + result);
 ```
 
-Copy
-
 Running the previous code prints out the following.
 
 ```text
 result = [ONE, TWO]
 ```
-
-Copy
 
 So you may be tempted to use this code because it's simple, and it "just works". Well, there are several wrong things that this code is doing. Let us go through them.
 
@@ -112,8 +100,6 @@ List<String> result =
            .collect(Collectors.toList());
 ```
 
-Copy
-
 This collector creates an instance of [`ArrayList`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/ArrayList.html) and adds the elements processed by your stream in it. So this pattern is not creating any side effect so there is no performance hit.
 
 Parallelism and concurrency are handled by the Collector API itself, so you can safely make this stream parallel.
@@ -130,8 +116,6 @@ List<String> result =
            .map(String::toUpperCase)
            .toList();
 ```
-
-Copy
 
 This pattern produces a special instance of [`List`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/List.html) that is unmodifiable. If what you need is a modifiable list, you should stick to the first collector pattern. It also may perform better than collecting your stream in an instance of [`ArrayList`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/ArrayList.html). This point is covered in the next paragraph.
 
@@ -165,8 +149,6 @@ List<String> result =
            .collect(Collectors.toList());
 ```
 
-Copy
-
 This pattern creates a simple instance of [`ArrayList`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/ArrayList.html) and accumulates the elements of your stream in it. If there are too many elements for the internal array of the [`ArrayList`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/ArrayList.html) to store them, then the current array will be copied into a larger one and will be handled by the garbage collector.
 
 If you want to avoid that, and you know the amount of elements your stream will produce, then you can use the [`Collectors.toCollection()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Collectors.html#toCollection(java.util.function.Supplier)) collector, which takes a supplier as an argument to create the collection in which you will be collecting the processed elements. The following code uses this pattern to create an instance of [`ArrayList`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/ArrayList.html) with an initial capacity of 10,000.
@@ -179,8 +161,6 @@ List<String> result =
            .map(String::toUpperCase)
            .collect(Collectors.toCollection(() -> new ArrayList<>(10_000)));
 ```
-
-Copy
 
 ### Collecting in an Immutable List
 
@@ -197,8 +177,6 @@ List<String> result =
            .collect(Collectors.toUnmodifiableList()));
 ```
 
-Copy
-
 In this example, `result` is an immutable list.
 
 Starting with Java SE 16, there is a better way to collect your data in an immutable list, which can be more efficient on some cases. The pattern is the following.
@@ -211,8 +189,6 @@ List<String> result =
            .map(String::toUpperCase)
            .toList();
 ```
-
-Copy
 
 How can it be more efficient? The first pattern, built on the use of a collector, begins by collecting your elements in a plain [`ArrayList`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/ArrayList.html) and then seals it to make it immutable when the processing is done. What your code sees is just the immutable list built from this [`ArrayList`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/ArrayList.html).
 
@@ -235,8 +211,6 @@ List<String> result =
            .collect(Collectors.toCollection(LinkedList::new));
 ```
 
-Copy
-
 ### Collecting in a Set
 
 Because the [`Set`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/Set.html) interface is an extension of the [`Collection`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/Collection.html) interface, you could use the pattern [`Collectors.toCollection(HashSet::new)`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Collectors.html#toCollection(java.util.function.Supplier)) to collect your data in an instance of [`Set`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/Set.html). This is fine, but the Collector API still gives you a cleaner pattern to do that: the [`Collectors.toSet()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Collectors.html#toSet()).
@@ -250,8 +224,6 @@ Set<String> result =
            .collect(Collectors.toSet());
 ```
 
-Copy
-
 You may be wondering if there is any difference between these two patterns. The answer is yes, there is a subtle difference, which you will see later in this tutorial.
 
 If what you need is an immutable set, the Collector API has another pattern for you: [`Collectors.toUnmodifiableSet()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Collectors.html#toUnmodifiableSet()).
@@ -264,8 +236,6 @@ Set<String> result =
            .map(String::toUpperCase)
            .collect(Collectors.toUnmodifiableSet());
 ```
-
-Copy
 
 ### Collecting in a Array
 
@@ -286,15 +256,11 @@ String[] result =
 System.out.println("result = " + Arrays.toString(result));
 ```
 
-Copy
-
 Running this code produces the following result.
 
 ```text
 result = [ONE, TWO]
 ```
-
-Copy
 
  
 
@@ -318,15 +284,11 @@ String longest =
 System.out.println("longest = " + longest);
 ```
 
-Copy
-
 It will print the following on your console.
 
 ```text
 longest = three
 ```
-
-Copy
 
 Remember that trying to open an optional object that is empty throws a [`NoSuchElementException`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/NoSuchElementException.html), which is something you do not want to see in your application. It happens only if your stream does not have any data to process. In this simple example, you have a stream that processes several strings of character with no filter operation. This stream cannot be empty, so you can safely open this optional object.
 
@@ -361,8 +323,6 @@ String first =
 System.out.println("first = " + first);
 ```
 
-Copy
-
 This stream is created on an instance of [`List`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/List.html), which makes it an _ordered_ stream. Note that the two lines [`unordered()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/BaseStream.html#unordered()) and [`parallel()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/BaseStream.html#parallel()) are commented in this first version.
 
 Running this code several times will always give you the same result.
@@ -370,8 +330,6 @@ Running this code several times will always give you the same result.
 ```text
 first = one
 ```
-
-Copy
 
 The [`unordered()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/BaseStream.html#unordered()) intermediate method call makes your _ordered_ stream an _unordered_ stream. In this case it does not make any difference because your stream is processed sequentially. Your data is pulled from a list that always traverses its elements in the same order. Replacing the [`findFirst()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Stream.html#findFirst()) method call with a [`findAny()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Stream.html#findAny()) method call does not make any difference either for the same reason.
 
@@ -398,8 +356,6 @@ boolean exists =
            .findFirst()
            .isPresent();
 ```
-
-Copy
 
 In fact, this code checks if the returned optional is empty or not.
 
@@ -430,8 +386,6 @@ System.out.println("oneGT3  = " + oneGT3);
 System.out.println("allLT10 = " + allLT10);
 ```
 
-Copy
-
 Running this code produces the following result.
 
 ```text
@@ -439,8 +393,6 @@ noBlank = true
 oneGT3  = true
 allLT10 = true
 ```
-
-Copy
 
  
 

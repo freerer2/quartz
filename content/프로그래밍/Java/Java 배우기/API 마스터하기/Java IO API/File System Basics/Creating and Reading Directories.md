@@ -20,8 +20,6 @@ for (Path name: dirs) {
 }
 ```
 
-Copy
-
  
 
 ## Creating a Directory
@@ -33,8 +31,6 @@ Path dir = ...;
 Files.createDirectory(path);
 ```
 
-Copy
-
 The following code snippet creates a new directory on a POSIX file system that has specific permissions:
 
 ```java
@@ -45,15 +41,11 @@ FileAttribute<Set<PosixFilePermission>> attr =
 Files.createDirectory(file, attr);
 ```
 
-Copy
-
 To create a directory several levels deep when one or more of the parent directories might not yet exist, you can use the convenience method, [`Files.createDirectories(Path, FileAttribute)`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Files.html#createDirectories(java.nio.file.Path,java.nio.file.attribute.FileAttribute...)). As with the [`Files.createDirectory(Path, FileAttribute)`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Files.html#createDirectory(java.nio.file.Path,java.nio.file.attribute.FileAttribute...)) method, you can specify an optional set of initial file attributes. The following code snippet uses default attributes:
 
 ```java
 Files.createDirectories(Paths.get("foo/bar/test"));
 ```
-
-Copy
 
 The directories are created, as needed, from the top down. In the `foo/bar/test` example, if the `foo` directory does not exist, it is created. Next, the `bar` directory is created, if needed, and, finally, the `test` directory is created.
 

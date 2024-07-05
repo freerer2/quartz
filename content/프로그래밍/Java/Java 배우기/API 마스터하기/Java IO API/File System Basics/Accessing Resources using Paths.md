@@ -78,8 +78,6 @@ The [`java.io.File`](https://docs.oracle.com/en/java/javase/22/docs/api/java.ba
 Path input = file.toPath();
 ```
 
-Copy
-
 You can then take advantage of the rich feature set available to the [`Path`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Path.html) interface.
 
 For example, assume you had some code that deleted a file:
@@ -88,16 +86,12 @@ For example, assume you had some code that deleted a file:
 file.delete();
 ```
 
-Copy
-
 You could modify this code to use the [`Files.delete()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Files.html#delete(java.nio.file.Path)) factory method, as follows:
 
 ```java
 Path fp = file.toPath();
 Files.delete(fp);
 ```
-
-Copy
 
 Conversely, the [`Path.toFile()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Path.html#toFile()) method constructs a [`java.io.File`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/File.html) object for a [`Path`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Path.html) object.
 

@@ -34,8 +34,6 @@ void main() {
 }
 ```
 
-Copy
-
 In other words, it does not matter how the variable is declared, we always get the actual implementation object's class. How can we get the [`List`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/List.html) class? That is fairly easy, using class literals. We simply write the name of the class, followed by `.class`, like so:
 
 ```java
@@ -45,8 +43,6 @@ void main() {
     System.out.println(java.util.List.class); // interface java.util.List
 }
 ```
-
-Copy
 
 We can also load classes by name as [`String`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/lang/String.html), without even knowing whether the class will be available at runtime. For example, here we are loading whatever class we are entering on the `Console`:
 
@@ -59,8 +55,6 @@ void main() throws ClassNotFoundException {
 }
 ```
 
-Copy
-
 For example:
 
 ```output
@@ -70,8 +64,6 @@ Note: Recompile with -Xlint:preview for details.
 Enter class name: java.util.Iterator
 interface java.util.Iterator
 ```
-
-Copy
 
 Each class is loaded into a [`ClassLoader`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/lang/ClassLoader.html). The JDK classes all reside in the bootstrap class loader, whereas our classes are in the system class loader, also called application class loader. We can see the class loaders here:
 
@@ -83,8 +75,6 @@ void main() {
 }
 ```
 
-Copy
-
 Interesting is that depending on how we invoke this code, we get different results. For example, if we call it using the `java ClassLoaderDemo.java`, then the type of class loader is a `MemoryClassLoader`, whereas if we first compile it and then call it with `java ClassLoaderDemo`, it is an `AppClassLoader`. The class loader for JDK classes comes back as `null`.
 
 ```output
@@ -92,8 +82,6 @@ heinz$ java --enable-preview --source 21 ClassLoaderDemo.java
 null
 com.sun.tools.javac.launcher.Main$MemoryClassLoader@6483f5ae
 ```
-
-Copy
 
 And
 
@@ -103,8 +91,6 @@ heinz$ java --enable-preview ClassLoaderDemo
 null
 jdk.internal.loader.ClassLoaders$AppClassLoader@3d71d552
 ```
-
-Copy
 
 The purpose of class loaders is to partition classes for security reasons. Classes in the JDK cannot see our classes at all, and similarly, classes in the `AppClassLoader` have no relation to classes in the `MemoryClassLoader`. This can cause some surprises when we compile our classes and then also launch them with the single-file command `java SomeClass.java`
 
@@ -127,8 +113,6 @@ void main() {
 }
 ```
 
-Copy
-
 We see four methods, two of which are `default` interface methods:
 
 ```java
@@ -138,8 +122,6 @@ public default void java.util.Iterator.forEachRemaining(java.util.function.Consu
 public abstract boolean java.util.Iterator.hasNext()
 public abstract java.lang.Object java.util.Iterator.next()
 ```
-
-Copy
 
 If we make an object of type [`java.util.Iterator`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/Iterator.html), we would even be able to call these methods. In the next example, we look for the method called [`"forEachRemaining"`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/Iterator.html#forEachRemaining(java.util.function.Consumer)) and which takes a [`Consumer`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/function/Consumer.html) as a parameter. We then create an [`Iterator`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/Iterator.html) from a [`List.of()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/List.html#of(E...)) and invoke the [`forEachRemaining`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/Iterator.html#forEachRemaining(java.util.function.Consumer)) method using reflection. Note that several things could go wrong, most notably that the method does not exist ([`NoSuchMethodException`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/lang/NoSuchMethodException.html)) and that we are not allowed to call the method ([`IllegalAccessException`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/lang/IllegalAccessException.html)). Since Java 7, we have a blanket exception that covers everything that can go wrong with reflection, the [`ReflectiveOperationException`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/lang/ReflectiveOperationException.html).
 
@@ -157,8 +139,6 @@ void main() throws ReflectiveOperationException {
     forEachRemainingMethod.invoke(iterator, println);
 }
 ```
-
-Copy
 
 Our next example is even more interesting, if I may say so myself. We are going to take a [`List`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/List.html) of items and then search through the [`Collections`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/Collections.html) class to see whether we can find any methods that we can give the method to. We invoke the method and see what happens to our list. Since the methods are declared `static` in [`Collections`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/Collections.html), the first parameter of our [`invoke()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/lang/reflect/Method.html#invoke(java.lang.Object,java.lang.Object...)) method will be `null`. We could use a stream, but they don't "play nice" with checked exceptions, thus the plain old for-in loop it will have to be:
 
@@ -185,8 +165,6 @@ void main() throws ReflectiveOperationException {
 }
 ```
 
-Copy
-
 This works nicely and we find three methods that match our requirements: [`sort()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/Collections.html#sort(java.util.List)), [`shuffle()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/Collections.html#shuffle(java.util.List)) and [`reverse()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/Collections.html#reverse(java.util.List)). The order of these methods is not guaranteed. For example, in the `Collections.java` file in OpenJDK 21, they are ordered as [`sort()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/Collections.html#sort(java.util.List)), [`reverse()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/Collections.html#reverse(java.util.List)), [`shuffle()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/Collections.html#shuffle(java.util.List)). However, when I run the code, they appear as:
 
 ```output
@@ -199,8 +177,6 @@ Calling sort()
 Calling shuffle()
 [5, 7, 4, 9, 9, 9, 2, 1, 6, 5, 3, 3, 1, 5, 3, 8]
 ```
-
-Copy
 
  
 
@@ -226,8 +202,6 @@ public class Person {
 }
 ```
 
-Copy
-
 Since we are now working with two separate classes, we will need to compile them. We can use an unnamed class as before for the demo, but we should still compile them both. It would be a mistake to use a single-file call, because in that case `Person` and the demo would exist in different class loaders. This can cause hard to understand runtime errors. I once spent a day chasing this exact error. Don't be me.
 
 Here is our `FountainOfYouth.java` file:
@@ -248,8 +222,6 @@ void main() throws ReflectiveOperationException {
 }
 ```
 
-Copy
-
 We first compile the `FountainOfYouth` class, which transitively compiles `Person.java`. We then run it, and _voila_, I've shaved 10% off my age.
 
 ```output
@@ -258,8 +230,6 @@ heinz$ java --enable-preview FountainOfYouth
 Heinz Kabutz (51)
 Heinz Kabutz (45)
 ```
-
-Copy
 
 Note that the `age` field is `private` _and_ `final`, and yet we were able to change it. If we convert `Person` to a record, then it will no longer allow us to change the properties via deep reflection.
 

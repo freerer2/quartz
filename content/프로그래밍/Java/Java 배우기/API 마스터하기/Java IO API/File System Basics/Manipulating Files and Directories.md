@@ -29,8 +29,6 @@ boolean isRegularExecutableFile = Files.isRegularFile(file) &
 Files.isReadable(file) & Files.isExecutable(file);
 ```
 
-Copy
-
 > Note: Once any of these methods completes, there is no guarantee that the file can be accessed. A common security flaw in many applications is to perform a check and then access the file. For more information, use your favorite search engine to look up TOCTTOU (pronounced TOCK-too).
 
 ### Checking Whether Two Paths Locate the Same File
@@ -45,8 +43,6 @@ if (Files.isSameFile(p1, p2)) {
     // Logic when the paths locate the same file
 }
 ```
-
-Copy
 
  
 
@@ -70,8 +66,6 @@ try {
     System.err.println(x);
 }
 ```
-
-Copy
 
 The [`deleteIfExists(Path)`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Files.html#delete(java.nio.file.Path)) method also deletes the file, but if the file does not exist, no exception is thrown. Failing silently is useful when you have multiple threads deleting files and you do not want to throw an exception just because one thread did so first.
 
@@ -101,8 +95,6 @@ import static java.nio.file.StandardCopyOption.*;
 Files.copy(source, target, REPLACE_EXISTING);
 ```
 
-Copy
-
 In addition to file copy, the [`Files`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Files.html) class also defines methods that may be used to copy between a file and a stream. The [`copy(InputStream, Path, CopyOptions...)`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Files.html#copy(java.nio.file.Path,java.io.OutputStream)) method may be used to copy all bytes from an input stream to a file. The [`copy(Path, OutputStream)`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Files.html#copy(java.nio.file.Path,java.io.OutputStream)) method may be used to copy all bytes from a file to an output stream.
 
  
@@ -119,8 +111,6 @@ Several Files methods accept an arbitrary number of arguments when flags are spe
 Path Files.move(Path, Path, CopyOption...)
 ```
 
-Copy
-
 When a method accepts a varargs argument, you can pass it a comma-separated list of values or an array (`CopyOption[]`) of values.
 
 In the following example, the method can be invoked as follows:
@@ -133,8 +123,6 @@ Files.move(source,
            REPLACE_EXISTING,
            ATOMIC_MOVE);
 ```
-
-Copy
 
 ### Moving Directories
 
@@ -152,8 +140,6 @@ import static java.nio.file.StandardCopyOption.*;
 
 Files.move(source, target, REPLACE_EXISTING);
 ```
-
-Copy
 
 Though you can implement the [`move()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Files.html#move(java.nio.file.Path,java.nio.file.Path,java.nio.file.CopyOption...)) method on a single directory as shown, the method is most often used with the file tree recursion mechanism. For more information, see the section Walking the File Tree.
 

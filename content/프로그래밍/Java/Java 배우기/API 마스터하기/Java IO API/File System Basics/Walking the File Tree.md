@@ -66,8 +66,6 @@ public static class PrintFiles
 }
 ```
 
-Copy
-
  
 
 ## Kickstarting the Process
@@ -85,8 +83,6 @@ PrintFiles pf = new PrintFiles();
 Files.walkFileTree(startingDir, pf);
 ```
 
-Copy
-
 The second `walkFileTree()` method enables you to additionally specify a limit on the number of levels visited and a set of [`FileVisitOption`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/FileVisitOption.html) enums. If you want to ensure that this method walks the entire file tree, you can specify [`Integer.MAX_VALUE`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/lang/Integer.html#MAX_VALUE) for the maximum depth argument.
 
 You can specify the [`FileVisitOption`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/FileVisitOption.html) enum, [`FOLLOW_LINKS`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/FileVisitOption.html#FOLLOW_LINKS), which indicates that symbolic links should be followed.
@@ -103,8 +99,6 @@ EnumSet<FileVisitOption> opts = EnumSet.of(FOLLOW_LINKS);
 Finder finder = new Finder(pattern);
 Files.walkFileTree(startingDir, opts, Integer.MAX_VALUE, finder);
 ```
-
-Copy
 
  
 
@@ -138,8 +132,6 @@ public FileVisitResult
 }
 ```
 
-Copy
-
 This case can occur only when the program is following symbolic links.
 
  
@@ -168,8 +160,6 @@ public FileVisitResult
 }
 ```
 
-Copy
-
 In this code snippet, as soon as a particular file is located, the file name is printed to standard output, and the file walking terminates:
 
 ```java
@@ -189,8 +179,6 @@ public FileVisitResult
 }
 ```
 
-Copy
-
  
 
 ## Finding Files
@@ -201,8 +189,6 @@ If you have ever used a shell script, you have most likely used pattern matching
 $ ls *.html
 ```
 
-Copy
-
 The [`java.nio.file`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/package-summary.html) package provides programmatic support for this useful feature. Each file system implementation provides a [`PathMatcher`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/PathMatcher.html). You can retrieve a file system's [`PathMatcher`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/PathMatcher.html) by using the [`getPathMatcher(String)`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/FileSystem.html#getPathMatcher(java.lang.String)) method in the [`FileSystem`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/FileSystem.html) class. The following code snippet fetches the path matcher for the default file system:
 
 ```java
@@ -210,8 +196,6 @@ String pattern = ...;
 PathMatcher matcher =
     FileSystems.getDefault().getPathMatcher("glob:" + pattern);
 ```
-
-Copy
 
 The string argument passed to [`getPathMatcher(String)`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/FileSystem.html#getPathMatcher(java.lang.String)) specifies the syntax flavor and the pattern to be matched. This example specifies glob syntax. If you are unfamiliar with glob syntax, see the section [What is a Glob](https://dev.java/learn/java-io/file-system/listing/#glob).
 
@@ -231,8 +215,6 @@ if (matcher.matches(filename)) {
 }
 ```
 
-Copy
-
 ### Recursive Pattern Matching
 
 Searching for files that match a particular pattern goes hand-in-hand with walking a file tree. How many times do you know a file is somewhere on the file system, but where? Or perhaps you need to find all files in a file tree that have a particular file extension.
@@ -245,15 +227,11 @@ To run the [`Find`](https://dev.java/learn/java-io/file-system/walking-tree/#fi
 $ java Find <path> -name "<glob_pattern>"
 ```
 
-Copy
-
 The pattern is placed inside quotation marks so any wildcards are not interpreted by the shell. For example:
 
 ```shell
 $ java Find . -name "*.html"
 ```
-
-Copy
 
  
 
@@ -360,8 +338,6 @@ public class Find {
     }
 }
 ```
-
-Copy
 
  
 
@@ -504,8 +480,6 @@ public class Copy {
     }
 }
 ```
-
-Copy
 
  
 

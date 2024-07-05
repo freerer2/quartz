@@ -30,8 +30,6 @@ interface Collector<T, A, R> {
 }
 ```
 
-Copy
-
 Let us first examine the following types: `T` and `R`.
 
 The first type is `T`, and it corresponds to the type of the elements of the stream this collector is processing.
@@ -59,8 +57,6 @@ Collector<String, ?, Map<Integer, Long>> groupingBy =
         Collectors.groupingBy(String::length, Collectors.counting());
 Map<Integer, Long> map = strings.stream().collect(groupingBy);
 ```
-
-Copy
 
 For all these collectors, the second parameter type is just `?`.
 
@@ -114,8 +110,6 @@ class ToList<T> implements Collector<T, List<T>, List<T>> {
 }
 ```
 
-Copy
-
 You can use this collector using the following pattern.
 
 ```java
@@ -126,15 +120,11 @@ List<String> result = strings.stream().collect(new ToList<>());
 System.out.println("result = " + result);
 ```
 
-Copy
-
 This code prints out the following result.
 
 ```text
 result = [one, two, three, four, five]
 ```
-
-Copy
 
 Implementing a collector that works like the [`toSet()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Collectors.html#toSet()) collector would need only two modifications.
 
@@ -178,8 +168,6 @@ class Joining implements Collector<String, StringBuffer, String> {
 }
 ```
 
-Copy
-
 You can see how this collector can be used in the following example.
 
 ```java
@@ -190,15 +178,11 @@ String result = strings.stream().collect(new Joining());
 System.out.println("result = " + result);
 ```
 
-Copy
-
 Running this code produces the following result.
 
 ```text
 result = onetwothreefourfive
 ```
-
-Copy
 
 Supporting a delimiter, a prefix, and a suffix would use a [`StringJoiner`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/StringJoiner.html) instead of a [`StringBuilder`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/lang/StringBuilder.html), which already supports these elements.
 

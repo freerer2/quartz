@@ -37,8 +37,6 @@ while (line != null) {
 System.out.println("Number of lines in this file = " + count);
 ```
 
-Copy
-
 Note that the `line` string does not contain the line termination characters of each line. When the end of the file is reached, the line returned is `null`.
 
 Starting with Java SE 8, you can write the following code.
@@ -53,8 +51,6 @@ try (BufferedReader reader = Files.newBufferedReader(path);
     System.out.println("count = " + count);
 }
 ```
-
-Copy
 
 The `reader.lines()` method is defined in the `BufferedReader` class. Because the `Stream` interface extends the `AutoCloseable` interface, you can open your stream in a _try-with-resources_ statement. In that case, the `reader` is properly closed.
 

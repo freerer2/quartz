@@ -12,8 +12,6 @@ PathMatcher matcher =
     FileSystems.getDefault().getPathMatcher("glob:*.*");
 ```
 
-Copy
-
 A [`Path`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Path.html) instance is always bound to a file system. If no file system is provided when a path is created, then the default file system is used.
 
 ### Path String Separator
@@ -24,8 +22,6 @@ The path separator for POSIX file systems is the forward slash, `/`, and for Mi
 String separator = File.separator;
 String separator = FileSystems.getDefault().getSeparator();
 ```
-
-Copy
 
 The [`getSeparator()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/FileSystem.html#getSeparator()) method is also used to retrieve the path separator for any available file system.
 
@@ -44,8 +40,6 @@ for (FileStore store: fileSystem.getFileStores()) {
 }
 ```
 
-Copy
-
 On a Windows machine, you will get this kind of result.
 
 ```shell
@@ -55,8 +49,6 @@ Video - NTFS
 Transfer - Fat32
 ```
 
-Copy
-
 If you need to access the drive letters, you can use the following code. Remember that some drive letters may be used without the drive been mounted. The following code checks if every drive letters is readable.
 
 ```java
@@ -65,8 +57,6 @@ for (Path directory : fileSystem.getRootDirectories()) {
     System.out.println("directory = " + directory + " - " + readable);
 }
 ```
-
-Copy
 
 Running the previous code on Windows will give a result similar to this one.
 

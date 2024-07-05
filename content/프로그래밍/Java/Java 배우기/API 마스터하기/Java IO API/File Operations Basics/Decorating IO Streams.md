@@ -69,8 +69,6 @@ long size = Files.size(path);
 System.out.println("size = " + size);
 ```
 
-Copy
-
 Running this code will create a file named `sonnet.txt` in the `files` directory with the text of the first sonnet of Shakespeare.
 
 Several things are worth noting in this example.
@@ -83,8 +81,6 @@ Running this code displays the following result.
 ```shell
 size = 609
 ```
-
-Copy
 
 ### Reading Characters using an InputStreamReader
 
@@ -106,8 +102,6 @@ try (var inputStream = Files.newInputStream(path);
 
 System.out.println("sonnet = \n" + sonnet);
 ```
-
-Copy
 
 The `reader` object is created by decorating the `inputStream` object, just as previously. This code goes a little further though.
 
@@ -135,8 +129,6 @@ And, tender churl, mak'st waste in niggardly.
 Pity the world, or else this glutton be,
 To eat the world's due, by the grave and thee.
 ```
-
-Copy
 
  
 
@@ -169,8 +161,6 @@ long size = Files.size(path);
 System.out.println("size = " + size);
 ```
 
-Copy
-
 Note that the `gzipOutputStream` object is created by decorating the regular `outputStream`, and is used to create the `writer` object. Nothing else is changed in the code.
 
 Because this file is now compressed, its size is smaller. Running this code displays the following.
@@ -178,8 +168,6 @@ Because this file is now compressed, its size is smaller. Running this code disp
 ```shell
 size = 377
 ```
-
-Copy
 
 Note that you can open this file with any software capable of reading gzip files.
 
@@ -204,8 +192,6 @@ try (var inputStream = Files.newInputStream(path);
 
 System.out.println("sonnet = \n" + sonnet);
 ```
-
-Copy
 
 Note that the `gzipInputStream` object is created by decorating the regular `inputStream`. This `gzipInputStream` object is then decorated to create the `reader` object. The rest of the code is unchanged.
 
@@ -258,15 +244,11 @@ System.out.printf("Wrote %d ints to %s [%d bytes]\n",
                   ints.length, path, Files.size(path));
 ```
 
-Copy
-
 Running this code displays the following.
 
 ```shell
 Wrote 6 ints to files\ints.bin [24 bytes]
 ```
-
-Copy
 
 Because each an `int` is 4 bytes, the size of the file is 24 bytes, as shown on the console.
 

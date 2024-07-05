@@ -24,8 +24,6 @@ Shakespeare wrote a number of plays and 154 sonnets, that you can find [here](h
     To eat the world’s due, by the grave and thee.
 ```
 
-Copy
-
 This use case consists in creating a file to store them all, in a compressed way. Here is the format of the file that you need to create.
 
 ![The Sonnets File Format](https://dev.java/assets/images/java-io/03_sonnets-file-format.png)
@@ -60,16 +58,12 @@ HttpResponse<InputStream> response = client.send(request, HttpResponse.BodyHandl
 InputStream inputStream = response.body();
 ```
 
-Copy
-
 Here is the code to read is from a file, using the [`Files`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Files.html) factory class.
 
 ```java
 Path path = Path.of("files/sonnets.txt");
 BufferedReader reader = Files.newBufferedReader(path);
 ```
-
-Copy
 
 None of these two pieces of code are complete: the exception handling part is missing, as well as the closing of the resources.
 
@@ -91,8 +85,6 @@ You know that there are no more sonnets to read when you encounter the following
 ```text
 *** END OF THE PROJECT GUTENBERG EBOOK THE SONNETS ***
 ```
-
-Copy
 
 To tackle this problem, you can decorate the [`BufferedReader`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/BufferedReader.html) class, keeping its features and adding your own. There are three features specific to this problem:
 
@@ -122,8 +114,6 @@ try (var reader = new SonnetReader(inputStream);
 
 System.out.println("# sonnets = " + sonnets.size());
 ```
-
-Copy
 
 The `SonnetReader` class is a decoration of the [`BufferedReader`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/BufferedReader.html) class. Here is an example of the code you can write.
 
@@ -175,15 +165,11 @@ class SonnetReader extends BufferedReader {
 }
 ```
 
-Copy
-
 Running this code you display the following on your console.
 
 ```shell
 # sonnets = 154
 ```
-
-Copy
 
 The `skipLines()` method is used to skip the file header that contains some technical and legal information on the file itself. It calls the [`readLine()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/BufferedReader.html#readLine()) method defined on the [`BufferedReader`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/BufferedReader.html) class.
 
@@ -202,8 +188,6 @@ class Sonnet {
     }
 }
 ```
-
-Copy
 
 This class is a simple wrapper on a `List<String>` with a simple `add(String)` method. Using this kind of simple class makes your code more readable and maintainable. Handling an instance of a `Sonnet` class makes your code more clear than handling a `List<String>`.
 
@@ -233,8 +217,6 @@ byte[] getCompressedBytes() throws IOException {
     return bos.toByteArray();
 }
 ```
-
-Copy
 
 This method writes the lines of a sonnet in a [`ByteArrayOutputStream`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/ByteArrayOutputStream.html), decorated with a [`GZIPOutputStream`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/zip/GZIPOutputStream.html), itself decorated with a [`PrintWriter`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/PrintWriter.html). This [`PrintWriter`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/PrintWriter.html) is very handy for you because it gives you the `println()` method that you need.
 
@@ -283,8 +265,6 @@ try (var sonnetFile = Files.newOutputStream(sonnetsFile);
 }
 ```
 
-Copy
-
 The first part of this code loops through all the sonnets and compress them to a first array of bytes. Then the offset and the length for this sonnet are stored in the corresponding lists of integers, and the bytes are added to `encodedSonnets` of type [`ByteArrayOutputStream`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/ByteArrayOutputStream.html).
 
 At the end of the day, all you need to do is follow the format of the file, that is:
@@ -324,8 +304,6 @@ try (var file = Files.newInputStream(path);
 }
 ```
 
-Copy
-
 Suppose you need to read the sonnet number 75. What you need to do is to skip the sonnets before this one, and read the correct number of bytes.
 
 Skipping a fixed number of elements from an I/O stream is a little tricky. You need to keep in mind that a stream can be very long, and too long to be held in memory. So in fact, when you call the `skip(n)` method, the system may have not skipped to correct amount of bytes. The correct code to skip a fixed amount of bytes needs to check for the exact number of bytes skipped, and try to skip again.
@@ -339,8 +317,6 @@ long skip(BufferedInputStream bis, int offset) throws IOException {
     return skip;
 }
 ```
-
-Copy
 
 The same goes for the reading of a fixed amount of bytes. It is possible that the amount of bytes read by the input stream is lesser than what you asked for. Your code needs to check that and make sure that all the bytes have been read correctly.
 
@@ -358,8 +334,6 @@ byte[] readBytes(BufferedInputStream bis, int length) throws IOException {
     return bytes;
 }
 ```
-
-Copy
 
 With these two methods, you can then add the following code after the reading of the offsets and the lengths.
 
@@ -380,8 +354,6 @@ try (ByteArrayInputStream bais = new ByteArrayInputStream(bytes);
     sonnetLines.forEach(System.out::println);
 }
 ```
-
-Copy
 
 This code reads the bytes of the compressed sonnet. It then builds a [`ByteArrayInputStream`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/ByteArrayInputStream.html) on this array, and decorates it with a [`GZIPInputStream`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/zip/GZIPInputStream.html) to decompress it. What you need to read is a list of lines, so you need to further decorate this binary stream with a character stream: [`InputStreamReader`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/InputStreamReader.html). You could read the text from there, but it is easier to use one of the methods of the [`BufferedReader`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/BufferedReader.html) class, that allows you to read this text line by line.
 

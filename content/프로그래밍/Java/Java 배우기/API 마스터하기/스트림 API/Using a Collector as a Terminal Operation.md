@@ -37,15 +37,11 @@ IntStream.range(0, 10)
 System.out.println("numbers = " + numbers);
 ```
 
-Copy
-
 This code uses the [`boxed()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/IntStream.html#boxed()) intermediate method to create a [`Stream<Integer>`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Stream.html) from the [`IntStream`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/IntStream.html) created by [`IntStream.range()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/IntStream.html#range(int,int)) by boxing all the elements of that stream. Running this code prints the following.
 
 ```text
 numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 ```
-
-Copy
 
 This second example creates a [`HashSet`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/HashSet.html) with only even numbers and without duplicates.
 
@@ -58,15 +54,11 @@ IntStream.range(0, 10)
 System.out.println("evenNumbers = " + evenNumbers);
 ```
 
-Copy
-
 Running this code gives you the following result.
 
 ```text
 evenNumbers = [0, 1, 2, 3, 4]
 ```
-
-Copy
 
 And this last example uses a [`Supplier`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/function/Supplier.html) object to create the instance of [`LinkedList`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/LinkedList.html) used to collect the elements of the stream.
 
@@ -78,15 +70,11 @@ IntStream.range(0, 10)
 System.out.println("linked listS = " + linkedList);
 ```
 
-Copy
-
 Running this code gives you the following result.
 
 ```text
 linked list = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 ```
-
-Copy
 
  
 
@@ -108,16 +96,12 @@ System.out.println("count = " + count);
 System.out.println("countWithACollector = " + countWithACollector);
 ```
 
-Copy
-
 Running this code gives you the following result.
 
 ```text
 count = 3
 countWithACollector = 3
 ```
-
-Copy
 
  
 
@@ -140,15 +124,11 @@ String joined =
 System.out.println("joined = " + joined);
 ```
 
-Copy
-
 Running this code produces the following result.
 
 ```text
 joined = 0123456789
 ```
-
-Copy
 
 You can add a separator to this string with the following code.
 
@@ -162,15 +142,11 @@ String joined =
 System.out.println("joined = " + joined);
 ```
 
-Copy
-
 The result is the following.
 
 ```text
 joined = 0, 1, 2, 3, 4, 5, 6, 7, 8, 9
 ```
-
-Copy
 
 Let us see the last overload in action, which takes a separator, a prefix, and a suffix.
 
@@ -184,15 +160,11 @@ String joined =
 System.out.println("joined = " + joined);
 ```
 
-Copy
-
 The result is the following.
 
 ```text
 joined = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
 ```
-
-Copy
 
 Note that this collector handles properly the corner cases where you stream is empty or only processes a single element.
 
@@ -222,16 +194,12 @@ Map<Boolean, List<String>> map =
 map.forEach((key, value) -> System.out.println(key + " :: " + value));
 ```
 
-Copy
-
 Running this code produces the following result.
 
 ```text
 false :: [one, two, four, five, six, nine, ten]
 true :: [three, seven, eight, eleven, twelve]
 ```
-
-Copy
 
 This factory method has an overload, which takes a collector as a further argument. This collector is called a _downstream collector_. We will cover these downstream collectors in the next paragraph of this tutorial, when we present the [`groupingBy()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Collectors.html#groupingBy(java.util.function.Function)) collector.
 
@@ -267,8 +235,6 @@ Map<Integer, List<String>> map =
 map.forEach((key, value) -> System.out.println(key + " :: " + value));
 ```
 
-Copy
-
 The classifier used in this example is a function that returns the length of each string from that stream. So, the map grouped the strings in lists by their length. It has the type [`Map<Integer, List<String>>`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/Map.html).
 
 Running this code prints the following.
@@ -279,8 +245,6 @@ Running this code prints the following.
 5 :: [three, seven, eight]
 6 :: [eleven, twelve]
 ```
-
-Copy
 
 ### Post-processing the Values Created with a Grouping By
 
@@ -300,8 +264,6 @@ Suppose you pass the [`Collectors.counting()`](https://docs.oracle.com/en/java/
 [three, seven, eight] .stream().collect(Collectors.counting()) -> 3L
 [eleven, twelve]      .stream().collect(Collectors.counting()) -> 2L
 ```
-
-Copy
 
 This code is not Java code, so you cannot execute it. It is just there to explain how this downstream collector is used.
 
@@ -324,8 +286,6 @@ Map<Integer, Long> map =
 map.forEach((key, value) -> System.out.println(key + " :: " + value));
 ```
 
-Copy
-
 Running this code prints the following result. It gives the number of string per length, which is the histogram of the strings by their length.
 
 ```text
@@ -334,8 +294,6 @@ Running this code prints the following result. It gives the number of string per
 5 :: 3
 6 :: 2
 ```
-
-Copy
 
 #### Joining the Lists of Values
 
@@ -355,8 +313,6 @@ Map<Integer, String> map =
 map.forEach((key, value) -> System.out.println(key + " :: " + value));
 ```
 
-Copy
-
 Running this code produces the following result.
 
 ```text
@@ -365,8 +321,6 @@ Running this code produces the following result.
 5 :: three, seven, eight
 6 :: eleven, twelve
 ```
-
-Copy
 
 ### Controlling the Instance of Map
 
@@ -397,8 +351,6 @@ Map<Long, User> userCache =
                  Function.idendity()));
 ```
 
-Copy
-
 The use of the [`Function.identity()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/function/Function.html#identity()) factory method just tells the collector not to transform the elements of the stream.
 
 If you expect several elements of the stream to generate the same key, then you can pass a further argument to the [`toMap()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Collectors.html#toMap(java.util.function.Function,java.util.function.Function)) method. This argument is of type [`BinaryOperator`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/function/BinaryOperator.html). It will be applied by the implementation to the conflicting elements when they are detected. Your binary operator will then produce a result that will be put in the map in place of the previous value.
@@ -421,8 +373,6 @@ Map<Integer, String> map =
 map.forEach((key, value) -> System.out.println(key + " :: " + value));
 ```
 
-Copy
-
 In this example, the three arguments passed to the [`toMap()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Collectors.html#toMap(java.util.function.Function,java.util.function.Function)) method are the following:
 
 1. `element -> element.length()` is the _key mapper_.
@@ -437,8 +387,6 @@ Running this code produces the following result.
 5 :: three, seven, eight
 6 :: eleven, twelve
 ```
-
-Copy
 
 As for the [`groupingBy()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Collectors.html#groupingBy(java.util.function.Function)) collector, you can pass a supplier as an argument to the [`toMap()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Collectors.html#toMap(java.util.function.Function,java.util.function.Function)) method to control what instance of the [`Map`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/Map.html) interface this collector will use.
 
@@ -469,8 +417,6 @@ Map<Integer, Long> histogram =
 histogram.forEach((key, value) -> System.out.println(key + " :: " + value));
 ```
 
-Copy
-
 Printing this histogram gives you the following result.
 
 ```text
@@ -479,8 +425,6 @@ Printing this histogram gives you the following result.
 5 :: 3
 6 :: 2
 ```
-
-Copy
 
 Extracting the maximum value from this histogram should give you the result: `3 :: 4`. The Stream API has all the tools you need to extract a maximum value. Unfortunately, there is no `stream()` method on the [`Map`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/Map.html) interface. So to create a stream on a map, you first need to get one of the collections you can get from a map.
 
@@ -501,8 +445,6 @@ Map.Entry<Integer, Long> maxValue =
 System.out.println("maxValue = " + maxValue);
 ```
 
-Copy
-
 You can notice that this code uses the [`max()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/IntStream.html#max()) method from the [`Stream`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Stream.html) interface, which takes a comparator as an argument. It turns out that the [`Map.Entry`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/Map.Entry.html) interface has several factory methods to create such a comparator. The one we use in this example creates a comparator that can compare [`Map.Entry`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/Map.Entry.html) instances, using the value of these key-value pairs to compare them. This comparison can work only if the value implements the [`Comparable`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/lang/Comparable.html) interface.
 
 This pattern of code is very generic and can be used on any map as long as it has comparable values. We can make it less generic and more readable, thanks to the introduction of records in Java SE 16.
@@ -522,8 +464,6 @@ record NumberOfLength(int length, long number) {
 }
 ```
 
-Copy
-
 With this record, the previous pattern becomes the following.
 
 ```java
@@ -536,15 +476,11 @@ NumberOfLength maxNumberOfLength =
 System.out.println("maxNumberOfLength = " + maxNumberOfLength);
 ```
 
-Copy
-
 Running this example prints out the following.
 
 ```text
 maxNumberOfLength = NumberOfLength[length=3, number=4]
 ```
-
-Copy
 
 You can see that this record looks like the [`Map.Entry`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/Map.Entry.html) interface. It has a factory method for the mapping of a key-value pair and a factory method to create the comparator you need. The analysis of your histogram becomes much more readable and easy to understand.
 
@@ -569,8 +505,6 @@ Map<Integer, Long> histogram =
 histogram.forEach((key, value) -> System.out.println(key + " :: " + value));
 ```
 
-Copy
-
 Printing this histogram gives you the following result.
 
 ```text
@@ -579,8 +513,6 @@ Printing this histogram gives you the following result.
 5 :: 3
 6 :: 2
 ```
-
-Copy
 
 Now we have three key-value pairs for the maximum value. If you use the previous pattern of code to extract it, one of these three will be selected and returned, hiding the two others.
 
@@ -613,8 +545,6 @@ List<String> result =
 System.out.println("result = " + result);
 ```
 
-Copy
-
 The [`Collectors.mappping()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Collectors.html#mapping(java.util.function.Function,java.util.stream.Collector)) factory method creates a regular collector. You can pass this collector as a downstream collector to any method that accepts one, including, for instance, [`groupingBy()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Collectors.html#groupingBy(java.util.function.Function)) or [`toMap()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Collectors.html#toMap(java.util.function.Function,java.util.function.Function)). You may remember from the section "Extracting an Ambiguous Maximum Value" that we left an open question about inverting a map. Let us use this mapping collector to solve this problem.
 
 In this example, you created a histogram. You now need to invert this histogram with a [`groupingBy()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Collectors.html#groupingBy(java.util.function.Function)) to find all the maximum values.
@@ -630,8 +560,6 @@ var map =
         .collect(
             Collectors.groupingBy(NumberOfLength::number));
 ```
-
-Copy
 
 Let us examine this code and determine the exact type of the map that is built.
 
@@ -654,8 +582,6 @@ var map =
                 NumberOfLength::number, 
                 Collectors.mapping(NumberOfLength::length, Collectors.toList())));
 ```
-
-Copy
 
 The values of the map built are now lists of mapped `NumberOfLength` objects, using the `NumberOfLength::length` mapper. This map is of type [`Map<Long, List<Integer>>`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/Map.html), which is exactly what you need.
 
@@ -680,15 +606,11 @@ Map.Entry<Long, List<Integer>> result =
 System.out.println("result = " + result);
 ```
 
-Copy
-
 Running this code produces the following.
 
 ```text
 result = 3=[3, 4, 5]
 ```
-
-Copy
 
 It means that there are three lengths of strings that are represented three times in this stream: 3, 4, and 5.
 

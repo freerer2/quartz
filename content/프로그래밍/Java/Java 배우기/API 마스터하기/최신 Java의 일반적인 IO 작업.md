@@ -30,15 +30,11 @@ You can read a text file into a string like this:
 String content = Files.readString(path);
 ```
 
-Copy
-
 Here, `path` is an instance of [`java.nio.Path`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Path.html), obtained like this:
 
 ```java
 var path = Path.of("/usr/share/dict/words");
 ```
-
-Copy
 
 Before Java 18, you were strongly encouraged to specify the character encoding with any file operations that read or write strings. Nowadays, by far the most common character encoding is UTF-8, but for backwards compatibility, Java used the "platform encoding", which can be a legacy encoding on Windows. To ensure portability, text I/O operations needed parameters [`StandardCharsets.UTF_8`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/charset/StandardCharsets.html#UTF_8). This is no longer necessary.
 
@@ -48,8 +44,6 @@ If you want the file as a sequence of lines, call
 List<String> lines = Files.readAllLines(path);
 ```
 
-Copy
-
 If the file is large, process the lines lazily as a [`Stream<String>`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Stream.html):
 
 ```java
@@ -57,8 +51,6 @@ try (Stream<String> lines = Files.lines(path)) {
     . . .
 }
 ```
-
-Copy
 
 Also use [`Files.lines`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Files.html#lines(java.nio.file.Path)) if you can naturally process lines with stream operations (such as [`map`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Stream.html#map(java.util.function.Function)), [`filter`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Stream.html#filter(java.util.function.Predicate))). Note that the stream returned by [`Files.lines`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Files.html#lines(java.nio.file.Path)) needs to be closed. To ensure that this happens, use a _try-with-resources_ statement, as in the preceding code snippet.
 
@@ -69,8 +61,6 @@ To split your input into something else than lines, use a [`java.util.Scanner`]
 ```java
 Stream<String> tokens = new Scanner(path).useDelimiter("\\PL+").tokens();
 ```
-
-Copy
 
 The [`Scanner`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/Scanner.html) class also has methods for reading numbers, but it is generally simpler to read the input as one string per line, or a single string, and then parse it.
 
@@ -87,8 +77,6 @@ String content = . . .;
 Files.writeString(path, content);
 ```
 
-Copy
-
 If you have a list of lines rather than a single string, use:
 
 ```java
@@ -96,16 +84,12 @@ List<String> lines = . . .;
 Files.write(path, lines);
 ```
 
-Copy
-
 For more general output, use a [`PrintWriter`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/PrintWriter.html) if you want to use the [`printf`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/PrintWriter.html#printf(java.lang.String,java.lang.Object...)) method:
 
 ```java
 var writer = new PrintWriter(path.toFile());
 writer.printf(locale, "Hello, %s, next year you'll be %d years old!%n", name, age + 1);
 ```
-
-Copy
 
 Note that [`printf`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/PrintWriter.html#printf(java.lang.String,java.lang.Object...)) is locale-specific. When writing numbers, be sure to write them in the appropriate format. Instead of using [`printf`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/PrintWriter.html#printf(java.lang.String,java.lang.Object...)), consider [`java.text.NumberFormat`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/text/NumberFormat.html) or [`Integer.toString`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/lang/Integer.html#toString())/[`Double.toString`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/lang/Double.html#Double.html#toString(double)).
 
@@ -118,8 +102,6 @@ var writer = Files.newBufferedWriter(path);
 writer.write(line); // Does not write a line separator
 writer.newLine(); 
 ```
-
-Copy
 
 Remember to close the `writer` when you are done.
 
@@ -141,15 +123,11 @@ HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.o
 String result = response.body();
 ```
 
-Copy
-
 That is overkill if all you want is the data. Instead, use:
 
 ```java
 InputStream in = new URI("https://horstmann.com/index.html").toURL().openStream();
 ```
-
-Copy
 
 Then read the data into a byte array and optionally turn them into a string:
 
@@ -158,16 +136,12 @@ byte[] bytes = in.readAllBytes();
 String result = new String(bytes);
 ```
 
-Copy
-
 Or transfer the data to an output stream:
 
 ```java
 OutputStream out = Files.newOutputStream(path);
 in.transferTo(out);
 ```
-
-Copy
 
 Note that no loop is required if you simply want to read all bytes of an input stream.
 
@@ -180,16 +154,12 @@ URL url = new URI("https://dog.ceo/api/breeds/image/random").toURL();
 Map<String, Object> result = JSON.std.mapFrom(url);
 ```
 
-Copy
-
 Here is how to read the dog image from the preceding call:
 
 ```java
 URL url = new URI(result.get("message").toString()).toURL();
 BufferedImage img = javax.imageio.ImageIO.read(url);
 ```
-
-Copy
 
 This is better than passing an input stream to the [`read`](https://docs.oracle.com/en/java/javase/22/docs/api/java.desktop/javax/imageio/ImageIO.html#read(java.net.URL)) method, because the library can use additional information from the URL to determine the image type.
 
@@ -209,8 +179,6 @@ try (Stream<Path> entries = Files.list(pathToDirectory)) {
 }
 ```
 
-Copy
-
 Use a _try-with-resources_ statement to ensure that the stream object, which keeps track of the iteration, will be closed.
 
 If you also want to visit the entries of descendant directories, instead use the method [`Files.walk`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Files.html#walk(java.nio.file.Path,java.nio.file.FileVisitOption...))
@@ -218,8 +186,6 @@ If you also want to visit the entries of descendant directories, instead use the
 ```java
 Stream<Path> entries = Files.walk(pathToDirectory);
 ```
-
-Copy
 
 Then simply use stream methods to home in on the entries that you are interested in, and to collect the results:
 
@@ -229,8 +195,6 @@ try (Stream<Path> entries = Files.walk(pathToDirectory)) {
     . . .
 }
 ```
-
-Copy
 
 Here are the other methods for traversing directory entries:
 
@@ -250,8 +214,6 @@ try (FileSystem fs = FileSystems.newFileSystem(pathToZipFile)) {
 }
 ```
 
-Copy
-
 The _try-with-resources_ statement ensures that the [`close`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/lang/AutoCloseable.html#close()) method is called after the ZIP file operations. That method updates the ZIP file to reflect any changes in the file system.
 
 You can then use the methods of the [`Files`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Files.html) class. Here we get a list of all files in the ZIP file:
@@ -262,15 +224,11 @@ try (Stream<Path> entries = Files.walk(fs.getPath("/"))) {
 }
 ```
 
-Copy
-
 To read the file contents, just use [`Files.readString`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Files.html#readString(java.nio.file.Path)) or [`Files.readAllBytes`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Files.html#readAllBytes(java.nio.file.Path)):
 
 ```java
 String contents = Files.readString(fs.getPath("/LICENSE"));
 ```
-
-Copy
 
 You can remove files with [`Files.delete`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Files.html#delete(java.nio.file.Path)). To add or replace files, simply use [`Files.writeString`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Files.html#writeString(java.nio.file.Path,java.lang.CharSequence,java.nio.file.OpenOption...)) or [`Files.write`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Files.html#write(java.nio.file.Path,byte%5B%5D,java.nio.file.OpenOption...)).
 
@@ -284,8 +242,6 @@ I use the two methods [`Files.createTempFile`](https://docs.oracle.com/en/java/
 Path filePath = Files.createTempFile("myapp", ".txt");
 Path dirPath = Files.createTempDirectory("myapp");
 ```
-
-Copy
 
 This creates a temporary file or directory in a suitable location (`/tmp` in Linux) with the given prefix and, for a file, suffix.
 

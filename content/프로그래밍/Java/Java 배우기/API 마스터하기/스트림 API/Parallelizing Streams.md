@@ -14,15 +14,11 @@ int parallelSum =
              .sum();
 ```
 
-Copy
-
 Running this code gives you the following result.
 
 ```text
 parallelSum = 45
 ```
-
-Copy
 
 This sum has in fact been computed in parallel. You may not notice any performance gain on such a small example though.
 
@@ -140,8 +136,6 @@ List<Integer> list2 =
              .toList();
 ```
 
-Copy
-
 Both lists `list1` and `list2` are the same, created with different patterns. The first one is easily splittable, while the second one is not. The main reason is that, in the second pattern, knowing the value of the fifth element requires the computation of all the previous elements. In that sense, this second pattern looks like a linked list where you need to visit the first four elements to reach the fifth one.
 
  
@@ -197,16 +191,12 @@ System.out.println("Thread names:");
 threadNames.forEach(System.out::println);
 ```
 
-Copy
-
 The result it produces is the following.
 
 ```text
 Thread names:
 main
 ```
-
-Copy
 
 If you uncomment the [`parallel()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/BaseStream.html#parallel()) call then this stream is executed in parallel. The result becomes the following, and may vary on your own machine.
 
@@ -220,8 +210,6 @@ main
 ForkJoinPool.commonPool-worker-5
 ```
 
-Copy
-
 Any access to a nonconcurrent, external element may lead to race conditions and data inconsistency. Let us run the following code.
 
 ```java
@@ -233,8 +221,6 @@ IntStream.range(0, 1_000_000)
 
 System.out.println("ints.size() = " + ints.size());
 ```
-
-Copy
 
 Running this code several times may lead to different results because all the threads of the Common Fork/Join Pool are trying to add data concurrently in an instance of [`ArrayList`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/ArrayList.html), which is not a thread-safe structure. There is little chance to see the right result, and you can even get an [`ArrayIndexOutOfBoundsException`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/lang/ArrayIndexOutOfBoundsException.html). Running this kind of code with any non-concurrent collection or map leads to unpredictable results, including exceptions.
 

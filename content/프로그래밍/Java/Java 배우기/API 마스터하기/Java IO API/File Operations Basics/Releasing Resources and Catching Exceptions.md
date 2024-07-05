@@ -28,8 +28,6 @@ try (BufferedReader reader = Files.newBufferedReader(path)) {
 }
 ```
 
-Copy
-
 In this example, the `reader` object can be used in the _try_ block. When the program leaves this block, whether it is normally or exceptionally, the `close()` method of the `reader` object will be called for you.
 
 ### Closing Several Resources
@@ -51,8 +49,6 @@ try (FileReader fileReader = new FileReader(file);
 }
 ```
 
-Copy
-
  
 
 ## Catching Exceptions
@@ -70,8 +66,6 @@ try (BufferedWriter writer = Files.newBufferedWriter(file, charset)) {
     System.err.format("IOException: %s%n", x);
 }
 ```
-
-Copy
 
 For more information, see the section [The try-with-resources Statement](https://dev.java/learn/exceptions/catching-handling/#try-with-resources).
 
@@ -96,8 +90,6 @@ try {
 }
 ```
 
-Copy
-
 For more information, see the section [Catching and Handling Exceptions](https://dev.java/learn/exceptions/catching-handling/).
 
 In addition to [`IOException`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/IOException.html), many specific exceptions extend [`FileSystemException`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/FileSystemException.html). This class has some useful methods that return the file involved ([`getFile()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/FileSystemException.html#getFile())), the detailed message string ([`getMessage()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/FileSystemException.html#getMessage())), the reason why the file system operation failed ([`getReason()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/FileSystemException.html#getReason())), and the "other" file involved, if any ([`getOtherFile()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/FileSystemException.html#getOtherFile())).
@@ -112,8 +104,6 @@ try (...) {
 }
 ```
 
-Copy
-
 For purposes of clarity, the file I/O examples in this section may not show exception handling, but your code should always include it.
 
  
@@ -125,8 +115,6 @@ Several Files methods accept an arbitrary number of arguments when flags are spe
 ```java
 Path Files.move(Path, Path, CopyOption...)
 ```
-
-Copy
 
 When a method accepts a varargs argument, you can pass it a comma-separated list of values or an array (`CopyOption[]`) of values.
 
@@ -140,8 +128,6 @@ Files.move(source,
            REPLACE_EXISTING,
            ATOMIC_MOVE);
 ```
-
-Copy
 
 For more information about varargs syntax, see the section [Arbitrary Number of Arguments](https://dev.java/learn/classes-objects/calling-methods-constructors/#arbitrary-number-of-arguments).
 
@@ -160,8 +146,6 @@ UserPrincipal group =
         .getUserPrincipalLookupService()
         .lookupPrincipalByName("me");
 ```
-
-Copy
 
 This technique produces compact code and enables you to avoid declaring temporary variables that you do not need.
 

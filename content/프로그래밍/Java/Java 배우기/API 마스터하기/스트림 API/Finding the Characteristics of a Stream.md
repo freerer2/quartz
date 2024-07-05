@@ -57,8 +57,6 @@ Stream<String> filteredStrings = strings.filtered(s -> s.length() < 5);
 Stream<Integer> lengths = filteredStrings.map(String::length);
 ```
 
-Copy
-
 Mapping or flatmapping a [_SORTED_](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/Spliterator.html#SORTED) stream removes this characteristic from the resulting stream.
 
  
@@ -78,8 +76,6 @@ Stream<String> strings = stringCollection.stream().distinct();
 Stream<String> filteredStrings = strings.filtered(s -> s.length() < 5);
 Stream<Integer> lengths = filteredStrings.map(String::length);
 ```
-
-Copy
 
 - [`stringCollection.stream()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/Collection.html#stream()) is not [_DISTINCT_](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/Spliterator.html#DISTINCT) as it is build from an instance of [`List`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/List.html).
 - `strings` is [_DISTINCT_](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/Spliterator.html#DISTINCT) as this stream is created by a call to the [`distinct()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Stream.html#distinct()) intermediate method.

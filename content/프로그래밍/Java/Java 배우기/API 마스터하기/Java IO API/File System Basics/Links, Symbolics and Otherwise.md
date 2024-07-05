@@ -34,8 +34,6 @@ try {
 }
 ```
 
-Copy
-
 The [`FileAttribute`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/attribute/FileAttribute.html) vararg enables you to specify initial file attributes that are set atomically when the link is created. However, this argument is intended for future use and is not currently implemented.
 
  
@@ -59,8 +57,6 @@ try {
 }
 ```
 
-Copy
-
  
 
 ## Detecting a Symbolic Link
@@ -72,8 +68,6 @@ Path file = ...;
 boolean isSymbolicLink =
     Files.isSymbolicLink(file);
 ```
-
-Copy
 
 For more information, see the section [Managing Metadata](https://dev.java/learn/java-io/file-system/metadata/).
 
@@ -93,8 +87,6 @@ try {
     System.err.println(x);
 }
 ```
-
-Copy
 
 If the [`Path`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Path.html) is not a symbolic link, this method throws a [`NotLinkException`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/NotLinkException.html).
 

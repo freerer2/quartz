@@ -35,8 +35,6 @@ Because this API is more advanced, try it out before proceeding. Save see the [
 $ java WatchDir test &
 ```
 
-Copy
-
 Play with creating, deleting, and editing files in the test directory. When any of these events occurs, a message is printed to the console. When you have finished, delete the test directory and `WatchDir` exits. Or, if you prefer, you can manually kill the process.
 
 You can also watch an entire file tree by specifying the `-r` option. When you specify `-r`, `WatchDir` walks the file tree, registering each directory with the watch service.
@@ -50,8 +48,6 @@ The first step is to create a new [`WatchService`](https://docs.oracle.com/en/j
 ```java
 WatchService watcher = FileSystems.getDefault().newWatchService();
 ```
-
-Copy
 
 Next, register one or more objects with the watch service. Any object that implements the [`Watchable`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Watchable.html) interface can be registered. The [`Path`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Path.html) class implements the [`Watchable`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Watchable.html) interface, so each directory to be monitored is registered as a [`Path`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Path.html) object.
 
@@ -79,8 +75,6 @@ try {
     System.err.println(x);
 }
 ```
-
-Copy
 
  
 
@@ -169,8 +163,6 @@ for (;;) {
 }
 ```
 
-Copy
-
  
 
 ## Retrieving the File Name
@@ -182,16 +174,12 @@ WatchEvent<Path> ev = (WatchEvent<Path>)event;
 Path filename = ev.context();
 ```
 
-Copy
-
 When you compile this example, it generates the following error:
 
 ```shell
 Note: Example.java uses unchecked or unsafe operations.
 Note: Recompile with -Xlint:unchecked for details.
 ```
-
-Copy
 
 This error is a result of the line of code that casts the `WatchEvent<T>` to a `WatchEvent<Path>`. The `WatchDir` example avoids this error by creating a utility cast method that suppresses the unchecked warning, as follows:
 
@@ -201,8 +189,6 @@ static <T> WatchEvent<T> cast(WatchEvent<?> event) {
     return (WatchEvent<Path>)event;
 }
 ```
-
-Copy
 
 If you are unfamiliar with the [`@SuppressWarnings`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/lang/SuppressWarnings.html) syntax, see the section on [Annotations](https://dev.java/learn/annotations/).
 

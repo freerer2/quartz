@@ -17,23 +17,17 @@ Path p2 = Paths.get(args[0]);
 Path p3 = Paths.get(URI.create("file:///Users/joe/FileTest.java"));
 ```
 
-Copy
-
 The [`Paths.get(String)`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Paths.html#get(java.lang.String,java.lang.String...)) method is shorthand for the following code:
 
 ```java
 Path p4 = FileSystems.getDefault().getPath("/users/sally");
 ```
 
-Copy
-
 The following example creates `/u/joe/logs/foo.log` assuming your home directory is `/u/joe`, or `C:\joe\logs\foo.log` if you are on Windows.
 
 ```java
 Path p5 = Paths.get(System.getProperty("user.home"),"logs", "foo.log");
 ```
-
-Copy
 
 ### Using the Path.of() Factory methods
 
@@ -48,8 +42,6 @@ The following code used the first factory method to create a path.
 ```java
 Path debugFile = Path.of("/tmp/debug.log");
 ```
-
-Copy
 
  
 
@@ -83,8 +75,6 @@ System.out.format("getParent: %s%n", path.getParent());
 System.out.format("getRoot: %s%n", path.getRoot());
 ```
 
-Copy
-
 Here is the output for both Windows and the Solaris OS:
 
 |Methode invoked|Returns in the Solaris OS|Returns in Microsoft Windows|Comments|
@@ -104,14 +94,10 @@ The previous example shows the output for an absolute path. In the following exa
 Path path = Paths.get("sally/bar");
 ```
 
-Copy
-
 ```java
 // Microsoft Windows syntax
 Path path = Paths.get("sally\\bar");
 ```
-
-Copy
 
 Here is the output for Windows and the Solaris OS:
 
@@ -138,8 +124,6 @@ The following examples both include redundancies:
 /home/sally/../joe/foo
 ```
 
-Copy
-
 The [`normalize()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Path.html#normalize()) method removes any redundant elements, which includes any "." or "directory/.." occurrences. Both of the preceding examples normalize to `/home/joe/foo`.
 
 It is important to note that normalize does not check at the file system when it cleans up a path. It is a purely syntactic operation. In the second example, if `sally` were a symbolic link, removing `sally/..` might result in a [`Path`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Path.html) that no longer locates the intended file.
@@ -158,15 +142,11 @@ Path p1 = Paths.get("/home/logfile");
 System.out.format("%s%n", p1.toUri());
 ```
 
-Copy
-
 Running this code produces the following result:
 
 ```shell
 file:///home/logfile
 ```
-
-Copy
 
 The [`toAbsolutePath()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Path.html#toAbsolutePath()) method converts a path to an absolute path. If the passed-in path is already absolute, it returns the same [`Path`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Path.html) object. The [`toAbsolutePath()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Path.html#toAbsolutePath()) method can be very helpful when processing user-entered file names. For example:
 
@@ -200,8 +180,6 @@ public class FileTest {
 }
 ```
 
-Copy
-
 The [`toAbsolutePath()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Path.html#toAbsolutePath()) method converts the user input and returns a [`Path`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Path.html) that returns useful values when queried. The file does not need to exist for this method to work.
 
 The [`toRealPath()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Path.html#toRealPath(java.nio.file.LinkOption...)) method returns the real path of an existing file. This method performs several operations in one:
@@ -224,8 +202,6 @@ try {
 }
 ```
 
-Copy
-
  
 
 ## Joining Two Paths
@@ -242,8 +218,6 @@ Path p1 = Paths.get("/home/joe/foo");
 System.out.format("%s%n", p1.resolve("bar"));
 ```
 
-Copy
-
 or
 
 ```java
@@ -254,16 +228,12 @@ Path p1 = Paths.get("C:\\home\\joe\\foo");
 System.out.format("%s%n", p1.resolve("bar"));
 ```
 
-Copy
-
 Passing an absolute path to the [`resolve()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Path.html#resolve(java.lang.String)) method returns the passed-in path:
 
 ```java
 // Result is /home/joe
 Paths.get("foo").resolve("/home/joe");
 ```
-
-Copy
 
  
 
@@ -278,8 +248,6 @@ Path p1 = Paths.get("joe");
 Path p2 = Paths.get("sally");
 ```
 
-Copy
-
 In the absence of any other information, it is assumed that `joe` and `sally` are siblings, meaning nodes that reside at the same level in the tree structure. To navigate from `joe` to `sally`, you would expect to first navigate one level up to the parent node and then down to `sally`:
 
 ```java
@@ -289,8 +257,6 @@ Path p1_to_p2 = p1.relativize(p2);
 // Result is ../joe
 Path p2_to_p1 = p2.relativize(p1);
 ```
-
-Copy
 
 Consider a slightly more complicated example:
 
@@ -304,8 +270,6 @@ Path p1_to_p3 = p1.relativize(p3);
 // Result is ../..
 Path p3_to_p1 = p3.relativize(p1);
 ```
-
-Copy
 
 In this example, the two paths share the same node, home. To navigate from `home` to `bar`, you first navigate one level down to `sally` and then one more level down to `bar`. Navigating from `bar` to `home` requires moving up two levels.
 
@@ -334,8 +298,6 @@ if (path.equals(otherPath)) {
 }
 ```
 
-Copy
-
 The [`Path`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Path.html) interface extends the [`Iterable`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/lang/Iterable.html) interface. The [`iterator()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/lang/Iterable.html#iterator()) method returns an object that enables you to iterate over the name elements in the path. The first element returned is that closest to the root in the directory tree. The following code snippet iterates over a path, printing each name element:
 
 ```java
@@ -344,8 +306,6 @@ for (Path name: path) {
     System.out.println(name);
 }
 ```
-
-Copy
 
 The [`Path`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Path.html) interface also extends the [`Comparable`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/lang/Comparable.html) interface. You can compare [`Path`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Path.html) objects by using [`compareTo()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/lang/Comparable.html#compareTo(T)) which is useful for sorting.
 

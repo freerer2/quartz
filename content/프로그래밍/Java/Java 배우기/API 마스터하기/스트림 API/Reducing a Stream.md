@@ -30,15 +30,11 @@ for (int index = 1; index < ints.size(); index++) {
 System.out.println("sum = " + sum);
 ```
 
-Copy
-
 Running it prints out the following result.
 
 ```text
 sum = 12
 ```
-
-Copy
 
 What this code does is the following.
 
@@ -65,8 +61,6 @@ for (int index = 1; index < ints.size(); index++) {
 System.out.println("sum = " + result);
 ```
 
-Copy
-
 Now you can see that this code only depends on the binary operator itself. Suppose you need to compute a _MAX_. All you need to do is to provide the right binary operator for that.
 
 ```java
@@ -79,8 +73,6 @@ for (int index = 1; index < ints.size(); index++) {
 }
 System.out.println("max = " + result);
 ```
-
-Copy
 
 The conclusion of this is that you can indeed compute a reduction by just providing a binary operator that operates on only two elements. This is how the [`reduce()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Stream.html#reduce(java.util.function.BinaryOperator)) method works in the Stream API.
 
@@ -116,8 +108,6 @@ int reduce(List<Integer> ints, BinaryOperator<Integer> sum) {
 }
 ```
 
-Copy
-
 Here is the main code that uses this method.
 
 ```java
@@ -130,8 +120,6 @@ int result2 = reduce(ints.subList(2, 4), sum);
 int result = sum.apply(result1, result2);
 System.out.println("sum = " + result);
 ```
-
-Copy
 
 To make things explicit, we have split your source of data in two parts, and reduced them separately in two integers: `reduce1` and `reduce2`. Then we have merged these results using the same binary operator. This is basically how parallel streams are working.
 
@@ -198,8 +186,6 @@ for (int i: ints) {
 System.out.println("sum = " + result);
 ```
 
-Copy
-
 You can notice that this way of writing things works well even if the list you need to process is empty. In that case it will return the identity element, which is what you need.
 
 The fact that the element you provide is indeed the identity element of the binary operator is not checked by the API. Providing an element that is not will return a corrupted result.
@@ -213,15 +199,11 @@ int sum = ints.reduce(10, (a, b) -> a + b);
 System.out.println("sum = " + sum);
 ```
 
-Copy
-
 You would expect this code to print the value 0 on the console. Because the first argument of the [`reduce()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Stream.html#reduce(java.util.function.BinaryOperator)) method call is not the identity element of the binary operator, the result is in fact wrong. Running this code will print the following on your console.
 
 ```text
 sum = 10
 ```
-
-Copy
 
 Here is the correct code you should be using.
 
@@ -231,8 +213,6 @@ Stream<Integer> ints = Stream.of(0, 0, 0, 0);
 int sum = ints.reduce(0, (a, b) -> a + b);
 System.out.println("sum = " + sum);
 ```
-
-Copy
 
 This example shows you that passing a wrong identity element does not trigger any error or exception when compiling your code or running it. It is really up to you to make sure that the object you pass is indeed the identity element of your binary operator.
 
@@ -255,15 +235,11 @@ if (optional.isPresent()) {
 }
 ```
 
-Copy
-
 Running this code gives you the following result.
 
 ```text
 result = 8
 ```
-
-Copy
 
 Note that this code opens the optional using the [`orElseThrow()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/Optional.html#get()) method, which is now the preferred way of doing so. This pattern has been added in Java SE 10, in replacement of the more traditional [`get()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/Optional.html#orElseThrow()) method that was originally introduced in Java SE 8.
 
@@ -282,8 +258,6 @@ Let us examine the signature of this method.
              BiFunction<U, ? super T, U> accumulator,
              BinaryOperator<U> combiner);
 ```
-
-Copy
 
 This method works with a type `U` that is defined locally to this method and used by the binary operator. The binary operator works in the same way as in the previous overloads of the [`reduce()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Stream.html#reduce(java.util.function.BinaryOperator)) method, except that it is not applied to elements of the stream but merely to mapped versions of them.
 
@@ -318,23 +292,17 @@ int result = strings.reduce(0, accumulator, combiner);
 System.out.println("sum = " + result);
 ```
 
-Copy
-
 Running this code produces the following result.
 
 ```text
 sum = 15
 ```
 
-Copy
-
 In the example above the mapper would simply be the following function.
 
 ```java
 Function<String, Integer> mapper = String::length;
 ```
-
-Copy
 
 So you can rewrite the accumulator to the following pattern. This way of writing thing clearly shows the fusion of the mapping, modeled by the mapper and the reduction, modeled by the binary operator.
 

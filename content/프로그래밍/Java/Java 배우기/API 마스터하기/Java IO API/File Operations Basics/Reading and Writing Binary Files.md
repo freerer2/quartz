@@ -21,8 +21,6 @@ try (InputStream in = Files.newInputStream(file);
 }
 ```
 
-Copy
-
  
 
 ## Creating and Writing a File by Using Stream I/O
@@ -57,8 +55,6 @@ public class LogFileTest {
   }
 }
 ```
-
-Copy
 
  
 
@@ -101,8 +97,6 @@ public static void readFile(Path path) throws IOException {
     }
 }
 ```
-
-Copy
 
 The following example, written for UNIX and other POSIX file systems, creates a log file with a specific set of file permissions. This code creates a log file or appends to the log file if it already exists. The log file is created with read/write permissions for owner and read only permissions for group.
 

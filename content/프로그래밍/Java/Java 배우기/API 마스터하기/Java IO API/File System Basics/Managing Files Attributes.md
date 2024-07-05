@@ -68,8 +68,6 @@ System.out.println("isSymbolicLink: " + attr.isSymbolicLink());
 System.out.println("size: " + attr.size());
 ```
 
-Copy
-
 In addition to the accessor methods shown in this example, there is a [`fileKey()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/attribute/BasicFileAttributes.html#fileKey()) method that returns either an object that uniquely identifies the file or `null` if no file key is available.
 
 ### Setting Time Stamps
@@ -84,8 +82,6 @@ long currentTime = System.currentTimeMillis();
 FileTime ft = FileTime.fromMillis(currentTime);
 Files.setLastModifiedTime(file, ft);
 ```
-
-Copy
 
  
 
@@ -108,16 +104,12 @@ try {
 }
 ```
 
-Copy
-
 However, you can set a DOS attribute using the [`setAttribute(Path, String, Object, LinkOption...)`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Files.html#setAttribute(java.nio.file.Path,java.lang.String,java.lang.Object,java.nio.file.LinkOption...)) method, as follows:
 
 ```java
 Path file = ...;
 Files.setAttribute(file, "dos:hidden", true);
 ```
-
-Copy
 
  
 
@@ -139,8 +131,6 @@ System.out.format("%s %s %s%n",
     PosixFilePermissions.toString(attr.permissions()));
 ```
 
-Copy
-
 The [`PosixFilePermissions`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/attribute/PosixFilePermissions.html) helper class provides several useful methods, as follows:
 
 - The [`toString()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/attribute/PosixFilePermissions.html#toString(java.util.Set)) method, used in the previous code snippet, converts the file permissions to a string (for example, `rw-r--r--`).
@@ -159,8 +149,6 @@ FileAttribute<Set<PosixFilePermission>> attr =
 Files.createFile(file, attr);
 ```
 
-Copy
-
 The [`asFileAttribute()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/attribute/PosixFilePermissions.html#asFileAttribute(java.util.Set)) method wraps the permissions as a [`FileAttribute`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/attribute/FileAttribute.html). The code then attempts to create a new file with those permissions. Note that the _umask_ also applies, so the new file might be more secure than the permissions that were requested.
 
 To set a file's permissions to values represented as a hard-coded string, you can use the following code:
@@ -173,8 +161,6 @@ FileAttribute<Set<PosixFilePermission>> attr =
     PosixFilePermissions.asFileAttribute(perms);
 Files.setPosixFilePermissions(file, perms);
 ```
-
-Copy
 
  
 
@@ -191,8 +177,6 @@ UserPrincipal owner = file.getFileSystem().getUserPrincipalLookupService()
 Files.setOwner(file, owner);
 ```
 
-Copy
-
 There is no special-purpose method in the [`Files`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Files.html) class for setting a group owner. However, a safe way to do so directly is through the POSIX file attribute view, as follows:
 
 ```java
@@ -203,8 +187,6 @@ GroupPrincipal group =
 Files.getFileAttributeView(file, PosixFileAttributeView.class)
         .setGroup(group);
 ```
-
-Copy
 
  
 
@@ -224,8 +206,6 @@ view.write("user.mimetype",
            Charset.defaultCharset().encode("text/html");
 ```
 
-Copy
-
 To read the MIME type attribute, you would use this code snippet:
 
 ```java
@@ -239,15 +219,11 @@ buf.flip();
 String value = Charset.defaultCharset().decode(buf).toString();
 ```
 
-Copy
-
 Note: In Linux, you might have to enable extended attributes for user-defined attributes to work. If you receive an [`UnsupportedOperationException`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/lang/UnsupportedOperationException.html) when trying to access the user-defined attribute view, you need to remount the file system. The following command remounts the root partition with extended attributes for the ext3 file system. If this command does not work for your flavor of Linux, consult the documentation.
 
 ```shell
 $ sudo mount -o remount,user_xattr /
 ```
-
-Copy
 
 If you want to make the change permanent, add an entry to `/etc/fstab`.
 
@@ -269,8 +245,6 @@ long used = (store.getTotalSpace() -
 long avail = store.getUsableSpace() / 1024;
 ```
 
-Copy
-
  
 
 ## Determining MIME Type
@@ -290,8 +264,6 @@ try {
     System.err.println(x);
 }
 ```
-
-Copy
 
 Note that this method returns null if the content type cannot be determined.
 

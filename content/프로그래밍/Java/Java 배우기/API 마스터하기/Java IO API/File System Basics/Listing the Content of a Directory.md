@@ -24,8 +24,6 @@ try (DirectoryStream<Path> stream = Files.newDirectoryStream(dir)) {
 }
 ```
 
-Copy
-
 The [`Path`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Path.html) objects returned by the iterator are the names of the entries resolved against the directory. So, if you are listing the contents of the `/tmp` directory, the entries are returned with the form `/tmp/a`, `/tmp/b`, and so on.
 
 This method returns the entire contents of a directory: files, links, subdirectories, and hidden files. If you want to be more selective about the contents that are retrieved, you can use one of the other [`newDirectoryStream()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Files.html#newDirectoryStream(java.nio.file.Path)) methods, as described later in this page.
@@ -54,8 +52,6 @@ try (DirectoryStream<Path> stream =
 }
 ```
 
-Copy
-
  
 
 ## Writing Your Own Directory Filter
@@ -79,8 +75,6 @@ DirectoryStream.Filter<Path> filter =
 };
 ```
 
-Copy
-
 Once the filter has been created, it can be invoked by using the [`newDirectoryStream(Path, DirectoryStream.Filter)`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Files.html#newDirectoryStream(java.nio.file.Path,java.nio.file.DirectoryStream.Filter)) method. The following code snippet uses the `isDirectory()` filter to print only the directory's subdirectories to standard output:
 
 ```java
@@ -94,8 +88,6 @@ try (DirectoryStream<Path>
     System.err.println(x);
 }
 ```
-
-Copy
 
 This method is used to filter a single directory only. However, if you want to find all the subdirectories in a file tree, you would use the mechanism for [Walking the File Tree](https://dev.java/learn/java-io/file-system/listing/).
 

@@ -54,15 +54,11 @@ List<Integer> collect =
 System.out.println("collect = " + collect);
 ```
 
-Copy
-
 Running this code produces the following result.
 
 ```text
 collect = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 ```
-
-Copy
 
 Collecting this data in a set would only require changing the implementation of [`supplier`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/function/Supplier.html) and adjusting the types accordingly.
 
@@ -86,15 +82,11 @@ StringBuffer collect =
 System.out.println("collect = " + collect);
 ```
 
-Copy
-
 Running this code produces the following result.
 
 ```text
 collect = 0123456789
 ```
-
-Copy
 
  
 
@@ -107,8 +99,6 @@ The Collector API defines a fourth component precisely to handle this case, whic
 ```java
 Function<StringBuffer, String> finisher = stringBuffer -> stringBuffer.toString();
 ```
-
-Copy
 
 There are many collectors where the finisher is just the identity function. This is the case for the following collectors: [`toList()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Collectors.html#toList()), [`toSet()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Collectors.html#toSet()), [`groupingBy()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Collectors.html#groupingBy(java.util.function.Function)), and [`toMap()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Collectors.html#toMap(java.util.function.Function,java.util.function.Function)).
 
@@ -138,8 +128,6 @@ Map.Entry<Integer, Long> maxValue =
 System.out.println("maxValue = " + maxValue);
 ```
 
-Copy
-
 In a first step, you built an histogram of type [`Map<Inter, Long>`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/Map.html), and in a second step, you extracted the maximum value of this histogram, comparing the key-value pairs by value.
 
 This second step is in fact a transformation of a map to a special key/value pair from this map. You can model it using the following function.
@@ -150,8 +138,6 @@ Function<Map<Integer, Long>, Map.Entry<Integer, Long>> finisher =
               .max(Map.Entry.comparingByValue())
               .orElseThrow();
 ```
-
-Copy
 
 The type of this function may look complex at first. In fact, it just extracts a key-value pair from a map. So it takes an instance of [`Map`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/Map.html) of a certain type and returns a key-value pair from that map, which is an instance of [`Map.Entry`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/Map.Entry.html) with the same type.
 
@@ -179,8 +165,6 @@ Map.Entry<Integer, Long> maxValue =
 
 System.out.println("maxValue = " + maxValue);
 ```
-
-Copy
 
 You may be wondering why would you need to write this code that looks quite complicated?
 
@@ -214,8 +198,6 @@ record Car(Color color, Engine engine, Drive drive, int passengers) {}
 record Truck(Engine engine, Drive drive, int weight) {}
 ```
 
-Copy
-
 A car object has several components: a color, an engine, a drive, and a certain amount of passengers it can transport. A truck has an engine, a drive, and it can transport a certain amount of freight. Both implement the same interface: `Vehicle`.
 
 Suppose you have a collection of vehicles, and you need to find all the car with an electric engine. Depending on your application, you may end up filtering your collection of cars by using a stream. Or, if you know that the next request will be to get the car with a hybrid engine, you may prefer to prepare a map, with the engine as a key, and the list of car with type of engine as values. In both cases, the Stream API will give you the right pattern to get what you need.
@@ -227,8 +209,6 @@ Predicate<Vehicle> predicate =
     vehicle -> vehicle instanceof Car car && car.engine() == Engine.ELECTRIC ||
                vehicle instanceof Truck truck && truck.engine() == Engine.ELECTRIC;
 ```
-
-Copy
 
 What you really need is the following:
 

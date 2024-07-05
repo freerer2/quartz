@@ -18,8 +18,6 @@ Stream<Integer> ints = strings.stream()
                               .map(toLength);
 ```
 
-Copy
-
 You can copy this code, and paste it in your IDE to run it. You will not see anything and you may be wondering why.
 
 The answer is in fact simple: there is no terminal operation defined on that stream. Your reflex should be to notice that and realize that this code does not do anything. It does not process any data. To answer the question: "What is this code doing?", there is only one valid answer: "Nothing".
@@ -34,15 +32,11 @@ List<Integer> lengths = strings.stream()
 System.out.println("lengths = " + lengths);
 ```
 
-Copy
-
 Running this code prints the following:
 
 ```text
 lengths = [3, 3, 5, 4]
 ```
-
-Copy
 
 You can see that this pattern creates a [`Stream<Integer>`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Stream.html), returned by the [`map(String::length)`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Stream.html#map(java.util.function.Function)). You can also make it a specialized [`IntStream`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/IntStream.html) by calling [`mapToInt()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Stream.html#mapToInt(java.util.function.ToIntFunction)) instead of the regular [`map()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Stream.html#map(java.util.function.Function)) call. This [`mapToInt()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Stream.html#mapToInt(java.util.function.ToIntFunction)) method takes a [`ToIntFuction<T>`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/function/ToIntFunction.html) as an argument. Changing `.map(String::length)` to `.mapToInt(String::length)` in the previous example does not create a compiler error. The method reference `String::length` can be of both types: [`Function<String, Integer>`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/function/Function.html) and [`ToIntFunction<String>`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/function/ToIntFunction.html).
 
@@ -56,15 +50,11 @@ IntSummaryStatistics stats = strings.stream()
 System.out.println("stats = " + stats);
 ```
 
-Copy
-
 The result is the following:
 
 ```text
 stats = IntSummaryStatistics{count=4, sum=15, min=3, average=3,750000, max=5}
 ```
-
-Copy
 
 There are three methods to go from [`Stream`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Stream.html) to a stream of primitive type: [`mapToInt()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Stream.html#mapToInt(java.util.function.ToIntFunction)), [`mapToLong()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Stream.html#mapToLong(java.util.function.ToLongFunction)) and [`mapToDouble()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Stream.html#mapToDouble(java.util.function.ToDoubleFunction)).
 
@@ -85,15 +75,11 @@ long count = strings.stream()
 System.out.println("count = " + count);
 ```
 
-Copy
-
 Running this code produces the following:
 
 ```text
 count = 2
 ```
-
-Copy
 
 Notice that you just used another terminal operation of the Stream API, [`count()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Stream.html#count()), which just counts the number of processed elements. This method returns a `long`, so you can count a lot of elements with it. More than you can put in an [`ArrayList`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/ArrayList.html).
 
@@ -116,8 +102,6 @@ public class City {
 }
 ```
 
-Copy
-
 Here is the code of the `State` class, with the relation to the `City` class.
 
 ```java
@@ -130,8 +114,6 @@ public class State {
     // toString, equals and hashCode
 }
 ```
-
-Copy
 
 Suppose your code is processing a list of states, and at some point you need to count the population of all the cities.
 
@@ -150,15 +132,11 @@ for (State state: states) {
 System.out.println("Total population = " + totalPopulation);
 ```
 
-Copy
-
 The inner loop of this code is a form of map-reduce that you can write with the following stream:
 
 ```java
 totalPopulation += state.getCities().stream().mapToInt(City::getPopulation).sum();
 ```
-
-Copy
 
 The connection between the loop on the states and this stream does not fit well in the map/reduce pattern, and putting a stream in a loop is not a very nice pattern of code.
 
@@ -170,8 +148,6 @@ In the case of our example, this function is simple because there is a `List<Ci
 Function<State, Stream<City>> stateToCity = state -> state.getCities().stream();
 ```
 
-Copy
-
 This list is not mandatory. Suppose you have a `Continent` class that holds a [`Map<String, Country>`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/Map.html), where the keys are the country codes of the countries (CAN for Canada, MEX for Mexico, FRA for France, and so on). Suppose that the `Continent` class has a method `getCountries()` that returns this map.
 
 In that case, this function could be written in this way.
@@ -180,8 +156,6 @@ In that case, this function could be written in this way.
 Function<Continent, Stream<Country>> continentToCountry = 
     continent -> continent.getCountries().values().stream();
 ```
-
-Copy
 
 The [`flatMap()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Stream.html#flatMap(java.util.function.Function)) method processed a stream in two streps.
 
@@ -201,8 +175,6 @@ int totalPopulation =
 
 System.out.println("Total population = " + totalPopulation);
 ```
-
-Copy
 
  
 
@@ -224,8 +196,6 @@ Predicate<String> isANumber = s -> {
     }
 };
 ```
-
-Copy
 
 This first flaw is that you need to actually do the conversion to see if it is working or not. Then you will have to do it again in your mapping function, which will be executed next: don't do that! The second flaw is that it is never a good idea to return from a catch block.
 
@@ -250,15 +220,11 @@ List<Integer> ints =
 System.out.println("ints = " + ints);
 ```
 
-Copy
-
 Running this code produces the following result. All the faulty strings have been silently removed.
 
 ```text
 ints = [1, 2, 3]
 ```
-
-Copy
 
 This use of the flatmap code works well, but it has an overhead: there is one stream created for each element of the stream you need to process. Starting with Java SE 16, a method has been added to the Stream API. It has been added exactly for this case: when you create many streams of zero or one object. This method is called [`mapMulti()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Stream.html#mapMulti(java.util.function.BiConsumer)) and takes a [`BiConsumer`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/function/BiConsumer.html) as an argument.
 
@@ -284,15 +250,11 @@ List<Integer> ints =
 System.out.println("ints = " + ints);
 ```
 
-Copy
-
 Running this code produces the same result as before. All the faulty strings have been silently removed, but this time, no other stream has been created.
 
 ```text
 ints = [1, 2, 3]
 ```
-
-Copy
 
 To use this method, you need to tell the compiler the type of [`Consumer`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/function/Consumer.html) used to add elements to the resulting stream. This is done with this special syntax where you put this type before calling [`mapMulti()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Stream.html#mapMulti(java.util.function.BiConsumer)). It is not a syntax that you see very often in Java code. You can use it in a static and nonstatic context.
 
@@ -332,15 +294,11 @@ List<Integer> result =
 System.out.println("result = " + result);
 ```
 
-Copy
-
 This code prints the following.
 
 ```text
 result = [3, 4, 5, 6, 7]
 ```
-
-Copy
 
 It is important to understand that `skip(2)` has been called on a stream that processes the elements `1, 2, 3, ...`, and produces another stream that processes the elements `3, 4, 5, 6, ...`.
 
@@ -387,16 +345,12 @@ System.out.println("concat  = " + concat);
 System.out.println("flatMap = " + flatMap);
 ```
 
-Copy
-
 Running this code produces the following result:
 
 ```text
 concat  = [1, 2, 3, 4, 5, 6]
 flatMap = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 ```
-
-Copy
 
 The reason why it is better to use the [`flatMap()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Stream.html#flatMap(java.util.function.Function)) way is that [`concat()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Stream.html#concat(java.util.stream.Stream,java.util.stream.Stream)) creates intermediates streams during the concatenation. When you use [`Stream.concat()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Stream.html#concat(java.util.stream.Stream,java.util.stream.Stream)), a new stream is created to concatenate your two streams. If you need to concatenate three streams, you will end up creating a first stream to handle the first concatenation, and a second one for the second concatenation. So each concatenation requires a stream that will be thrown away very quickly.
 
@@ -433,8 +387,6 @@ List<String> result =
 System.out.println("result = " + result);
 ```
 
-Copy
-
 If you run this code, you will see the following on your console.
 
 ```text
@@ -448,8 +400,6 @@ Mapped = THREE
 Starting with = four
 result = [TWO, THREE]
 ```
-
-Copy
 
 Let us analyze this output.
 

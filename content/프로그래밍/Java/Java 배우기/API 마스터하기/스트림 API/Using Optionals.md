@@ -83,8 +83,6 @@ String findCustomerNameById(int id){
 }
 ```
 
-Copy
-
 You can see on this pattern that the [`map()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/Optional.html#map(java.util.function.Function)) method comes from the [`Optional`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/Optional.html) class, and it integrates nicely with the stream processing. You do not need to check if the optional object returned by the [`findFirst()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Stream.html#findFirst()) method is empty or not; calling [`map()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/Optional.html#map(java.util.function.Function)) does in fact this for you.
 
 ### Getting the Two Authors that Published the Most Together
@@ -121,8 +119,6 @@ record PairOfAuthors(Author first, Author second) {
 }
 ```
 
-Copy
-
 Creating a factory method in the `PairOfAuthors` record allows you to control what instances of this record are allowed and prevent the creation of pairs you do not need. To show that this factory method may not be able to produce a result, you can wrap it in an optional. This perfectly respects the principle: if you cannot produce a result, return an empty optional.
 
 Let us write a function that creates a [`Stream<PairOfAuthors>`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Stream.html) for a given article. You can make a Cartesian product with two nested streams.
@@ -136,8 +132,6 @@ BiFunction<Article, Author, Stream<PairOfAuthors>> buildPairOfAuthors =
             secondAuthor -> PairOfAuthors.of(firstAuthor, secondAuthor).stream());
 ```
 
-Copy
-
 This bifunction creates an optional object from the `firstAuthor` and the `secondAuthor`, taken from the stream built on the authors of the article. You can see that the [`stream()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/Optional.html#stream()) method is called on the optional object returned by the [`of()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/Optional.html#of(T)) method. The returned stream is empty if the optional is empty and contains only a single pair of authors otherwise. This stream is processed by [`flatMap()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Stream.html#flatMap(java.util.function.Function)) method. This method opens the streams, the empty ones will just vanish, and only the valid pairs will appear in the resulting stream.
 
 You can now build a function that uses this bifunction to create a stream of pairs of authors from an article.
@@ -149,8 +143,6 @@ Function<Article, Stream<PairOfAuthors>> toPairOfAuthors =
                      .flatMap(firstAuthor -> buildPairOfAuthors.apply(article, firstAuthor));
 ```
 
-Copy
-
 Knowing the two authors that published to most together can be done from a histogram in which the keys are the pairs of authors and the values the number of articles they wrote together.
 
 You can build a histogram with the [`groupingBy()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Collectors.html#groupingBy(java.util.function.Function)) collector. Let us first create the stream of pair of authors.
@@ -160,8 +152,6 @@ Stream<PairOfAuthors> pairsOfAuthors =
     articles.stream()
             .flatMap(toPairOfAuthors);
 ```
-
-Copy
 
 This stream is built in such a way that if a pair of authors wrote two articles together, this pair appears twice in the stream. So, what you need to do is to count how many times each pair appears in this stream. This can be done with a [`groupingBy()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Collectors.html#groupingBy(java.util.function.Function)) pattern in which the classifier is the identity function: the pair itself. At this point, the values are lists of pairs, which you need to count. So the downstream collector is just the [`counting()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Collectors.html#counting()) collector.
 
@@ -175,8 +165,6 @@ Map<PairOfAuthors, Long> numberOfAuthorsTogether =
             ));
 ```
 
-Copy
-
 Finding the authors that published the most together consists in extracting the maximum value of this map. You can create the following function for this processing.
 
 ```java
@@ -185,8 +173,6 @@ Function<Map<PairOfAuthors, Long>, Map.Entry<PairOfAuthors, Long>> maxExtractor 
                          .max(Map.Entry.comparingByValue())
                          .orElseThrow();
 ```
-
-Copy
 
 This function calls the [`orElseThrow()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/Optional.html#get()) method on the optional object returned by the [`Stream.max()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Stream.html#max(java.util.Comparator)) method.
 
@@ -213,8 +199,6 @@ Function<Map<PairOfAuthors, Long>, Map.Entry<PairOfAuthors, Long>> finisher =
                   .orElseThrow();
 ```
 
-Copy
-
 Now you can merge them together in a single [`collectingAndThen()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Collectors.html#collectingAndThen(java.util.stream.Collector,java.util.function.Function)) collector. You can recognize the [`groupingBy()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Collectors.html#groupingBy(java.util.function.Function)) collector as the first argument and the the `finisher` function as a second argument.
 
 ```java
@@ -230,8 +214,6 @@ Collector<PairOfAuthors, ?, Map.Entry<PairOfAuthors, Long>> pairOfAuthorsEntryCo
     );
 ```
 
-Copy
-
 You can now write the full pattern with the initial flatmap operation and this collector.
 
 ```java
@@ -240,8 +222,6 @@ Map.Entry<PairOfAuthors, Long> numberOfAuthorsTogether =
             .flatMap(toPairOfAuthors)
             .collect(pairOfAuthorsEntryCollector);
 ```
-
-Copy
 
 Thanks to the [`flatMapping()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Collectors.html#flatMapping(java.util.function.Function,java.util.stream.Collector)) collector, you can write this code with a single collector by merging the intermediate [`flatMap()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Stream.html#flatMap(java.util.function.Function)) and the terminal collector. The following code is equivalent to the previous one.
 
@@ -253,8 +233,6 @@ Map.Entry<PairOfAuthors, Long> numberOfAuthorsTogether =
                     toPairOfAuthors,
                     pairOfAuthorsEntryCollector));
 ```
-
-Copy
 
 Finding the two authors that published the most, per year, is just a matter of passing this [`flatMapping()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Collectors.html#flatMapping(java.util.function.Function,java.util.stream.Collector)) collector as a downstream collector to the right [`groupingBy()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Collectors.html#groupingBy(java.util.function.Function)).
 
@@ -273,8 +251,6 @@ Map<Integer, Map.Entry<PairOfAuthors, Long>> result =
                 )
             );
 ```
-
-Copy
 
 You may remember that, deep inside this [`flatMapping()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Collectors.html#flatMapping(java.util.function.Function,java.util.stream.Collector)) collector there is a call to the [`Optional.orElseThrow()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/Optional.html#orElseThrow()). Checking if this call could fail was easy in the previous pattern, because having an empty optional at this point was fairly easy to guess.
 
@@ -299,8 +275,6 @@ Collector<PairOfAuthors, ?, Optional<Map.Entry<PairOfAuthors, Long>>>
             );
 ```
 
-Copy
-
 Note that the [`orElseThrow()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/Optional.html#get()) is not called anymore, thus leading to an optional in the signature of the collector.
 
 This optional also appears in the signature of the [`flatMapping()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Collectors.html#flatMapping(java.util.function.Function,java.util.stream.Collector)) collector.
@@ -312,8 +286,6 @@ Collector<Article, ?, Optional<Map.Entry<PairOfAuthors, Long>>> flatMapping =
                 pairOfAuthorsEntryCollector
         );
 ```
-
-Copy
 
 Using this collector to create the map of the pair of authors per year creates a map of type [`Map<Integer, Optional<Map.Entry<PairOfAuthors, Long>>>`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/Map.html), a type we do not need: having a map in which values are empty optionals is useless and maybe costly. It is an antipattern. Unfortunately, there is no way you can guess that this optional will be empty before computing this maximum value.
 
@@ -339,8 +311,6 @@ Map<Integer, Map.Entry<PairOfAuthors, Long>> histogram =
                     Map.Entry::getKey, Map.Entry::getValue
             )); // Map<Integer, Map.Entry<PairOfAuthors, Long>>
 ```
-
-Copy
 
 Note the flatmap function in this pattern. It takes an `entry`, whose value is of type [`Optional<Map.Entry<PairOfAuthors, Long>>`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/Optional.html) as an argument, and calls [`map()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/Optional.html#map(java.util.function.Function)) on this optional.
 
