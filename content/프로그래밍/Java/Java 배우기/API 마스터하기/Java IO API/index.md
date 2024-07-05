@@ -10,7 +10,7 @@ This tutorial will guide you through the Java I/O API, presenting the basic noti
 
   
 
-1. [[Understanding the Main Java I/O Concepts]]  
+1. [[Understanding the Main Java IO Concepts]]  
     
     Introducing the Java I/O API: files, paths, streams of characters and streams of bytes.
     

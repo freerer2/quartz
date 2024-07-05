@@ -1,3 +1,8 @@
+---
+date: 2024-07-05
+updated: 2024-07-05
+order: 70
+---
 ## Collecting Stream Elements with a Collector
 
 You already used a very useful pattern to collect the elements processed by a stream in an [`List`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/List.html): `collect(Collectors.toList())`. This [`collect()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Collector.html) method is a terminal method defined in the [`Stream`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Stream.html) interface that takes an object of type [`Collector`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Collector.html) as an argument. This [`Collector`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Collector.html) interface defines an API of its own, that you can use to create any kind of in-memory structure to store the data processed by a stream. Collecting can be made in any instance of [`Collection`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/Collection.html) or [`Map`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/Map.html), it can be used to create strings of characters, and you can create your own instance of the [`Collector`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Collector.html) interface to add your own structures to this list.

@@ -1,3 +1,8 @@
+---
+date: 2024-07-05
+updated: 2024-07-05
+order: 60
+---
 ## Characteristics of a Stream
 
 The Stream API relies on a special object, an instance of the [`Spliterator`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/Spliterator.html) interface. The name of this interface comes from the fact that the role of a spliterator in the Stream API looks like the role of an iterator has in the Collection API. Moreover, because the Stream API supports parallel processing, a spliterator object also controls how a stream splits its elements among the different CPUs that handle parallelization. The name is the contraction of _split_ and _iterator_.

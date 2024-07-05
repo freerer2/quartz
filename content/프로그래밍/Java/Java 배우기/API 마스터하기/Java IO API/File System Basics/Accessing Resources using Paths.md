@@ -1,0 +1,134 @@
+---
+date: 2024-07-05
+updated: 2024-07-05
+order: 10
+---
+## Introducing the Legacy File Class
+
+There two ways to model a file or a path on a file system in Java. The first, legacy one, is the [`File`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/File.html) class. This class is mentioned here, with a word of warning: you should not use it anymore in your code, unless you have very good reasons to do so. You should favor the use of the [`Path`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Path.html) interface, also covered in this section. Along with the factory methods from the [`Files`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Files.html), it gives you more features than the [`File`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/File.html) class, and better performances, especially to access larger files and directories.
+
+That been said, because it is widely used in legacy code, understanding the [`File`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/File.html) may still be important to you. Without diving too deep in it, let us present the main concepts of this class.
+
+An instance of the [`File`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/File.html) class can represent anything on a file system: a file, a directory, a symbolic link, a relative path, or an absolute path. This instance is an abstract notion. Creating such an instance does not create anything on your file system. You can query your file system using this class, but you need to do it explicitly.
+
+An instance of a [`File`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/File.html) does not allow you to access the content of the file it represents. With this instance, you can check if this file exists or is readable (among other things).
+
+A file is composed of several elements, separated by a separator, which depends on your file system. The first element may be a prefix, such as a disk-drive specifier, a slash for the UNIX root directory. The other elements are names.
+
+### Creating an Instance of File
+
+You can create an instance of the [`File`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/File.html) class using several constructors:
+
+- [`File(String pathName)`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/File.html#%3Cinit%3E(java.lang.String)): creates a file from the path you provide.
+- [`File(String parent, String child)`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/File.html#%3Cinit%3E(java.lang.String,java.lang.String)): create the given file in the `parent` directory.
+- [`File(File parent, String child)`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/File.html#%3Cinit%3E(java.io.File,java.lang.String)): create the given file in the `parent` directory, specified as an instance of [`File`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/File.html).
+- [`File(URI uri)`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/File.html#%3Cinit%3E(java.net.URI)): create a file from a `URI`.
+
+### Getting the Elements of a File
+
+The following methods give you information on the elements of this file:
+
+- [`getName()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/File.html#getName()): returns the name of the file or directory denoted by this file object. This is just the last name of the sequence.
+- [`getParent()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/File.html#getParent()): returns the pathname string of this abstract pathname's parent, or null if this pathname does not name a parent directory.
+- [`getPath()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/File.html#getPath()): returns this abstract pathname converted into a pathname string. This method is not related to the [`Path`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Path.html) interface.
+- [`getAbsolutePath()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/File.html#getAbsolutePath()): returns the absolute pathname string of this abstract pathname. If this abstract pathname is already absolute, then the pathname string is simply returned. Otherwise this pathname is resolved in a system-dependent way.
+- [`getCanonicalPath()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/File.html#getCanonicalPath()): returns the canonical pathname string of this abstract pathname. The canonical pathname is absolute and unique and system-dependent. The construction of this canonical pathname typically involves removing redundant names such as `.` and `..` from the pathname, and resolving symbolic links.
+
+### Getting Information on a File or a Directory
+
+Some of these methods may require special rights on files or directories. As a legacy class, the [`File`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/File.html) does not expose all the security attributes offered by your file system.
+
+- [`isFile()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/File.html#isFile()), [`isDirectory()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/File.html#isDirectory()): checks if this abstract pathname denotes an existing file or directory.
+- [`exists()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/File.html#exists()), [`canRead()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/File.html#canRead()), [`canWrite()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/File.html#canWrite()), [`canExecute()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/File.html#canExecute()): checks if this file exists, is readable, if you can modify it, or if you can execute it.
+- [`setReadable(boolean)`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/File.html#setReadable()), [`setWritable(boolean)`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/File.html#setReadable()), [`setExecutable(boolean)`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/File.html#setExecutable(boolean)): allows you to change the corresponding security attribute of the file. These methods return `true` if the operation succeeded.
+- [`lastModified()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/File.html#lastModified()) et [`setLastModified()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/File.html#setLastModified(long)): return or set the time that this file was last modified.
+- [`length()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/File.html#length()): returns the length of the file denoted by this abstract pathname.
+- [`isHidden()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/File.html#isHidden()): tests whether the file named by this abstract pathname is a hidden file.
+
+### Manipulating Files and Directories
+
+Several methods allow you to create files and directories on a file system. Most of them are file system dependent. Remember that these methods are legacy methods. You can check the section [Refactoring your Code to Using Path](https://dev.java/learn/java-io/file-system/file-path/#file-to-path) to refactor your code to use the equivalent methods from the [`Path`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Path.html) interface and the [`Files`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Files.html) class.
+
+- [`createNewFile()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/File.html#createNewFile()): tries to create a new file from this pathname. This creation will fail if this file already exists. This method returns `true` if the file was successfully created, and `false` otherwise.
+- [`delete()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/File.html#delete()): deletes the file or directory denoted by this abstract pathname. If this pathname denotes a directory, then the directory must be empty in order to be deleted. This method returns `true` if the file was successfully deleted and `false` otherwise. You should favor the use of the [`Files.delete()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Files.html#delete(java.nio.file.Path)) method over this one, since it gives you more information in case the deletion fails.
+- [`mkdirs()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/File.html#mkdirs()) and [`mkdir()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/File.html#mkdir()): create a directory named by this abstract pathname. [`mkdirs()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/File.html#mkdirs()) creates all the intermediate directories if needed.
+- [`renameTo(file)`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/File.html#renameTo(java.io.File)): renames the file denoted by this abstract pathname.
+
+ 
+
+## Introducing the Path Interface
+
+The [`Path`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Path.html) class, introduced in the Java SE 7 release, is one of the primary entrypoint of the [`java.nio.file`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/package-summary.html) package. If your application uses file I/O, you will want to learn about the powerful features of this interface.
+
+> Version Note: If you have pre-JDK7 code that uses [`java.io.File`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/File.html), you can still take advantage of the [`Path`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Path.html) interface functionality by using the [`File.toPath()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/File.html#toPath()) method. See the next section for more information. As its name implies, the [`Path`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Path.html) interface is a programmatic representation of a path in the file system. A [`Path`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Path.html) object contains the file name and directory list used to construct the path, and is used to examine, locate, and manipulate files.
+
+A [`Path`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Path.html) instance reflects the underlying platform. In the Solaris OS, a [`Path`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Path.html) uses the Solaris syntax (`/home/joe/foo`) and in Microsoft Windows, a [`Path`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Path.html) uses the Windows syntax (`C:\home\joe\foo`). A [`Path`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Path.html) is not system independent. You cannot compare a [`Path`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Path.html) from a Solaris file system and expect it to match a [`Path`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Path.html) from a Windows file system, even if the directory structure is identical and both instances locate the same relative file.
+
+The file or directory corresponding to the [`Path`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Path.html) might not exist. You can create a [`Path`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Path.html) instance and manipulate it in various ways: you can append to it, extract pieces of it, compare it to another path. At the appropriate time, you can use the methods in the [`Files`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Files.html) class to check the existence of the file corresponding to the [`Path`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Path.html), create the file, open it, delete it, change its permissions, and so on.
+
+ 
+
+## Refactoring your Code to Using Path
+
+Perhaps you have legacy code that uses [`java.io.File`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/File.html) and would like to take advantage of the [`java.nio.file.Path`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Path.html) functionality with minimal impact to your code.
+
+The [`java.io.File`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/File.html) class provides the [`toPath()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/File.html#toPath()) method, which converts an old style [`java.io.File`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/File.html) instance to a [`java.nio.file.Path`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Path.html) instance, as follows:
+
+```java
+Path input = file.toPath();
+```
+
+Copy
+
+You can then take advantage of the rich feature set available to the [`Path`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Path.html) interface.
+
+For example, assume you had some code that deleted a file:
+
+```java
+file.delete();
+```
+
+Copy
+
+You could modify this code to use the [`Files.delete()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Files.html#delete(java.nio.file.Path)) factory method, as follows:
+
+```java
+Path fp = file.toPath();
+Files.delete(fp);
+```
+
+Copy
+
+Conversely, the [`Path.toFile()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Path.html#toFile()) method constructs a [`java.io.File`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/File.html) object for a [`Path`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Path.html) object.
+
+Because the Java implementation of file I/O has been completely re-architected in the Java SE 7 release, you cannot swap one method for another method. If you want to use the rich functionality offered by the [`java.nio.file`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/package-summary.html) package, your easiest solution is to use the [`File.toPath()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/File.html#toPath()) method. However, if you do not want to use that approach or it is not sufficient for your needs, you must rewrite your file I/O code.
+
+There is no one-to-one correspondence between the two APIs, but the following table gives you a general idea of what functionality in the [`java.io.File`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/File.html) API maps to in the [`java.nio.file`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/package-summary.html) API and tells you where you can obtain more information.
+
+|java.io.File Functionality|java.nio.file Functionality|Tutorial coverage|
+|---|---|---|
+|[java.io.File](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/File.html)|[java.nio.file.Path](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Path.html)|The Path Interface|
+|[java.io.RandomAccessFile](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/RandomAccessFile.html)|The [SeekableByteChannel](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/channels/SeekableByteChannel.html) functionality.|Random Access Files|
+|[File.canRead()](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/File.html#canRead()), [File.canWrite()](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/File.html#canWrite()), [File.canExecute()](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/File.html#canExecute())|[Files.isReadable()](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Files.html#isReadable()), [Files.isWritable()](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Files.html#isWritable()), and [Files.isExecutable()](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Files.html#isExecutable()). On UNIX file systems, the Managing Metadata (File and File Store Attributes) package is used to check the nine file permissions.|Checking a File or Directory Managing Metadata|
+|[File.isDirectory()](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/File.html#isDirectory()), [File.isFile()](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/File.html#isFile()), and [File.length()](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/File.html#length())|[Files.isDirectory(Path, LinkOption...)](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Files.html#isDirectory(java.nio.file.Path,java.nio.file.LinkOption...)), [Files.isRegularFile(Path, LinkOption...)](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Files.html#isRegularFile(java.nio.file.Path,java.nio.file.LinkOption...)), and [Files.size(Path)](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Files.html#size(java.nio.file.Path))|Managing Metadata|
+|[File.lastModified()](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/File.html#lastModified()) and [File.setLastModified(long)](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/File.html#setLastModified(long))|[Files.getLastModifiedTime(Path, LinkOption...)](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Files.html#getLastModifiedTime(java.nio.file.Path,java.nio.file.LinkOption...)) and [Files.setLastModifiedTime(Path, FileTime)](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Files.html#setLastModifiedTime(java.nio.file.Path,java.nio.file.attribute.FileTime))|Managing Metadata|
+|The [File](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/File.html) methods that set various attributes: [setExecutable()](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/File.html#setExecutable(boolean)), [setReadable()](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/File.html#setReadable()), [setReadOnly()](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/File.html#setReadOnly()), [setWritable()](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/File.html#setWritable(boolean))|These methods are replaced by the [Files](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Files.html) method [setAttribute(Path, String, Object, LinkOption...)](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Files.html#setAttribute(java.nio.file.Path,java.lang.String,java.lang.Object,java.nio.file.LinkOption...)).|Managing Metadata|
+|[new File(parent, "newfile")](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/File.html#%3Cinit%3E(java.lang.String,java.lang.String))|[parent.resolve("newfile")](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Path.html#resolve(java.lang.String))|Path Operations|
+|[File.renameTo()](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/File.html#renameTo(java.io.File))|[Files.move()](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Files.html#move(java.nio.file.Path,java.nio.file.Path,java.nio.file.CopyOption...))|Moving a File or Directory|
+|[File.delete()](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/File.html#delete())|[Files.delete()](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Files.html#delete(java.nio.file.Path))|Deleting a File or Directory|
+|[File.createNewFile()](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/File.html#createNewFile())|[Files.createFile()](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Files.html#createFile(java.nio.file.Path,java.nio.file.attribute.FileAttribute...))|Creating Files|
+|[File.deleteOnExit()](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/File.html#deleteOnExit())|Replaced by the [DELETE_ON_CLOSE](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/StandardOpenOption.html#DELETE_ON_CLOSE) option specified in the [Files.createFile()](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Files.html#createFile(java.nio.file.Path,java.nio.file.attribute.FileAttribute...)) method.|Creating Files|
+|[File.createTempFile()](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/File.html#createTempFile(java.lang.String,java.lang.String))|[Files.createTempFile(String, String, FileAttributes<?>)](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Files.html#createTempFile(java.lang.String,java.lang.String,java.nio.file.attribute.FileAttribute...)), [Files.createTempFile(Path, String, FileAttributes<?>)](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Files.html#createTempFile(java.nio.file.Path,java.lang.String,java.lang.String,java.nio.file.attribute.FileAttribute...))|Creating Files, Creating and Writing a File by Using Stream I/O, Reading and Writing Files by Using Channel I/O|
+|[File.exists()](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/File.html#exists())|[Files.exists()](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Files.html#exists(java.nio.file.Path,java.nio.file.LinkOption...)) and [Files.notExists()](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Files.html#notExists(java.nio.file.Path,java.nio.file.LinkOption...))|Verifying the Existence of a File or Directory|
+|[File.compareTo()](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/File.html#compareTo(java.io.File)) and [File.equals()](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/File.html#equals(java.lang.Object))|[Path.compareTo()](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Path.html#compareTo(java.nio.file.Path)) and [Path.equals()](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Path.html#equals(java.lang.Object))|Comparing Two Paths|
+|[File.getAbsolutePath()](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/File.html#getAbsolutePath()) and [File.getAbsoluteFile()](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/File.html#getAbsoluteFile())|[Path.toAbsolutePath()](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Path.html#toAbsolutePath())|Converting a Path, Removing Redundancies From a Path (normalize)|
+|[File.getCanonicalPath()](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/File.html#getCanonicalPath()) and [File.getCanonicalFile()](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/File.html#getCanonicalFile())|[Path.toRealPath()](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Path.html#toRealPath(java.nio.file.LinkOption...)) or [Path.normalize()](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Path.html#normalize())|Converting a Path (toRealPath)|
+|[File.toURI()](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/File.html#toURI())|[Path.toUri()](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Path.html#toUri())|Converting a Path|
+|[File.isHidden()](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/File.html#isHidden())|[Files.isHidden()](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Files.html#isHidden(java.nio.file.Path))|Retrieving Information About the Path|
+|[File.list()](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/File.html#list()) and listFiles|[Files.newDirectoryStream()](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Files.html#newDirectoryStream(java.nio.file.Path))|Listing a Directory's Contents|
+|[File.mkdir()](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/File.html#mkdir()) and mkdirs|[Files.createDirectory(Path,FileAttribute)](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Files.html#createDirectory(java.nio.file.Path,java.nio.file.attribute.FileAttribute...))|Creating a Directory|
+|[File.listRoots()](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/File.html#listRoots())|[FileSystem.getRootDirectories()](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/FileSystem.html#getRootDirectories())|Listing a File System's Root Directories|
+|[File.getTotalSpace()](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/File.html#getTotalSpace()), [File.getFreeSpace()](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/File.html#getFreeSpace()), [File.getUsableSpace()](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/File.html#getUsableSpace())|[FileStore.getTotalSpace()](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/FileStore.html#getTotalSpace()), [FileStore.getUnallocatedSpace()](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/FileStore.html#getUnallocatedSpace()), [FileStore.getUsableSpace()](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/FileStore.html#getUsableSpace()), [FileStore.getTotalSpace()](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/FileStore.html#getTotalSpace())|File Store Attributes|
+
+---
+Last update: January 25, 2023

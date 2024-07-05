@@ -1,3 +1,8 @@
+---
+date: 2024-07-05
+updated: 2024-07-05
+order: 90
+---
 ## Why Would You Implement the Collector Interface?
 
 There are three ways to create your own collector.

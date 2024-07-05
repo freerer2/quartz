@@ -1,3 +1,8 @@
+---
+date: 2024-07-05
+updated: 2024-07-05
+order: 30
+---
 ## Creating a Stream
 
 You have already created many streams in this tutorial, all by calling the [`stream()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/Arrays.html#stream(int%5B%5D)) method of the [`Collection`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/Collection.html) interface. This method is very convenient: creating streams in this way requires only two simple lines of code, and you can use this stream to experiment with almost any feature of the Stream API.

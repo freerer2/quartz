@@ -1,3 +1,8 @@
+---
+date: 2024-07-05
+updated: 2024-07-05
+order: 100
+---
 ## Supporting Methods That Cannot Produce a Result
 
 We already covered several uses of the [`Optional`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/Optional.html) class, especially in the case where you are calling a terminal operation on a stream that does not have an identity element. This case is not easy to handle because you cannot return any value, including 0, and returning `null` would make your code have to handle `null` values in places where you would not want it.

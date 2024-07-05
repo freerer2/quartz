@@ -1,3 +1,8 @@
+---
+date: 2024-07-05
+updated: 2024-07-05
+order: 80
+---
 ## Understanding How a Collector Works
 
 As we mentioned earlier, the [`Collectors`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Collectors.html) factory class only addresses streams of objects because the [`collect()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Collector.html) method that takes a collector object as an argument only exists in [`Stream`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Stream.html). If you need to collect a stream of numbers, then you need to understand what are the building elements of a collector.

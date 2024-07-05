@@ -1,3 +1,8 @@
+---
+date: 2024-07-05
+updated: 2024-07-05
+order: 20
+---
 ## Mapping a Stream to Another Stream
 
 Mapping a stream consists of transforming its elements using a function. This transformation may change the types of the elements processed by that stream, but you can also transform them without changing their type.

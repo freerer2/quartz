@@ -1,3 +1,8 @@
+---
+date: 2024-07-05
+updated: 2024-07-05
+order: 40
+---
 ## Calling a Terminal Operation on a Stream
 
 So far you read in this tutorial that reducing a stream consists of aggregating the elements of that stream in a way that looks like what is done in the SQL language. In the examples you ran, you also collected the elements of the streams you built in a list, using the `collect(Collectors.toList())` pattern. All these operations are called _terminal operations_ in the Stream API and consists in reducing your stream.

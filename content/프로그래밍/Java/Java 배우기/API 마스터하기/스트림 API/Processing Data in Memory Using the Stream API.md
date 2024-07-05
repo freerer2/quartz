@@ -1,3 +1,8 @@
+---
+date: 2024-07-05
+updated: 2024-07-05
+order: 10
+---
 ## Introducing the Stream API
 
 The Stream API is probably the second most important feature added to Java SE 8, after the lambda expressions. In a nutshell, the Stream API is about providing an implementation of the well known map-filter-reduce algorithm to the JDK.

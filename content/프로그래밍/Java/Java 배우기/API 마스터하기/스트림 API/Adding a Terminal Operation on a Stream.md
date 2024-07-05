@@ -1,3 +1,8 @@
+---
+date: 2024-07-05
+updated: 2024-07-05
+order: 50
+---
 ## Avoiding the Use of the Reduce Method
 
 A stream does not process any data if it does not end with a terminal operation. We already covered the terminal operation [`reduce()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Stream.html#reduce(java.util.function.BinaryOperator)), and you saw several terminal operations in other examples. Let us now present the other terminal operations you can use on a stream.

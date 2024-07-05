@@ -1,3 +1,8 @@
+---
+date: 2024-07-05
+updated: 2024-07-05
+order: 110
+---
 ## Optimizing Streams Computations
 
 A very exciting feature of the Stream API is the fact that a stream is capable of processing data in parallel. Processing data in parallel with the Stream API is as simple as calling the [`parallel()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/BaseStream.html#parallel()) method on any existing stream.
