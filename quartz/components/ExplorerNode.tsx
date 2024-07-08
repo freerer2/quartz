@@ -179,7 +179,9 @@ export function ExplorerNode({ node, opts, fullPath, fileData }: ExplorerNodePro
   // Calculate current folderPath
   const folderPath = node.name !== "" ? joinSegments(fullPath ?? "", node.name) : ""
   const href = resolveRelative(fileData.slug!, folderPath as SimpleSlug) + "/"
-
+  if(node.file?.frontmatter?.tags?.includes("moc")) {
+    return;
+  }
   return (
     <>
       {node.file ? (
