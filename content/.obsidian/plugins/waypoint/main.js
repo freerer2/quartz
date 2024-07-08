@@ -389,7 +389,8 @@ ${n}`
             g = g.filter(
               (r) =>
                 (this.settings.showFolderNotes || r.name !== e.name + ".md") &&
-                !this.ignorePath(r.path),
+                !this.ignorePath(r.path) &&
+                !app.metadataCache.getFileCache(r)?.frontmatter?.draft,
             )
           else {
             let r = new Set()
