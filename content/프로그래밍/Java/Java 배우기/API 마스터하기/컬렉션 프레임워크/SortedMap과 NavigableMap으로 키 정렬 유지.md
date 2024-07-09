@@ -3,24 +3,23 @@ date: 2024-07-04
 updated: 2024-07-04
 order: 120
 ---
-## Methods Added by SortedMap
+## SortedMap에 추가된 메서드
 
-The JDK provides two extensions of the [`Map`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/Map.html) interface: [`SortedMap`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/SortedMap.html) and [`NavigableMap`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/NavigableMap.html). [`NavigableMap`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/NavigableMap.html) is an extension of [`SortedMap`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/SortedMap.html). Both interfaces are implemented by the same class: [`TreeMap`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/TreeMap.html). The [`TreeMap`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/TreeMap.html) class is a red-black tree, a well-known data structure.
+JDK는 [`Map`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/Map.html) 인터페이스의 두 가지 확장을 제공합니다: [`SortedMap`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/SortedMap.html)과 [`NavigableMap`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/NavigableMap.html). [`NavigableMap`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/NavigableMap.html)은 [`SortedMap`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/SortedMap.html)의 확장입니다. 두 인터페이스는 모두 같은 클래스에 의해 구현됩니다: [`TreeMap`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/TreeMap.html) 클래스는 잘 알려진 데이터 구조인 레드-블랙랙 트리입니다.
 
-[`SortedMap`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/SortedMap.html) and [`NavigableMap`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/NavigableMap.html) keep their key/value pairs sorted by key. Just as for [`SortedSet`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/SortedSet.html) and [`NavigableSet`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/NavigableSet.html), you need to provide a way to compare these keys. You have two solutions to do this: either the class of your keys implements [`Comparable`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/lang/Comparable.html), or you provide a [`Comparator`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/Comparator.html) for your keys when creating your [`TreeMap`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/TreeMap.html). If you provide a [`Comparator`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/Comparator.html), it will be used even if your keys are comparable.
+[`SortedMap`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/SortedMap.html) 및 [`NavigableMap`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/NavigableMap.html)은 키/값 쌍을 키별로 정렬된 상태로 유지합니다. [`SortedSet`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/SortedSet.html) 및 [`NavigableSet`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/NavigableSet.html)과 마찬가지로 이러한 키를 비교할 수 있는 방법을 제공해야 합니다. 이를 위한 두 가지 해결책이 있습니다: 키의 클래스에서 [`Comparable`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/lang/Comparable.html)을 구현하거나 [`TreeMap`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/TreeMap.html)을 만들 때 키에 대한 [`Comparator`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/Comparator.html)를 제공하는 것입니다. [`Comparator`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/Comparator.html)를 제공하면 키가 비슷하더라도 비교자가 사용됩니다.
 
-If the implementation you chose for your [`SortedMap`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/SortedMap.html) or [`NavigableMap`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/NavigableMap.html) is [`TreeMap`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/TreeMap.html), then you can safely cast the set returned by a call to [`keySet()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/Map.html#keySet()) or [`entrySet()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/Map.html#entrySet()) to [`SortedSet`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/SortedSet.html) or [`NavigableSet`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/NavigableSet.html). [`NavigableMap`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/NavigableMap.html) has a method, [`navigableKeySet()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/NavigableMap.html#navigableKeySet()) that returns an instance of [`NavigableSet`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/NavigableSet.html) that you can use instead of the plain [`keySet()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/Map.html#keySet()) method. Both methods return the same object.
+만약 [`SortedMap`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/SortedMap.html) 또는 [`NavigableMap`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/NavigableMap.html)에 대해 선택한 구현이 [`TreeMap`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/TreeMap.html)이라면, [`keySet()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/Map.html#keySet()) 또는 [`entrySet()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/Map.html#entrySet())에 대한 호출로 반환된 set를 [`SortedSet`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/SortedSet.html) 또는 [`NavigableSet`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/NavigableSet.html)에 안전하게 캐스팅할 수 있습니다. [`NavigableMap`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/NavigableMap.html)에는 일반 [`keySet()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/Map.html#keySet()) 메서드 대신 사용할 수 있는 [`NavigableSet`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/NavigableSet.html)의 인스턴스를 반환하는 [`navigableKeySet()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/NavigableMap.html#navigableKeySet()) 메서드가 있습니다. 두 메서드 모두 동일한 객체를 반환합니다.
 
-The [`SortedMap`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/SortedMap.html) interface adds the following methods to [`Map`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/Map.html):
+[`SortedMap`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/SortedMap.html) 인터페이스는 [`Map`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/Map.html)에 다음 메서드를 추가합니다:
 
-- [`firstKey()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/SortedMap.html#firstKey()) and [`lastKey()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/SortedMap.html#lastKey()): returns the lowest and the greatest key of your map;
-- [`headMap(toKey)`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/SortedMap.html#headMap(K)) and [`tailMap(fromKey)`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/SortedMap.html#tailMap(K)): returns a [`SortedMap`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/SortedMap.html) whose keys are strictly less than `toKey`, or greater than or equal to `fromKey`;
-- [`subMap(fromKey, toKey)`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/SortedMap.html#subMap(K,K)): returns a [`SortedMap`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/SortedMap.html) whose keys are strictly lesser than `toKey`, or greater than or equal to `fromKey`.
+- [`firstKey()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/SortedMap.html#firstKey()) 및 [`lastKey()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/SortedMap.html#lastKey()): map의 가장 낮은 키와 가장 큰 키를 반환합니다;
+- [`headMap(toKey)`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/SortedMap.html#headMap(K)) 및 [`tailMap(fromKey)`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/SortedMap.html#tailMap(K)): 키가 `toKey`보다 작거나 `fromKey`보다 크거나 같은 [`SortedMap`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/SortedMap.html)을 반환합니다;
+- [`subMap(fromKey, toKey)`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/SortedMap.html#subMap(K,K)): 키가 `toKey`보다 엄격하게 작거나 `fromKey`보다 크거나 같은 [`SortedMap`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/SortedMap.html)을 반환합니다.
 
-These maps are instances of [`SortedMap`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/SortedMap.html) and are views backed by this map. Any change made to this map will be seen in these views. These views can be updated, with a restriction: you cannot insert a key outside the boundaries of the map you built.
+이 맵은 [`SortedMap`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/SortedMap.html)의 인스턴스이며 이 맵에 의해 뒷받침되는 뷰입니다. 이 Map에 대한 모든 변경 사항은 이 보기에서 볼 수 있습니다. 이러한 보기는 업데이트할 수 있지만 사용자가 만든 Map의 경계 외부에 키를 삽입할 수 없다는 제한이 있습니다.
 
-You can see this behavior on the following example:
-
+다음 예제에서 이 동작을 확인할 수 있습니다:
 ```java
 SortedMap<Integer, String> map = new TreeMap<>();
 map.put(1, "one");
@@ -36,34 +35,34 @@ headMap.put(4, "four"); // this line throws an IllegalArgumentException
 
  
 
-## Methods Added by NavigableMap
+## NavigableMap에 추가된 메서드
 
-### Accessing to Specific Keys or Entries
+### 특정 키 또는 항목에 액세스하기
 
-The [`NavigableMap`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/NavigableMap.html) adds more methods to [`SortedMap`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/SortedMap.html). The first set of methods gives you access to specific keys and entries in your map.
+[`NavigableMap`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/NavigableMap.html)은 [`SortedMap`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/SortedMap.html)에 더 많은 메서드를 추가합니다. 첫 번째 메서드 세트는 Map의 특정 키와 항목에 대한 액세스를 제공합니다.
 
-- [`firstKey()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/NavigableMap.html#firstKey()), [`firstEntry()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/NavigableMap.html#firstEntry()), [`lastEntry()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/NavigableMap.html#lastEntry()), and [](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/SortedMap.html#lastKey())[`lastKey()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/SortedMap.html#lastKey()): return the lowest or greatest key or entry from this map.
-- [`ceilingKey(key)`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/NavigableMap.html#ceilingKey(K)), [`ceilingEntry(key)`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/NavigableMap.html#ceilingEntry(K)), [`higherKey(key)`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/NavigableMap.html#higherKey(K)), [`higherEntry(key)`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/NavigableMap.html#higherEntry(K)): return the lowest key or entry greater than the provided key. The `ceiling` methods may return a key that is equal to the provided key, whereas the key returned by the `higher` methods is strictly greater.
-- [`floorKey(key)`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/NavigableMap.html#floorKey(K)), [`floorEntry(key)`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/NavigableMap.html#floorEntry(K)), [`lowerKey(key)`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/NavigableMap.html#lowerKey(K)), [`lowerEntry(key)`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/NavigableMap.html#lowerEntry(K)): return the greatest key or entry lesser than the provided key. The `floor` methods may return a key that is equal to the provided key, whereas the key returned by the `higher` methods is strictly lower.
+- [`firstKey()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/NavigableMap.html#firstKey()), [`firstEntry()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/NavigableMap.html#firstEntry()), [`lastEntry()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/NavigableMap.html#lastEntry()), [](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/SortedMap.html#lastKey())[`lastKey()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/SortedMap.html#lastKey()): 이 맵에서 가장 낮거나 큰 키 또는 엔트리를 반환합니다.
+- [`ceilingKey(key)`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/NavigableMap.html#ceilingKey(K)), [`ceilingEntry(key)`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/NavigableMap.html#ceilingEntry(K)), [`higherKey(key)`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/NavigableMap.html#higherKey(K)), [`higherEntry(key)`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/NavigableMap.html#higherEntry(K)): 가장 낮은 키 또는 제공된 키보다 큰 엔트리를 반환합니다. `ceiling` 메서드는 제공된 키와 동일한 키를 반환할 수 있지만, `higher` 메서드가 반환하는 키는 엄밀히 말하면 더 큰 키입니다.
+- [`floorKey(key)`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/NavigableMap.html#floorKey(K)), [`floorEntry(key)`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/NavigableMap.html#floorEntry(K)), [`lowerKey(key)`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/NavigableMap.html#lowerKey(K)), [`lowerEntry(key)`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/NavigableMap.html#lowerEntry(K)): 제공된 키보다 큰 키 또는 작은 항목을 반환합니다. `floor` 메서드는 제공된 키와 같은 키를 반환할 수 있지만 `higher` 메서드가 반환하는 키는 엄밀히 말해 더 낮습니다.
 
-### Accessing your Map with Queue-Like Features
+### Queue-Like 기능으로 Map에 액세스하기
 
-The second set gives you queue-like features:
+두 번째 세트는 Queue와 유사한 기능을 제공합니다:
 
-- [`pollFirstEntry()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/NavigableMap.html#pollFirstEntry()): returns and removes the lowest entry
-- [`pollLastEntry()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/NavigableMap.html#pollLastEntry()): returns and removes the greatest entry.
+- [`pollFirstEntry()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/NavigableMap.html#pollFirstEntry()): 가장 낮은 항목을 반환하고 제거합니다.
+- [`pollLastEntry()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/NavigableMap.html#pollLastEntry()): 가장 큰 항목을 반환하고 제거합니다.
 
-### Traversing your Map in the Reverse Order
+### 역순으로 Map 트래버스하기
 
-The third set reverses your map, as if it had been built on the reversed comparison logic.
+세 번째 Set은 마치 역 비교 로직에 기반한 것처럼 Map을 반전시킵니다.
 
-- [`navigableKeySet()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/NavigableMap.html#navigableKeySet()) is a convenience method that returns a [`NavigableSet`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/NavigableSet.html) so that you do not have to cast the result of [`keySet()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/Map.html#keySet())
-- [`descendingKeySet()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/NavigableMap.html#descendingKeySet()): returns a [`NavigableSet`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/NavigableSet.html) backed by the map, on which you can iterate in the descending order
-- [`descendingMap()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/NavigableMap.html#descendingMap()): returns a [`NavigableMap`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/NavigableMap.html) with the same semantic.
+- [`navigableKeySet()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/NavigableMap.html#navigableKeySet())은 [`keySet()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/Map.html#keySet())의 결과를 캐스팅할 필요가 없도록 [`NavigableSet`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/NavigableSet.html)을 반환하는 편리한 메서드입니다.
+- [`descendingKeySet()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/NavigableMap.html#descendingKeySet()): 내림차순으로 반복할 수 있는 Map에 의해 뒷받침되는 [`NavigableSet`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/NavigableSet.html)을 반환합니다.
+- [`descendingMap()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/NavigableMap.html#descendingMap()): 동일한 의미를 가진 [`NavigableMap`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/NavigableMap.html)을 반환합니다.
 
-Both views support element removal, but you cannot add anything through them.
+두 뷰 모두 요소 제거를 지원하지만 이를 통해 아무것도 추가할 수 없습니다.
 
-Here is an example to demonstrate how you can use them.
+다음은 두 뷰를 사용하는 방법을 보여주는 예제입니다.
 
 ```java
 NavigableMap<Integer, String> map = new TreeMap<>();
@@ -80,22 +79,23 @@ NavigableSet<Integer> descendingKeys = map.descendingKeySet();
 descendingKeys.forEach(key -> System.out.print(key + " "));
 ```
 
-Running this code prints out the following result.
+이 코드를 실행하면 다음과 같은 결과가 출력됩니다.
 
 ```text
 1 2 3 4 5 
 5 4 3 2 1 
 ```
 
-### Getting Submap Views
+### 하위 Submap 뷰 가져오기
 
-The last set of methods give you access to views on portions of your map.
+마지막 메서드 세트는 Map의 일부에 대한 보기에 액세스할 수 있게 해줍니다.
 
-- [`subMap(fromKey, fromInclusive, toKey, toInclusive)`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/NavigableMap.html#subMap(K,boolean,K,boolean)): returns a submap where you can decide to include or not the boundaries
-- [`headMap(toKey, inclusive)`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/NavigableMap.html#headMap(K)): same for the head map
-- [`tailMap(fromKey, inclusive)`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/NavigableMap.html#tailMap(K)): same for the tail map.
+- [`subMap(fromKey, fromInclusive, toKey, toInclusive)`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/NavigableMap.html#subMap(K,boolean,K,boolean)): 경계를 포함할지 여부를 결정할 수 있는 하위 맵을 반환합니다.
+- [`headMap(toKey, inclusive)`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/NavigableMap.html#headMap(K)): 헤드 맵과 동일합니다.
+- [`tailMap(fromKey, inclusive)`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/NavigableMap.html#tailMap(K)): 꼬리 맵과 동일합니다.
 
-These maps are views on this map, which you can update by removing or adding key/value pairs. There is one restriction on adding elements though: you cannot add keys outside the boundaries on which the view has been created.
+이러한 맵은 이 맵의 보기이며, 키/값 쌍을 제거하거나 추가하여 업데이트할 수 있습니다. 하지만 요소를 추가할 때 한 가지 제한 사항이 있습니다. 뷰가 만들어진 경계 밖에서는 키를 추가할 수 없습니다.
+
 
 ---
 Last update: September 14, 2021
