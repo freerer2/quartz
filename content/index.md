@@ -12,6 +12,7 @@ title: 목록
 - [[프로그래밍/Java/index|Java]] : 다음 단계 도약을 위한 자바 기본 다시 살펴보기
 - [[프로그래밍/자료구조와 알고리즘/index|자료구조와 알고리즘]] : 정식으로 배워본 적이 없으니 학습해보기
 - [[프로그래밍/Java/디자인패턴/index|디자인패턴]] : 자바에서 많이 쓰이는 디자인 패턴 정리하기
+- [[프로그래밍/Java/모던 자바 인 액션/index|모던 자바 인 액션]] : 자바 심화학습
 ### 추후 관심사
 - [[프로그래밍/Java/Effective Java 3E/index|Effective Java 3E]] : 좋은 코드를 작성하기 위한 심화 학습
 - [[프로그래밍/Kotlin/index|Kotlin]] : 코틀린 스프링 한번 써보고 싶음
@@ -22,11 +23,12 @@ title: 목록
 1. Java
 2. 자료구조와 알고리즘
 3. 디자인패턴
-4. Effective Java 3E
-5. Kotilin
-6. React
-7. SQL
-8. GraphQL
+4. 모던 자바 인 액션
+5. Effective Java 3E
+6. Kotilin
+7. React
+8. SQL
+9. GraphQL
 
 %%
 	- Java와 같은 JVM언어로 활용도가 높고 문법이 단순하며, JVM을 사용하므로 Java와 100% 호환된다.
@@ -36,6 +38,7 @@ title: 목록
 %%
 
 ---
+%%
 ## 호스팅 목록
 
 **현재 페이지는 아래 서비스들을 이용하여 무료로 호스팅 되고 있습니다.**
@@ -65,3 +68,4 @@ title: 목록
 - **배포 시간 제한**: 10분 이상 걸리면 시간 초과
 - **주요 특징**: 간편한 Git 기반 배포
 - **관련 문서**: [Github Pages 정보 - 사용 제한](https://docs.github.com/ko/pages/getting-started-with-github-pages/about-github-pages#usage-limits)
+%%
