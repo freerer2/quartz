@@ -16,20 +16,20 @@ title: 목록
 - [[프로그래밍/Java/디자인패턴/index|디자인패턴]] : 자바에서 많이 쓰이는 디자인 패턴 정리하기
 ### 추후 관심사
 - [[프로그래밍/Java/Effective Java 3E/index|Effective Java 3E]] : 좋은 코드를 작성하기 위한 심화 학습
+- [[프로그래밍/실전에서 바로 쓰는 Next.js/index|실전에서 바로 쓰는 Next.js]] : 많이 쓰이는 프론트엔드 라이브러리/프레임워크 써보기
 - [[프로그래밍/Kotlin/index|Kotlin]] : 코틀린 스프링 한번 써보고 싶음
-- [[프로그래밍/React/index|React]] : 많이 쓰이는 프론트엔드 라이브러리 써보기
-- SQL : SQL전문가 가이드 스터디
 - GraphQL : 뭔지 모르는데 일단 적어봄
+- SQL : SQL전문가 가이드 스터디
 ### 우선순위
 1. Java
 2. 모던 자바 인 액션
 3. 자료구조와 알고리즘
 4. 디자인패턴
 5. Effective Java 3E
-6. Kotilin
-7. React
-8. SQL
+7. 실전에서 바로 쓰는 Next.js
+8. Kotilin
 9. GraphQL
+10. SQL
 
 %%
 	- Java와 같은 JVM언어로 활용도가 높고 문법이 단순하며, JVM을 사용하므로 Java와 100% 호환된다.
