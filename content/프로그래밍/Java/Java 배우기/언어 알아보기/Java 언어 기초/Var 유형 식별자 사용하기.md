@@ -1,4 +1,6 @@
 ---
+date: 2021-9-23
+updated: 2021-9-23
 order: 40
 ---
 ## Var 키워드
@@ -84,6 +86,3 @@ public String greetings(int message) {
     return "Good " + greetings;
 }
 ```
-
----
-Last update: September 23, 2021

@@ -1,6 +1,6 @@
 ---
-date: 2024-07-05
-updated: 2024-07-05
+date: 2023-1-25
+updated: 2023-1-25
 order: 40
 ---
 ## Checking a File or Directory
@@ -156,6 +156,3 @@ An atomic file operation is an operation that cannot be interrupted or "partiall
 ## Link Awareness
 
 The [`Files`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Files.html) class is "link aware." Every [`Files`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Files.html) method either detects what to do when a symbolic link is encountered, or it provides an option enabling you to configure the behavior when a symbolic link is encountered. For more information on the way you can handle links on a file system, you can check the [Links, Symbolics and Otherwise](https://dev.java/learn/java-io/file-system/links/) section.
-
----
-Last update: January 25, 2023

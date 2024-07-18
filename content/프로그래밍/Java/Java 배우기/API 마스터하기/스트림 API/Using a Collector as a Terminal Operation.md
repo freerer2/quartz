@@ -1,6 +1,6 @@
 ---
-date: 2024-07-05
-updated: 2024-07-05
+date: 2021-9-14
+updated: 2021-9-14
 order: 70
 ---
 ## Collecting Stream Elements with a Collector
@@ -633,6 +633,3 @@ There Collector API also offers several terminal operations that correspond to t
 - [`maxBy()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Collectors.html#maxBy(java.util.Comparator)), and [`minBy()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Collectors.html#minBy(java.util.Comparator)). These two methods both take a comparator as an argument and return an optional object that is empty if the stream processed is itself empty.
 - [`summingInt()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Collectors.html#summingInt(java.util.function.ToIntFunction)), [`summingLong()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Collectors.html#summingLong(java.util.function.ToLongFunction)), and [`summingDouble()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Collectors.html#summingDouble(java.util.function.ToDoubleFunction)). These three methods take a mapping function as an argument to map the element of your stream to `int`, `long` and `double` respectively, before summing them.
 - [`averagingInt()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Collectors.html#averagingInt(java.util.function.ToIntFunction)), [`averagingLong()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Collectors.html#averagingLong(java.util.function.ToLongFunction)), and [`averagingDouble()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Collectors.html#averagingDouble(java.util.function.ToDoubleFunction)). These three methods also takes a mapping function as an argument, to map the element of your stream to `int`, `long` and `double`, respectively, before computing the average. These collectors do not work the same as the corresponding [`average()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/IntStream.html#average()) methods defined in [`IntStream`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/IntStream.html), [`LongStream`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/LongStream.html), and [`DoubleStream`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/DoubleStream.html). They all return a [`Double`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/lang/Double.html) instance and return 0 for empty streams. The [`average()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/IntStream.html#average()) methods return an optional object that is empty for empty streams.
-
----
-Last update: September 14, 2021

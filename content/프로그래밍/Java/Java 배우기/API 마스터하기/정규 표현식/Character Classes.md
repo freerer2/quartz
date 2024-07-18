@@ -1,6 +1,6 @@
 ---
-date: 2024-07-05
-updated: 2024-07-05
+date: 2022-1-10
+updated: 2022-1-10
 order: 30
 ---
 ## Character Classes
@@ -236,6 +236,3 @@ I found the text "9" starting at index 0 and ending at index 1.
 ```
 
 Now that we have covered how character classes are created, You may want to review the [Character Classes](https://dev.java/learn/regex/string-literals/#character-classes) table before continuing with the next section.
-
----
-Last update: January 10, 2022

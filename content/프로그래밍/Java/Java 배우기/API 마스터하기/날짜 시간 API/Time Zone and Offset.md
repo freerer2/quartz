@@ -1,6 +1,6 @@
 ---
-date: 2024-07-05
-updated: 2024-07-05
+date: 2022-1-27
+updated: 2022-1-27
 order: 60
 ---
 A _time zone_ is a region of the earth where the same standard time is used. Each time zone is described by an identifier and usually has the format _region/city_ (`Asia/Tokyo`) and an offset from Greenwich/UTC time. For example, the offset for Tokyo is `+09:00`.
@@ -172,6 +172,3 @@ The last Thursday in July 2013 is the 25th.
 The [`OffsetTime`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/time/OffsetTime.html) class, in effect, combines the [`LocalTime`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/time/LocalTime.html) class with the [`ZoneOffset`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/time/ZoneOffset.html) class. It is used to represent time (hour, minute, second, nanosecond) with an offset from Greenwich/UTC time (+/-hours:minutes, such as +06:00 or -08:00).
 
 The [`OffsetTime`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/time/OffsetTime.html) class is used in the same situations as the [`OffsetDateTime`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/time/OffsetDateTime.html) class, but when tracking the date is not needed.
-
----
-Last update: January 27, 2022

@@ -1,6 +1,6 @@
 ---
-date: 2024-07-05
-updated: 2024-07-05
+date: 2022-1-27
+updated: 2022-1-27
 order: 10
 ---
 ## Introducing Date Time APIs
@@ -78,6 +78,3 @@ There is also standardization regarding the method name prefixes. Because most o
 |`minus`|instance|Returns a copy of the target object with an amount of time subtracted.|
 |`to`|instance|Converts this object to another type.|
 |`at`|instance|Combines this object with another.|
-
----
-Last update: January 27, 2022

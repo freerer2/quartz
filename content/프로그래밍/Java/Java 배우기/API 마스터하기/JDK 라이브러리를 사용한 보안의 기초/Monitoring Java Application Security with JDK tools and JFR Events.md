@@ -392,6 +392,3 @@ try (RemoteRecordingStream stream = new RemoteRecordingStream(connection)) {
 ```
 
 So utilize the JDK tools and APIs available with your JDK version and analyze security settings and certificate data at runtime to keep your application safe!
-
----
-Last update: December 1, 2023

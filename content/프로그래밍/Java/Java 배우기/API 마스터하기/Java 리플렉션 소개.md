@@ -1,4 +1,6 @@
 ---
+date: 2021-9-14
+updated: 2021-9-14
 order: 70
 ---
 ## Reflection
@@ -246,6 +248,3 @@ We can open up a package in another module for deep reflection with a command li
 We hope that you got a bit of insight into how reflection works in this tutorial. There are many other topics to explore: arrays, dynamic proxies, generics, sealed classes, etc. How we can read the properties of a record, how parameter names can be preserved. But this is long enough and will hopefully get you started in the right direction.
 
 For many more deep dives into the Java Programming Language, be sure to subscribe to [The Java Specialists' Newsletter](https://www.javaspecialists.eu/), a newsletter for anyone who wants to become more proficient in Java.
-
----
-Last update: September 14, 2021

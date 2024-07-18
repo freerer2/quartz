@@ -1,6 +1,6 @@
 ---
-date: 2024-07-04
-updated: 2024-07-04
+date: 2021-9-14
+updated: 2021-9-14
 order: 60
 ---
 ## Set 인터페이스 살펴보기
@@ -101,6 +101,3 @@ System.out.println("reversed strings = " + reversedStrings);
 sorted strings = [a, b, c, d, e, f]
 reversed strings = [f, e, d, c, b, a]
 ```
-
----
-Last update: September 14, 2021

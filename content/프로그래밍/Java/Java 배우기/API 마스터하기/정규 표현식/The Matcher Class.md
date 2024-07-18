@@ -1,6 +1,6 @@
 ---
-date: 2024-07-05
-updated: 2024-07-05
+date: 2022-1-10
+updated: 2022-1-10
 order: 90
 ---
 ## Index Methods
@@ -241,6 +241,3 @@ For convenience, the [`String`](https://docs.oracle.com/en/java/javase/22/docs/
 
 - [`public String replaceFirst(String regex, String replacement)`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/lang/String.html#replaceFirst(java.lang.String,java.lang.String)): Replaces the first substring of this string that matches the given regular expression with the given replacement. An invocation of this method of the form `string.replaceFirst(regex, repl)` yields exactly the same result as the expression `Pattern.compile(regex).matcher(str).replaceFirst(repl)`
 - [`public String replaceAll(String regex, String replacement)`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/lang/String.html#replaceAll(java.lang.String,java.lang.String)): Replaces each substring of this string that matches the given regular expression with the given replacement. An invocation of this method of the form `string.replaceAll(regex, repl)` yields exactly the same result as the expression `Pattern.compile(regex).matcher(str).replaceAll(repl)`
-
----
-Last update: January 10, 2022

@@ -1,6 +1,6 @@
 ---
-date: 2024-07-05
-updated: 2024-07-05
+date: 2023-1-25
+updated: 2023-1-25
 order: 20
 ---
 ## Creating a Path
@@ -312,6 +312,3 @@ The [`Path`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/
 You can also put [`Path`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Path.html) objects into a [`Collection`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/Collection.html). See the [Collections tutorial](https://dev.java/learn/api/collections-framework/) for more information about this powerful feature.
 
 When you want to verify that two [`Path`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Path.html) objects locate the same file, you can use the [`isSameFile()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Files.html#isSameFile(java.nio.file.Path,java.nio.file.Path)) method from the [`Files`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Files.html) class, as described in the section [Checking Whether Two Paths Locate the Same File](https://dev.java/learn/java-io/file-system/path/).
-
----
-Last update: January 25, 2023

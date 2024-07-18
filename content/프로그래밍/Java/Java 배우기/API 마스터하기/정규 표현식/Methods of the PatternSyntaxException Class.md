@@ -1,6 +1,6 @@
 ---
-date: 2024-07-05
-updated: 2024-07-05
+date: 2022-1-10
+updated: 2022-1-10
 order: 100
 ---
 ## Methods of the PatternSyntaxException Class
@@ -84,6 +84,3 @@ The index is: 0
 ```
 
 From this output, we can see that the syntax error is a dangling metacharacter (the question mark) at index 0. A missing opening parenthesis is the culprit.
-
----
-Last update: January 10, 2022

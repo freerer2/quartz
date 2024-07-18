@@ -1,6 +1,6 @@
 ---
-date: 2024-07-05
-updated: 2024-07-05
+date: 2023-1-25
+updated: 2023-1-25
 order: 80
 ---
 ## Listing a the Content of a Directory
@@ -127,6 +127,3 @@ Here are some examples of glob syntax:
 The glob syntax is powerful and easy to use. However, if it is not sufficient for your needs, you can also use a regular expression. For more information, see the section on Regular Expressions.
 
 For more information about the glob syntax, see the API specification for the [`getPathMatcher(String)`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/FileSystem.html#getPathMatcher(java.lang.String)) method in the [`FileSystem`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/FileSystem.html) class.
-
----
-Last update: January 25, 2023

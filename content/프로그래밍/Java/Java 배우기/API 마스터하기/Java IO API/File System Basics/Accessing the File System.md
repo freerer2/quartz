@@ -1,6 +1,6 @@
 ---
-date: 2024-07-05
-updated: 2024-07-05
+date: 2023-1-25
+updated: 2023-1-25
 order: 30
 ---
 ## Default File System
@@ -68,5 +68,3 @@ directory = F:\ - false
 directory = G:\ - false
 ```
 
----
-Last update: January 25, 2023

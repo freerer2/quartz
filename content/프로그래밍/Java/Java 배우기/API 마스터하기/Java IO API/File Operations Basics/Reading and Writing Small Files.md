@@ -1,6 +1,6 @@
 ---
-date: 2024-07-05
-updated: 2024-07-05
+date: 2023-1-25
+updated: 2023-1-25
 order: 20
 ---
 ## Choosing the Right I/O Method
@@ -176,6 +176,3 @@ try (FileChannel fc = (FileChannel.open(file, READ, WRITE))) {
     System.out.println("I/O Exception: " + x);
 }
 ```
-
----
-Last update: January 25, 2023

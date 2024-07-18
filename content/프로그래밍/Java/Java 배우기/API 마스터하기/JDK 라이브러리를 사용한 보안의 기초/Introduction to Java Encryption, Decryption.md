@@ -1,6 +1,6 @@
 ---
-date: 2024-07-05
-updated: 2024-07-05
+date: 2023-2-10
+updated: 2023-2-10
 order: 10
 ---
 ## Introducing Cryptography
@@ -299,6 +299,3 @@ Congratulations, you’ve learned how JCA supports working with cryptography in 
 ## More Learning
 
 ![](https://youtu.be/olgii0eWu88)
-
----
-Last update: February 10, 2023

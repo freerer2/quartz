@@ -1,6 +1,6 @@
 ---
-date: 2024-07-05
-updated: 2024-07-05
+date: 2023-1-25
+updated: 2023-1-25
 order: 50
 ---
 As mentioned previously, the [`java.nio.file`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/package-summary.html) package, and the [`Path`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Path.html) class in particular, is "link aware." Every [`Path`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Path.html) method either detects what to do when a symbolic link is encountered, or it provides an option enabling you to configure the behavior when a symbolic link is encountered.
@@ -90,5 +90,3 @@ try {
 
 If the [`Path`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Path.html) is not a symbolic link, this method throws a [`NotLinkException`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/NotLinkException.html).
 
----
-Last update: January 25, 2023

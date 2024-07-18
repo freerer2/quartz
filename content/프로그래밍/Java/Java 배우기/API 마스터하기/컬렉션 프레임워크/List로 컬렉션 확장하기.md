@@ -1,6 +1,6 @@
 ---
-date: 2024-07-04
-updated: 2024-07-04
+date: 2021-9-14
+updated: 2021-9-14
 order: 50
 ---
 ## List 인터페이스 살펴보기
@@ -111,6 +111,3 @@ System.out.println("numbers = " + numbers);
 ```text
 numbers = [one, 2, three]
 ```
-
----
-Last update: September 14, 2021

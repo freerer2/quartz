@@ -1,4 +1,6 @@
 ---
+date: 2024-4-24
+updated: 2024-4-24
 order: 40
 ---
 ## Introduction
@@ -257,6 +259,3 @@ Web searches and AI chats can suggest needlessly complex code for common I/O ope
 4. Use [`Files.list`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Files.html#list(java.nio.file.Path)) or [`Files.walk`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Files.html#walk(java.nio.file.Path,java.nio.file.FileVisitOption...)) to traverse directory entries.
 5. Use a ZIP file system for processing ZIP files.
 6. Stay away from the legacy [`File`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/File.html) class.
-
----
-Last update: April 24, 2024

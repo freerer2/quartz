@@ -1,6 +1,6 @@
 ---
-date: 2024-07-05
-updated: 2024-07-05
+date: 2022-1-27
+updated: 2022-1-27
 order: 120
 ---
 This tutorial does not discuss the [`java.time.chrono`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/time/chrono/package-summary.html) package in any detail. However, it might be useful to know that this package provides several predefined chronologies that are not ISO-based, such as Japanese, Hijrah, Minguo, and Thai Buddhist. You can also use this package to create your own chronology.
@@ -153,6 +153,3 @@ The printed strings should all convert back to October 29th, 1996:
 1996-10-29
 1996-10-29
 ```
-
----
-Last update: January 27, 2022

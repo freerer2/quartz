@@ -1,4 +1,6 @@
 ---
+date: 2023-11-14
+updated: 2023-11-14
 order: 30
 ---
 ## foreach로 반복하기
@@ -81,6 +83,3 @@ names.stream()
 ## 매핑하기
 
 `foreach` 루프가 보이는 곳에서는 컬렉션에서 직접 `forEach()` 메서드를 사용하세요. `foreach`의 본문에 일부 값을 선택적으로 선택하는 `if` 문이 있는 경우 `stream()` API를 `filter()` 메서드 호출과 함께 사용하세요.
-
----
-Last update: November 14, 2023

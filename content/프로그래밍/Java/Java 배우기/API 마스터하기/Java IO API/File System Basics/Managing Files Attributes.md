@@ -1,6 +1,6 @@
 ---
-date: 2024-07-05
-updated: 2024-07-05
+date: 2023-1-25
+updated: 2023-1-25
 order: 60
 ---
 ## File and File Store Attributes
@@ -270,6 +270,3 @@ Note that this method returns null if the content type cannot be determined.
 The implementation of this method is highly platform specific and is not infallible. The content type is determined by the platform's default file type detector. For example, if the detector determines a file's content type to be `application/x-java` based on the `.class` extension, it might be fooled.
 
 You can provide a custom [`FileTypeDetector`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/spi/FileTypeDetector.html) if the default is not sufficient for your needs.
-
----
-Last update: January 25, 2023

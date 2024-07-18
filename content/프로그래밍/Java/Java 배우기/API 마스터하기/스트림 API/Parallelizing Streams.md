@@ -1,6 +1,6 @@
 ---
-date: 2024-07-05
-updated: 2024-07-05
+date: 2021-9-14
+updated: 2021-9-14
 order: 110
 ---
 ## Optimizing Streams Computations
@@ -262,6 +262,3 @@ Computing a stream in parallel adds some computations to handle parallelism. The
 **Rule #3** Do not modify external state, and do not share mutable state.
 
 **Rule #4** Do not guess; measure the performance of your code.
-
----
-Last update: September 14, 2021

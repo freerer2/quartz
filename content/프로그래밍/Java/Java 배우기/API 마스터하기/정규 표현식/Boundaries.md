@@ -1,6 +1,6 @@
 ---
-date: 2024-07-05
-updated: 2024-07-05
+date: 2022-1-10
+updated: 2022-1-10
 order: 70
 ---
 ## Quantifiers
@@ -84,6 +84,3 @@ I found the text "dog" starting at index 0 and ending at index 3.
 ```
 
 Here the second example finds only one match, because the second occurrence of "dog" does not start at the end of the previous match.
-
----
-Last update: January 10, 2022

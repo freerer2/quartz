@@ -1,6 +1,6 @@
 ---
-date: 2024-07-05
-updated: 2024-07-05
+date: 2022-1-10
+updated: 2022-1-10
 order: 60
 ---
 ## Capturing Groups
@@ -53,6 +53,3 @@ No match found.
 ```
 
 For nested capturing groups, backreferencing works in exactly the same way: specify a backslash followed by the number of the group to be recalled.
-
----
-Last update: January 10, 2022

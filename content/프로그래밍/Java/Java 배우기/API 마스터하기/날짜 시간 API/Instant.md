@@ -1,6 +1,6 @@
 ---
-date: 2024-07-05
-updated: 2024-07-05
+date: 2022-1-27
+updated: 2022-1-27
 order: 70
 ---
 ## The Instant Class
@@ -53,6 +53,3 @@ MAY 30 2021 at 18:21
 ```
 
 Either a [`ZonedDateTime`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/time/ZonedDateTime.html) or an [`OffsetDateTime`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/time/OffsetDateTime.html) object can be converted to an [`Instant`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/time/Instant.html) object, as each maps to an exact moment on the timeline. However, the reverse is not true. To convert an [`Instant`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/time/Instant.html) object to a [`ZonedDateTime`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/time/ZonedDateTime.html) or an [`OffsetDateTime`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/time/OffsetDateTime.html) object requires supplying time zone, or time zone offset, information.
-
----
-Last update: January 27, 2022

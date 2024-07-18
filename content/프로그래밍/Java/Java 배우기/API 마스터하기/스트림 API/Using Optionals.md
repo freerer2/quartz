@@ -1,6 +1,6 @@
 ---
-date: 2024-07-05
-updated: 2024-07-05
+date: 2021-9-14
+updated: 2021-9-14
 order: 100
 ---
 ## Supporting Methods That Cannot Produce a Result
@@ -354,6 +354,3 @@ The [`Optional`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/j
 **Rule #6** Do not use identity-sensitive operations on an optional object, such as reference equality, identity hash code, and synchronization.
 
 **Rule #7** Do not forget that optional objects are not serializable.
-
----
-Last update: September 14, 2021

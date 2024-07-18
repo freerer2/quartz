@@ -1,6 +1,6 @@
 ---
-date: 2024-07-05
-updated: 2024-07-05
+date: 2022-1-27
+updated: 2022-1-27
 order: 90
 ---
 The [`java.time.temporal`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/time/temporal/package-summary.html) package provides a collection of interfaces, classes, and enums that support date and time code and, in particular, date and time calculations.
@@ -252,6 +252,3 @@ if (isFamilyVacation.booleanValue() || isFamilyBirthday.booleanValue())
 else
     System.out.printf("%s is not an important date.%n", date);
 ```
-
----
-Last update: January 27, 2022

@@ -1,6 +1,6 @@
 ---
-date: 2024-07-05
-updated: 2024-07-05
+date: 2021-9-14
+updated: 2021-9-14
 order: 50
 ---
 ## Avoiding the Use of the Reduce Method
@@ -411,6 +411,3 @@ There are still cases where these last methods need to process all the elements:
 - Returning `true` for [`allMatch()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Stream.html#allMatch(java.util.function.Predicate)) and [`noneMatch()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Stream.html#noneMatch(java.util.function.Predicate)) also needs to process all the elements of the stream.
 
 These methods are called _short-circuiting_ methods in the Stream API because they can produce a result without having to process all the elements of your stream.
-
----
-Last update: September 14, 2021

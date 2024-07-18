@@ -1,6 +1,6 @@
 ---
-date: 2024-07-05
-updated: 2024-07-05
+date: 2021-9-14
+updated: 2021-9-14
 order: 40
 ---
 ## Calling a Terminal Operation on a Stream
@@ -313,6 +313,3 @@ BinaryOperator<Integer> combiner = (length1, length2) -> length1 + length2;
 BiFunction<Integer, String, Integer> accumulator =
         (partialReduction, element) -> partialReduction + mapper.apply(element);
 ```
-
----
-Last update: September 14, 2021

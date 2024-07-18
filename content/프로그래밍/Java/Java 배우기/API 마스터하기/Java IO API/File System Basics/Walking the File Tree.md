@@ -1,6 +1,6 @@
 ---
-date: 2024-07-05
-updated: 2024-07-05
+date: 2024-1-4
+updated: 2024-1-4
 order: 90
 ---
 Do you need to create an application that will recursively visit all the files in a file tree? Perhaps you need to delete every `.class` file in a tree, or find every file that has not been accessed in the last year. You can do so with the [`FileVisitor`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/FileVisitor.html) interface.
@@ -796,6 +796,3 @@ public class Chmod {
     }
 }
 ```
-
----
-Last update: January 4, 2024

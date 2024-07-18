@@ -1,6 +1,6 @@
 ---
-date: 2024-07-05
-updated: 2024-07-05
+date: 2022-1-10
+updated: 2022-1-10
 order: 40
 ---
 ## Predefined Character Classes
@@ -108,6 +108,3 @@ Alternatively, a capital letter means the opposite:
 - `\D` matches non-digits
 - `\S` matches non-spaces
 - `\W` matches non-word characters
-
----
-Last update: January 10, 2022

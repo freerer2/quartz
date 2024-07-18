@@ -1,6 +1,6 @@
 ---
-date: 2024-07-05
-updated: 2024-07-05
+date: 2022-1-27
+updated: 2022-1-27
 order: 50
 ---
 ## The LocalTime Class
@@ -53,6 +53,3 @@ now (from Instant): 2013-07-24T17:14:00.479
 6 months from now: 2014-01-24T17:14:00.480
 6 months ago: 2013-01-24T17:14:00.481
 ```
-
----
-Last update: January 27, 2022

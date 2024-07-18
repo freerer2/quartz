@@ -1,6 +1,6 @@
 ---
-date: 2024-07-05
-updated: 2024-07-05
+date: 2022-1-27
+updated: 2022-1-27
 order: 40
 ---
 The Date-Time API provides four classes that deal exclusively with date information, without respect to time or time zone. The use of these classes are suggested by the class names: [`LocalDate`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/time/LocalDate.html), [`YearMonth`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/time/YearMonth.html), [`MonthDay`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/time/MonthDay.html), and [`Year`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/time/Year.html).
@@ -89,6 +89,3 @@ The [`Year`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/
 ```java
 boolean validLeapYear = Year.of(2012).isLeap();
 ```
-
----
-Last update: January 27, 2022

@@ -1,6 +1,6 @@
 ---
-date: 2024-07-05
-updated: 2024-07-05
+date: 2021-9-14
+updated: 2021-9-14
 order: 60
 ---
 ## Characteristics of a Stream
@@ -126,6 +126,3 @@ Transforming a stream may change the [_SIZED_](https://docs.oracle.com/en/java/
 - Flatmapping, filtering, and calling [`distinct()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Stream.html#distinct()) erases these characteristics.
 
 It is always better to have [_SIZED_](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/Spliterator.html#SIZED) and [_SUBSIZED_](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/Spliterator.html#SUBSIZED) stream for parallel computations.
-
----
-Last update: September 14, 2021

@@ -1,6 +1,6 @@
 ---
-date: 2024-07-05
-updated: 2024-07-05
+date: 2022-1-27
+updated: 2022-1-27
 order: 30
 ---
 The Date-Time API provides enums for specifying days of the week and months of the year.
@@ -68,6 +68,3 @@ Aug
 ### In this tutorial
 
 [DayOfWeek](https://dev.java/learn/date-time/dayofweek-month/#dayofweek)[Month](https://dev.java/learn/date-time/dayofweek-month/#month)
-
----
-Last update: January 27, 2022

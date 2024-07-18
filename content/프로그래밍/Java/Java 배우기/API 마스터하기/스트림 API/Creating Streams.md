@@ -1,6 +1,6 @@
 ---
-date: 2024-07-05
-updated: 2024-07-05
+date: 2021-9-14
+updated: 2021-9-14
 order: 30
 ---
 ## Creating a Stream
@@ -512,6 +512,3 @@ Running this code will print out the following.
 The stream is created by the body handler you give as an argument to the [`send()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.net.http/java/net/http/HttpClient.html#send(java.net.http.HttpRequest,java.net.http.HttpResponse.BodyHandler)) method. The HTTP Client API gives you several body handlers. The one you need to consume the body as a stream is the one created by the factory method [`HttpResponse.BodyHandlers.ofLines()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.net.http/java/net/http/HttpResponse.BodyHandlers.html#ofLines()). This way of consuming the body of the response is very memory efficient. If you write your stream carefully, the body of the response will never be stored in memory.
 
 We decided to put all the lines of the text in a list, but, depending on the processing you need to conduct on this data, you do not necessarily need to do that. In fact, in most cases it is probably a bad idea to store this data in memory.
-
----
-Last update: September 14, 2021

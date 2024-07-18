@@ -1,6 +1,6 @@
 ---
-date: 2024-07-05
-updated: 2024-07-05
+date: 2022-1-27
+updated: 2022-1-27
 order: 100
 ---
 When you write code to specify an amount of time, use the class or method that best meets your needs: the [`Duration`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/time/Duration.html) class, [`Period`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/time/Period.html) class, or the [`ChronoUnit.between()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/time/temporal/ChronoUnit.html#between(java.time.temporal.Temporal,java.time.temporal.Temporal)) method. A [`Duration`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/time/Duration.html) measures an amount of time using time-based values (seconds, nanoseconds). A [`Period`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/time/Period.html) uses date-based values (years, months, days).
@@ -104,6 +104,3 @@ There are 7 months, and 2 days until your next birthday. (216 total)
 ```
 
 These calculations do not account for time zone differences. If you were, for example, born in Australia, but currently live in Bangalore, this slightly affects the calculation of your exact age. In this situation, use a [`Period`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/time/Period.html) in conjunction with the [`ZonedDateTime`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/time/ZonedDateTime.html) class. When you add a [`Period`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/time/Period.html) to a [`ZonedDateTime`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/time/ZonedDateTime.html), the time differences are observed.%%  %%
-
----
-Last update: January 27, 2022

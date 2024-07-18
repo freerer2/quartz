@@ -1,6 +1,6 @@
 ---
-date: 2024-07-05
-updated: 2024-07-05
+date: 2023-1-25
+updated: 2023-1-25
 order: 60
 ---
 ## Introducing I/O Streams on In-Memory Structures
@@ -40,5 +40,3 @@ The second one allows you to write bytes to a byte array. You can fix the initia
 2. [`toString()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/ByteArrayOutputStream.html#toString()) returns the content of the array as a string of characters. This method can take a `CharSet` as an argument to decode these bytes correctly.
 3. [`toBytes()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/ByteArrayOutputStream.html#toBytes()) returns a copy of the internal array of this [`ByteArrayOutputStream`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/ByteArrayOutputStream.html).
 
----
-Last update: January 25, 2023

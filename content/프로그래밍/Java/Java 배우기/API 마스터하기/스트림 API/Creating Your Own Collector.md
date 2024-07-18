@@ -1,6 +1,6 @@
 ---
-date: 2024-07-05
-updated: 2024-07-05
+date: 2021-9-14
+updated: 2021-9-14
 order: 80
 ---
 ## Understanding How a Collector Works
@@ -241,6 +241,3 @@ List<Vehicle> electricVehicles = vehicles.stream()
                 return cars;
             }));
 ```
-
----
-Last update: September 14, 2021

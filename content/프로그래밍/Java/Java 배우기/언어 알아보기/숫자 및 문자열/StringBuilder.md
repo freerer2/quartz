@@ -1,4 +1,6 @@
 ---
+date: 2021-9-14
+updated: 2021-9-14
 order: 40
 ---
 ## StringBuilder 클래스
@@ -137,6 +139,3 @@ System.out.println(sb);
 왜냐하면 `sb.toString()`은 [`println`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/PrintStream.html#println(java.lang.Object)) 호출에서 다른 객체와 마찬가지로 암시적으로 호출되기 때문입니다.
 
 > Note: 메서드가 동기화되어 있어 스레드 안전하다는 점을 제외하면 [`StringBuffer`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/lang/StringBuffer.html) 클래스는 [`StringBuilder`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/lang/StringBuilder.html) 클래스와 완전히 동일합니다. 스레드 safe 클래스가 꼭 필요한 경우가 아니라면 [`StringBuffer`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/lang/StringBuffer.html)를 사용할 필요가 없습니다.
-
----
-Last update: September 14, 2021

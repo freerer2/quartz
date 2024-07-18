@@ -1,6 +1,6 @@
 ---
-date: 2024-07-05
-updated: 2024-07-05
+date: 2022-1-27
+updated: 2022-1-27
 order: 80
 ---
 The temporal-based classes in the Date-Time API provide `parse()` methods for parsing a string that contains date and time information. These classes also provide `format()` methods for formatting temporal-based objects for display. In both cases, the process is similar: you provide a pattern to the [`DateTimeFormatter`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/time/format/DateTimeFormatter.html) to create a `formatter` object. This `formatter` is then passed to the `parse()` or `format()` method.
@@ -94,6 +94,3 @@ The output for this example, which prints both the arrival and departure time, i
 LEAVING:  Jul 20 2013  07:30 PM (America/Los_Angeles)
 ARRIVING: Jul 21 2013  10:20 PM (Asia/Tokyo)
 ```
-
----
-Last update: January 27, 2022

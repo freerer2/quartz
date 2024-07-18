@@ -1,6 +1,6 @@
 ---
-date: 2024-07-05
-updated: 2024-07-05
+date: 2022-1-10
+updated: 2022-1-10
 order: 80
 ---
 ## Creating a Pattern with Flags
@@ -177,6 +177,3 @@ Regular expression support also exists in [`java.lang.String`](https://docs.ora
 There is also a [`replace()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/lang/String.html#replace(java.lang.CharSequence,java.lang.CharSequence)) method, that replaces one [`CharSequence`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/lang/CharSequence.html) with another:
 
 - [`public String replace(CharSequence target,CharSequence replacement)`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/lang/String.html#replace(java.lang.CharSequence,java.lang.CharSequence)): Replaces each substring of this string that matches the literal target sequence with the specified literal replacement sequence. The replacement proceeds from the beginning of the string to the end, for example, replacing "aa" with "b" in the string "aaa" will result in "ba" rather than "ab".
-
----
-Last update: January 10, 2022

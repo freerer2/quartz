@@ -1,6 +1,6 @@
 ---
-date: 2024-07-05
-updated: 2024-07-05
+date: 2023-1-25
+updated: 2023-1-25
 order: 100
 ---
 To implement _file change notification_, a program must be able to detect what is happening to the relevant directory on the file system. One way to do so is to poll the file system looking for changes, but this approach is inefficient. It does not scale to applications that have hundreds of open files or directories to monitor.
@@ -369,6 +369,3 @@ public class WatchDir {
     }
 }
 ```
-
----
-Last update: January 25, 2023

@@ -1,6 +1,6 @@
 ---
-date: 2024-07-05
-updated: 2024-07-05
+date: 2022-1-10
+updated: 2022-1-10
 order: 20
 ---
 ## String Literals
@@ -55,6 +55,3 @@ There are two ways to force a metacharacter to be treated as an ordinary charact
 - enclose it within `\Q` (which starts the quote) and `\E` (which ends it).
 
 When using this technique, the `\Q` and `\E` can be placed at any location within the expression, provided that the `\Q` comes first.
-
----
-Last update: January 10, 2022

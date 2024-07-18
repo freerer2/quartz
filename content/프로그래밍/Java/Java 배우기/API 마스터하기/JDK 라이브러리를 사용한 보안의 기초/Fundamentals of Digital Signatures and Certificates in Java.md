@@ -219,7 +219,4 @@ Congratulations, you’ve learned about the differences between digital signatur
 - [Java Security Standard Algorithm Names Specification](https://docs.oracle.com/en/java/javase/22/docs/specs/security/standard-names.html)
 - [DSS](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.186-5.pdf)
 - [T-REC-X.509](https://www.itu.int/rec/T-REC-X.509/en)
-- [RFC-8032](https://tools.ietf.org/html/rfc8032)
-
----
-Last update: Invalid DateTime
+- [RFC-8032](https://tools.ietf.org/html/rfc8032

@@ -1,6 +1,6 @@
 ---
-date: 2024-07-05
-updated: 2024-07-05
+date: 2023-1-25
+updated: 2023-1-25
 order: 70
 ---
 Some of the methods previously discussed, such as `delete()`, work on files, links and directories. But how do you list all the directories at the top of a file system? How do you list the contents of a directory or create a directory?
@@ -61,6 +61,3 @@ You can create a temporary directory using one of createTempDirectory methods:
 - [`createTempDirectory(String, FileAttribute...)`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Files.html#createTempDirectory(java.nio.file.Path,java.lang.String,java.nio.file.attribute.FileAttribute...))
 
 The first method allows the code to specify a location for the temporary directory and the second method creates a new directory in the default temporary-file directory.
-
----
-Last update: January 25, 2023

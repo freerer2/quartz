@@ -1,6 +1,6 @@
 ---
-date: 2024-07-05
-updated: 2024-07-05
+date: 2023-1-25
+updated: 2023-1-25
 order: 30
 ---
 The [`java.nio.file`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/package-summary.html) package supports channel I/O, which moves data in buffers, bypassing some of the layers that can bottleneck stream I/O.
@@ -71,6 +71,3 @@ try (BufferedWriter writer = Files.newBufferedWriter(file, charset)) {
     System.err.format("IOException: %s%n", x);
 }
 ```
-
----
-Last update: January 25, 2023

@@ -1,6 +1,6 @@
 ---
-date: 2024-07-05
-updated: 2024-07-05
+date: 2021-9-14
+updated: 2021-9-14
 order: 90
 ---
 ## Why Would You Implement the Collector Interface?
@@ -185,6 +185,3 @@ result = onetwothreefourfive
 ```
 
 Supporting a delimiter, a prefix, and a suffix would use a [`StringJoiner`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/StringJoiner.html) instead of a [`StringBuilder`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/lang/StringBuilder.html), which already supports these elements.
-
----
-Last update: September 14, 2021

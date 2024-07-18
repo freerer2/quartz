@@ -1,6 +1,6 @@
 ---
-date: 2024-07-05
-updated: 2024-07-05
+date: 2022-1-27
+updated: 2022-1-27
 order: 130
 ---
 Prior to the Java SE 8 release, the Java date and time mechanism was provided by the [`java.util.Date`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/Date.html), [`java.util.Calendar`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/Calendar.html), and [`java.util.TimeZone`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/TimeZone.html) classes, as well as their subclasses, such as [`java.util.GregorianCalendar`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/GregorianCalendar.html). These classes had several drawbacks, including:
@@ -104,6 +104,3 @@ Code that sets the time to 00:00 in a [`GregorianCalendar`](https://docs.oracle
 ## Date and Time Formatting
 
 Although the [`java.time.format.DateTimeFormatter`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/time/format/DateTimeFormatter.html) provides a powerful mechanism for formatting date and time values, you can also use the [`java.time`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/time/package-summary.html) temporal-based classes directly with [`java.util.Formatter`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/Formatter.html) and [`String.format()`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/lang/String.html#format(java.lang.String,java.lang.Object...)), using the same pattern-based formatting that you use with the [`java.util`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/package-summary.html) date and time classes.
-
----
-Last update: January 27, 2022

@@ -1,6 +1,6 @@
 ---
-date: 2024-07-05
-updated: 2024-07-05
+date: 2022-1-10
+updated: 2022-1-10
 order: 10
 ---
 ## Introducing Regular Expressions
@@ -107,6 +107,3 @@ public class RegexTestHarness {
 ```
 
 Before continuing to the next section, you may save and compile this code to ensure that your development environment supports the required packages.
-
----
-Last update: January 10, 2022

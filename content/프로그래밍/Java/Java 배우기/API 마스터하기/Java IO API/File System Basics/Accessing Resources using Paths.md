@@ -1,6 +1,6 @@
 ---
-date: 2024-07-05
-updated: 2024-07-05
+date: 2023-1-25
+updated: 2023-1-25
 order: 10
 ---
 ## Introducing the Legacy File Class
@@ -123,6 +123,3 @@ There is no one-to-one correspondence between the two APIs, but the following ta
 |[File.mkdir()](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/File.html#mkdir()) and mkdirs|[Files.createDirectory(Path,FileAttribute)](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/Files.html#createDirectory(java.nio.file.Path,java.nio.file.attribute.FileAttribute...))|Creating a Directory|
 |[File.listRoots()](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/File.html#listRoots())|[FileSystem.getRootDirectories()](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/FileSystem.html#getRootDirectories())|Listing a File System's Root Directories|
 |[File.getTotalSpace()](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/File.html#getTotalSpace()), [File.getFreeSpace()](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/File.html#getFreeSpace()), [File.getUsableSpace()](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/File.html#getUsableSpace())|[FileStore.getTotalSpace()](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/FileStore.html#getTotalSpace()), [FileStore.getUnallocatedSpace()](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/FileStore.html#getUnallocatedSpace()), [FileStore.getUsableSpace()](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/FileStore.html#getUsableSpace()), [FileStore.getTotalSpace()](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/nio/file/FileStore.html#getTotalSpace())|File Store Attributes|
-
----
-Last update: January 25, 2023

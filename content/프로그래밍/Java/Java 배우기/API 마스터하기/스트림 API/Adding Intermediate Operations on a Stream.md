@@ -1,6 +1,6 @@
 ---
-date: 2024-07-05
-updated: 2024-07-05
+date: 2021-9-14
+updated: 2021-9-14
 order: 20
 ---
 ## Mapping a Stream to Another Stream
@@ -411,6 +411,3 @@ Let us analyze this output.
 There is one point that you saw earlier in this tutorial and that appears clearly now: a stream does process all the elements it has to process one by one, from the beginning to the end of the stream. This was mentioned before, and now you can see it in action.
 
 You can see that this `peek(System.out::println)` pattern is very useful to follow the elements processed by your stream one by one, without having to debug your code. Debugging a stream is hard because you need to be careful where you put your breakpoints. Most of the time, putting breakpoints on a stream processing will send you to the implementation of the [`Stream`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Stream.html) interface. This is not what you need. Most of the time you need to put these breakpoints in the code of your lambda expressions.
-
----
-Last update: September 14, 2021

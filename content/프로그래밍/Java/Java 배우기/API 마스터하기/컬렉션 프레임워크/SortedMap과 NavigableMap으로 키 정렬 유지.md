@@ -1,6 +1,6 @@
 ---
-date: 2024-07-04
-updated: 2024-07-04
+date: 2021-9-14
+updated: 2021-9-14
 order: 120
 ---
 ## SortedMap에 추가된 메서드
@@ -96,6 +96,3 @@ descendingKeys.forEach(key -> System.out.print(key + " "));
 
 이러한 맵은 이 맵의 보기이며, 키/값 쌍을 제거하거나 추가하여 업데이트할 수 있습니다. 하지만 요소를 추가할 때 한 가지 제한 사항이 있습니다. 뷰가 만들어진 경계 밖에서는 키를 추가할 수 없습니다.
 
-
----
-Last update: September 14, 2021

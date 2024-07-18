@@ -1,6 +1,6 @@
 ---
-date: 2024-07-05
-updated: 2024-07-05
+date: 2023-1-25
+updated: 2023-1-25
 order: 10
 ---
 ## Introducing the Java I/O API
@@ -76,6 +76,3 @@ Following this, the Java I/O API defines four base classes, that are abstract, e
 All byte streams are descended from [`InputStream`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/InputStream.html) and [`OutputStream`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/OutputStream.html), there are many of them. Some of them are covered in this tutorial.
 
 All character stream classes are descended from [`Reader`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/Reader.html) and [`Writer`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/Writer.html).
-
----
-Last update: January 25, 2023

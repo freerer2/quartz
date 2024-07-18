@@ -1,6 +1,6 @@
 ---
-date: 2024-07-05
-updated: 2024-07-05
+date: 2022-1-27
+updated: 2022-1-27
 order: 20
 ---
 ## Standard Calendar
@@ -39,6 +39,3 @@ Notes:
 (2): This class does not store this information, but has methods to provide time in these units.
 
 (3): When a Period is added to a [`ZonedDateTime`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/time/ZonedDateTime.html), daylight saving time or other local time differences are observed.
-
----
-Last update: January 27, 2022

@@ -1,6 +1,6 @@
 ---
-date: 2024-07-05
-updated: 2024-07-05
+date: 2021-9-14
+updated: 2021-9-14
 order: 10
 ---
 ## Introducing the Stream API
@@ -254,6 +254,3 @@ As you have seen, you are allowed to call only one method on a stream, even if t
 A stream is an object connected to a source. It pulls the elements it processes from this source. This source should not be modified by the stream itself. Doing so will lead to unspecified results. In some cases, this source is immutable or read-only, so you will not be able to do that, but there are cases where you could.
 
 There are plenty of methods available in the [`Stream`](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Stream.html) interface, and you are going to see most of them in this tutorial. Writing an operation that modifies some variables or fields outside the stream itself is a bad idea that can always be avoided. A stream should not have any _side effects_.
-
----
-Last update: September 14, 2021
