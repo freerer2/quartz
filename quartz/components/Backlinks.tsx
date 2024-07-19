@@ -17,7 +17,7 @@ const Backlinks: QuartzComponent = ({
       <h3>{i18n(cfg.locale).components.backlinks.title}</h3>
       <ul class="overflow">
         {backlinkFiles.length > 0 ? (
-          backlinkFiles.filter(f=> !f.frontmatter?.tags?.includes("moc")) //moc 태그가 있으면 백링크 생성 안함
+          backlinkFiles.filter(f => !f.frontmatter?.tags?.includes("moc")) //moc 태그가 있으면 백링크 생성 안함
           .map((f) => (
             <li>
               <a href={resolveRelative(fileData.slug!, f.slug!)} class="internal">
