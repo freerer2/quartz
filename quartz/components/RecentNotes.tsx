@@ -43,6 +43,8 @@ export default ((userOpts?: Partial<Options>) => {
             const title = page.frontmatter?.title ?? i18n(cfg.locale).propertyDefaults.title
             const tags = page.frontmatter?.tags ?? []
 
+            if(page.frontmatter?.tags?.includes("moc")) return;
+
             return (
               <li class="recent-li">
                 <div class="section">
