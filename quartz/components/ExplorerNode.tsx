@@ -180,7 +180,7 @@ export function ExplorerNode({ node, opts, fullPath, fileData }: ExplorerNodePro
   const folderPath = node.name !== "" ? joinSegments(fullPath ?? "", node.name) : ""
   const href = resolveRelative(fileData.slug!, folderPath as SimpleSlug) + "/"
   if(node.file?.frontmatter?.tags?.includes("moc")) {
-    return;
+    return; //moc 태그가 있으면 목록 생성 안함
   }
   return (
     <>

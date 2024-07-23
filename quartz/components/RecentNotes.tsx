@@ -43,7 +43,7 @@ export default ((userOpts?: Partial<Options>) => {
             const title = page.frontmatter?.title ?? i18n(cfg.locale).propertyDefaults.title
             const tags = page.frontmatter?.tags ?? []
 
-            if(page.frontmatter?.tags?.includes("moc")) return;
+            if(page.frontmatter?.tags?.includes("moc")) return; //moc 태그가 있으면 최근수정 생성 안함
 
             return (
               <li class="recent-li">
