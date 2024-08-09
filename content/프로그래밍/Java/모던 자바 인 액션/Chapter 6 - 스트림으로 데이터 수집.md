@@ -193,7 +193,7 @@ public class ToListCollector<T> implements Collector<T, List<T>, List<T>> {
 
 - 순차 리듀싱 과정의 논리적 순서
 
-![image](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FctRO2S%2FbtqQzRZRXsl%2FV5MAG3vARUcycy7PsP7BEK%2Fimg.png))
+![[Pasted image 20240809140947.png]]
 
 1. supplier를 통해 누적할 컨테이너를 공급받는다.
 2. 각 요소에 대하여 accumulator를 통해 컨테이너에 누적한다.
@@ -201,7 +201,7 @@ public class ToListCollector<T> implements Collector<T, List<T>, List<T>> {
 
 - 병렬 리듀싱 과정의 논리적 순서
 
-![image](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbaHdxc%2FbtqQBGcFA2C%2F5KfeU47knVsrefCjFhcC70%2Fimg.png)
+![[Pasted image 20240809140957.png]]
 
 1. 스트림을 여러 서브 파트로 분할 한다.
 2. 분할된 서브 파트로 대하여 순차 리듀싱 과정의 변환과정을 처리한다.
