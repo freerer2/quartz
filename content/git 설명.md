@@ -1,3 +1,6 @@
+---
+draft: true
+---
 ## 구조
 
 ```mermaid

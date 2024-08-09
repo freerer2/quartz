@@ -49,7 +49,7 @@ List<Apple> greenApples
 	 = filterApples(inventory, (Apple apple) -> GREEN.equals(apple.getColor()));
 ```
 
-![image](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FZp1m8%2FbtqP4ltjmFM%2FKzQ26f1to0vP6AI5Kefml0%2Fimg.png)
+![[Pasted image 20240729222942.png]]
 
 자바 API의 많은 메서드는 정렬, 스레드, GUI 처리 등을 포함한 다양한 동작으로 파라미터화 할 수 있다.
 
