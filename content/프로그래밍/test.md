@@ -1,3 +1,292 @@
+<style type="text/css">
+/* 찐파 - #006bff */
+/* 퀴즈 UI */
+.quiz {
+  padding: 16px;
+  background-color: #fafafa;
+  border-radius: 16px;
+  text-align: center;
+}
+.quiz__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  margin-bottom: 16px;
+  width: 56px;
+  height: 56px;
+  border-radius: 28px;
+  background-color: #006bff;
+  color: white;
+}
+
+.quiz__title {
+  font-weight: bold;
+  font-size: 28px;
+  color: black;
+}
+
+.quiz__box {
+  padding: 24px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.quiz__btn-container {
+  margin-top: 16px;
+  text-align: right;
+}
+
+.quiz__btn {
+  padding: 14px;
+  background: black;
+  color: white !important;
+  border-radius: 8px;
+  text-decoration: none !important;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.quiz__question {
+  color: black;
+  font-size: 16px;
+}
+
+.option-list {
+  background-color: #f4f4f4;
+  border-color: #00000014;
+  border: 1px solid;
+  border-radius: 8px;
+}
+
+.option {
+  cursor: pointer;
+  display: flex;
+  padding: 16px;
+  align-items: center;
+}
+
+.option:first-child {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+.option:last-child {
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.option:hover {
+  background: white;
+}
+
+.option__number {
+  margin-right: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  color: #005ff2;
+  background-color: #dfefff;
+  border-radius: 9999px;
+}
+
+.option-selected {
+  background-color: white;
+}
+
+.option-selected .option__number {
+  background-color: #006bff;
+  color: white;
+}
+
+.option-selected.option-mark {
+  background-color: #fca5a5;
+}
+
+.option-selected.option-mark .option__number {
+  background-color: #b91c1c;
+}
+
+.option-mark[data-answer="true"] {
+  background-color: #bbf7d0;
+}
+
+.option-selected.option-mark[data-answer="true"] .option__number {
+  background-color: #16a34a;
+}
+
+/* 완료 UI */
+.finish {
+  margin-top: 64px;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.finish__title {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.next-box {
+  color: #666666;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  padding: 24px 16px;
+  font-size: 16px;
+}
+.next {
+  font-size: 14px;
+  margin: 0;
+}
+
+.next__title {
+  color: black;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#next__btn {
+  display: inline-block;
+  font-size: 20px;
+  padding: 14px;
+  margin-bottom: 8px;
+  background: black;
+  color: white !important;
+  border-radius: 8px;
+  text-decoration: none !important;
+}
+
+h2 {
+  font-weight: bold !important;
+}
+
+code {
+  background-color: #ebebeb;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+li {
+  list-style: disc;
+}
+
+.tt_article_useless_p_margin p {
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+  margin: auto !important;
+}
+
+.is-inactive {
+  display: none;
+}
+
+.hint {
+  padding: 12px;
+  font-size: 12px;
+  border-radius: 8px;
+  border: 1px solid #ebebeb;
+}
+
+.btn {
+  padding: 14px;
+  background: black;
+  color: white !important;
+  text-decoration: nont !important;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.show-and-hide-btn {
+  margin-top: 48px;
+  margin-bottom: 48px;
+}
+
+@media screen and (max-width: 600px) {
+  .quiz__btn-container {
+    text-align: center;
+  }
+
+  .quiz__btn {
+    width: 100%;
+  }
+}
+<style>
+<script typep="text/javascript">
+let onAnswerClicked = (event) => {
+  const button = event.currentTarget;
+  const questionNumber = button.getAttribute("data-question");
+  const options = document.querySelectorAll(
+    `[data-question-number='${questionNumber}']`
+  );
+
+  Array.prototype.forEach.call(options, (element) => {
+    element.classList.add("option-mark");
+  });
+};
+
+let onOptionClick = (event) => {
+  const target = event.currentTarget;
+  const questionNumber = target.getAttribute("data-question-number");
+
+  const options = document.querySelectorAll(
+    `[data-question-number='${questionNumber}']`
+  );
+
+  Array.prototype.forEach.call(options, (element) => {
+    element.classList.remove("option-selected");
+  });
+  target.classList.add("option-selected");
+};
+
+let onShowAndHideClicked = (event) => {
+  const button = event.currentTarget;
+  const buttonContent = $("[data-btn-content]", $(button));
+
+  const dataTarget = button.getAttribute("data-target");
+  const targetElems = document.querySelectorAll(
+    `[data-hide-target='${dataTarget}']`
+  );
+
+  const isHidden = button.classList.contains("show-and-hide-btn--hidden");
+
+  if (isHidden) {
+    button.classList.remove("show-and-hide-btn--hidden");
+    buttonContent.html("정답 숨기기");
+  } else {
+    button.classList.add("show-and-hide-btn--hidden");
+    buttonContent.html("정답 보이기");
+  }
+
+  Array.prototype.forEach.call(targetElems, (element) => {
+    if (isHidden) {
+      element.classList.remove("is-inactive");
+    } else {
+      element.classList.add("is-inactive");
+    }
+  });
+};
+
+let checkAnswerElem = document.querySelectorAll("[data-js-check-answer]");
+let optionElem = document.querySelectorAll("[data-question-number]");
+let showAndHideBtn = document.getElementsByClassName("show-and-hide-btn");
+
+Array.prototype.forEach.call(checkAnswerElem, (element) => {
+  element.onclick = onAnswerClicked;
+});
+
+Array.prototype.forEach.call(optionElem, (element) => {
+  element.onclick = onOptionClick;
+});
+
+Array.prototype.forEach.call(showAndHideBtn, (element) => {
+  element.onclick = onShowAndHideClicked;
+});
+</script>
 <div class="tt_article_useless_p_margin contents_style"><h2>들어가기 전에</h2>
 <p>이 글은 <a href="https://nextjs.org/learn/dashboard-app/css-styling">Next.js 튜토리얼</a>을 번역한 글입니다.</p>
 <h1>CSS 스타일하기</h1>
