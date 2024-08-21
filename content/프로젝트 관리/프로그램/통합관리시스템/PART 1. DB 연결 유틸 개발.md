@@ -8,7 +8,7 @@ order: 10
 
 ## 패키지 선택
 nodejs의 postgresql 패키지는 **node-postgres**와 **pg-promise**가 있다.
-pg-promise는 내부적으로 node-postgres를 사용하며, Promise 객체를 활용할 수 있으므로 비동기 처리시 이점이 있어 pg-promise를 사용한다.
+pg-promise는 내부적으로 node-postgres를 사용하며, Promise 객체를 활용할 수 있으므로 비동기 처리시 이점이 있어 pg-promise를 사용한다
 
 ```sh
 pnpm i pg-promise
@@ -20,7 +20,8 @@ pnpm i pg-promise
 
 cn 변수의 max 속성을 보면 커넥션의 갯수를 지정할 수 있는 것 같다. 추측하건데 커넥션 풀을 구축하지는 않아도 될 것으로 판단되나. 확인은 필요하다.
 
-SELECT 쿼리 수행 완료 후 받아오는 값을 스네이크 케이스로 그대로 받아오기에 카멜 케이스로 바꿔주는 로직을 콜백에 추가해주어야 한다.
+SELECT 쿼리 수행 완료 후 받아오는 값을 스네이크 케이스로 그대로 받아오기에 카멜 케이스로 바꿔주는 로직을 콜백에 추가해주어야 해서 `camelizeColumns`  함수를 추가 후 `receive` 콜백함수에 추가하였다.
+
 ```ts
 import 'server-only';
 
@@ -36,7 +37,7 @@ const initOptions = {
     console.log('QUERY:', e.query);
   },
   receive(e:any) {
-      camelizeColumns(e.data);
+    camelizeColumns(e.data);
   },
   disconnect(e:any) {
     const cp = e.client.connectionParameters;

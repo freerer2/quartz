@@ -6,7 +6,6 @@ order: 0
 ## 개요
 [[프로젝트 관리/프로그램/index|프로그램]]에 구현이 완료 되었거나 구상중인 프로그램을 통합적으로 관리하기 위한 통합관리시스템 구축 프로젝트. 가칭 LMS(Lee Management System)
 
-## 목표
 주로 사용하는 환경인 Spring, Java, Jsp를 사용하지 않는 것을 목표로 하며, 한번도 사용해보지 않은 완전히 새로운 환경인 Next.js, React, Typescript를 사용한다.
 
 ## 선행학습
