@@ -1,0 +1,15 @@
+---
+date: 2024-10-02
+updated: 2024-10-02
+order: 10
+---
+
+| Advisor Framework Privileges: All of the advisor framework privileges are part of the DBA role. | —                                                                                                                                                                                                                                                |
+| ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `ADVISOR`                                                                                       | Access the advisor framework through PL/SQL packages such as `DBMS_ADVISOR` and `DBMS_SQLTUNE`.                                                                                                                                                  |
+| `ADMINISTER SQL TUNING SET`                                                                     | Create, drop, select (read), load (write), and delete SQL tuning sets owned by the grantee through the `DBMS_SQLTUNE` package.                                                                                                                   |
+| `ADMINISTER ANY SQL TUNING SET`                                                                 | Create, drop, select (read), load (write), and delete SQL tuning sets owned by any user through the `DBMS_SQLTUNE` package.                                                                                                                      |
+| `CREATE ANY SQL PROFILE`                                                                        | Accept a SQL Profile recommended by the SQL Tuning Advisor, which is accessed through Enterprise Manager or by the `DBMS_SQLTUNE` package.<br><br>Note: This privilege has been deprecated in favor of `ADMINISTER` `SQL` `MANAGEMENT` `OBJECT`. |
+| `ALTER ANY SQL PROFILE`                                                                         | Alter the attributes of an existing SQL Profile.<br><br>Note: This privilege has been deprecated in favor of `ADMINISTER` `SQL` `MANAGEMENT` `OBJECT`.                                                                                           |
+| `DROP ANY SQL PROFILE`                                                                          | Drop existing SQL Profiles.<br><br>Note: This privilege has been deprecated in favor of `ADMINISTER` `SQL` `MANAGEMENT` `OBJECT`.                                                                                                                |
+| `ADMINISTER SQL MANAGEMENT OBJECT`                                                              | Create, alter, and drop SQL Profiles owned by any user through the `DBMS_SQLTUNE` package.                                                                                                                                                       |
