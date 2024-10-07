@@ -8,7 +8,12 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
+<<<<<<< HEAD
     pageTitle: "개발자의 서랍장🗄️",
+=======
+    pageTitle: "🪴 Quartz 4.0",
+    pageTitleSuffix: "",
+>>>>>>> upstream/v4
     enableSPA: true,
     enablePopovers: true,
     analytics: null,
