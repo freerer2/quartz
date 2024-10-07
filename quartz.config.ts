@@ -8,20 +8,24 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-<<<<<<< HEAD
     pageTitle: "개발자의 서랍장🗄️",
-=======
-    pageTitle: "🪴 Quartz 4.0",
     pageTitleSuffix: "",
->>>>>>> upstream/v4
     enableSPA: true,
     enablePopovers: true,
     analytics: null,
     // locale: "en-US",
     locale: "ko-KR",
     baseUrl: "lhk-lms.pages.dev",
-    ignorePatterns: ["templates", "private", ".makemd", ".obsidian", ".obsidian-mobile", ".space", ".trash"],
-    defaultDateType: "modified",//"created",
+    ignorePatterns: [
+      "templates",
+      "private",
+      ".makemd",
+      ".obsidian",
+      ".obsidian-mobile",
+      ".space",
+      ".trash",
+    ],
+    defaultDateType: "modified", //"created",
     theme: {
       fontOrigin: "googleFonts",
       cdnCaching: true,
