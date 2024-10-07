@@ -27,9 +27,13 @@ sudo apt install postfix #로그용 (CRON) info (No MTA installed, discarding ou
 #파이썬 패키지 설치
 #필수설치
 sudo apt install python3-pip
+pip install psycopg2-binary
 
 #의존성 설치
 pip install -r requirements.txt
+
+#psycopg2 설치 오류시 requirements.txt에서 제외 후 해당 패키지 설치
+sudo apt install python3-psycopg2 
 
 #crontab 편집기 열기
 crontab -e
