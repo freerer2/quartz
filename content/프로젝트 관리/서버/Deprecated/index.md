@@ -1,7 +1,7 @@
 ---
-title: OLD
+title: Deprecated
 aliases:
-  - OLD
+  - Deprecated
 order: 99999
 ---
 ## Database 변경으로 인한 불필요해진 정보
