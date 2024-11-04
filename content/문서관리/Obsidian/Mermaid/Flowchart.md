@@ -17,20 +17,20 @@ flowchart RL
 
 ```mermaid
 flowchart LR
-    a[#91;Square#93;]
-    b(#40;round edge#41;)
-	c([#40;#91;stadium shaped#93;#41;])
-    d[[#91;#91;subroutine shape#93;#93;]]
-    e>#62;asymmetric shape#93;]
-    f[(#91;#40;cylindrical shape#41;#93;)]
-    g((#40;#40;circle#41;#41;))
-    h(((#40;#40;#40;Double circle#41;#41;#41;)))
-    i{#123;rhombus#125;}
-    j{{#123;#123;hexagon#125;#125;}}
-    k[/#91;#47;Parallelogram#47;#93;/] 
-    l[\#91;#92;Parallelogram alt#92;#93;\]
-    m[/#91;#47;Trapezoid#92;#93;\]
-    n[\#91;#92;Trapezoid alt#47;#93;/]
+    a["[Square]"]
+    b("(round edge)")
+		c(["([stadium shaped])"])
+    d[["[[subroutine shape]]"]]
+    e>">asymmetric shape]"]
+    f[("[(cylindrical shape)]")]
+    g(("((circle))"))
+    h((("(((Double circle)))")))
+    i{"{rhombus}"}
+    j{{"{{hexagon}}"}}
+    k[/"[/Parallelogram/]"/] 
+    l[\"[\Parallelogram alt\]"\]
+    m[/"[/Trapezoid\]"\]
+    n[\"[\Trapezoid alt/]"/]
     
 	a ~~~ b ~~~ c
 	d ~~~ e ~~~ f
